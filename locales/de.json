@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "subproject1": "Wasserquellen-Karte",
+    "subproject2": "Trinkbrunnen",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "switchLanguage": "English"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "email": "E-Mail",
+    "privacy": "Datenschutzerklärung"
+  },
+  "home": {
+    "projectTitle": "Berliner Trinkbrunnen Initiative",
+    "projectIntro": "Unsere Initiative zielt darauf ab, den Zugang zu kostenlosem Trinkwasser in Berlin zu verbessern und Menschen zu helfen, während heißer Sommertage hydratisiert und kühl zu bleiben. Wir konzentrieren uns darauf, Informationen über bestehende Wasserquellen zugänglicher zu machen und uns für neue Trinkbrunnen im öffentlichen Raum einzusetzen.",
+    "subproject1Title": "Wasserquellen-Karte",
+    "subproject1Description": "Wir arbeiten daran, Informationen über kostenlose Trinkwasserquellen in Berlin zugänglicher zu machen, indem wir Refill-Stationen in Google Maps eintragen.",
+    "subproject2Title": "Öffentliche Trinkbrunnen",
+    "subproject2Description": "Wir setzen uns für die Installation neuer Trinkbrunnen an stark frequentierten Orten in Pankow ein, um kostenlosen Zugang zu Trinkwasser zu ermöglichen.",
+    "learnMore": "Mehr erfahren",
+    "latestNews": "Aktuelle Meldungen"
+  },
+  "subprojects": {
+    "subproject1FullDescription": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden – insbesondere auf Plattformen, die täglich genutzt werden, wie Google Maps.",
+    "subproject1Details": "Unser Projekt greift dieses praktische Problem auf, indem wir bestehende Refill-Stationen in Google Maps eintragen und sie für Berliner:innen und Besucher:innen sichtbarer machen. Wir haben bereits Trinkbrunnen der Berliner Wasserbetriebe eingetragen und möchten eine umfassende Übersicht über kostenlose Wasserquellen in Berlin schaffen.",
+    "subproject2FullDescription": "Ein weiterer Teil unserer Initiative ist die Förderung der Einrichtung neuer Trinkbrunnen an stark frequentierten Orten in Pankow.",
+    "subproject2Details": "Wir planen, mit diesem Anliegen sowohl die Berliner Wasserbetriebe als auch das Bezirksamt Pankow zu kontaktieren. Wir sind inspiriert von ähnlichen erfolgreichen Projekten in anderen Bezirken wie Neukölln.",
+    "relatedNews": "Verwandte Meldungen"
+  },
+  "about": {
+    "title": "Über unsere Initiative",
+    "intro": "Erfahren Sie mehr über unser Projekt und das Team hinter der Berliner Trinkbrunnen Initiative."
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "intro": "Hier finden Sie Antworten auf häufige Fragen zu unserer Trinkbrunnen-Initiative.",
+    "questions": {
+      "faq1Question": "Wie finde ich Trinkbrunnen in meiner Nähe?",
+      "faq1Answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der Berliner Wasserbetriebe besuchen oder Apps wie Refill Deutschland nutzen.",
+      "faq2Question": "Sind die Trinkbrunnen sicher zu benutzen?",
+      "faq2Answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den Berliner Wasserbetrieben getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards.",
+      "faq3Question": "Wie kann ich einen neuen Standort für einen Trinkbrunnen vorschlagen?",
+      "faq3Answer": "Sie können sich an Ihr örtliches Bezirksamt wenden oder uns direkt kontaktieren. Wir sammeln Vorschläge und leiten sie an die zuständigen Behörden weiter.",
+      "faq4Question": "Was ist eine Refill-Station?",
+      "faq4Answer": "Refill-Stationen sind Geschäfte, Cafés oder öffentliche Gebäude, die Menschen erlauben, ihre Wasserflaschen kostenlos nachzufüllen. Achten Sie auf den Refill-Aufkleber in den Fenstern.",
+      "faq5Question": "Wie kann ich Ihre Initiative unterstützen?",
+      "faq5Answer": "Sie können helfen, indem Sie Bewusstsein schaffen, neue Brunnenstandorte vorschlagen oder sich freiwillig melden, um uns beim Kartieren bestehender Wasserquellen zu helfen. Kontaktieren Sie uns unter berlinertrinkbrunnen@gmail.com.",
+      "faq6Question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
+      "faq6Answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können. Wir planen, basierend auf unseren Erfahrungen auf andere Bezirke zu expandieren."
+    }
+  },
+  "news": {
+    "newsTitle1": "Kartierungsprojekt gestartet",
+    "newsContent1": "Wir haben begonnen, die ersten Trinkbrunnen in Google Maps einzutragen, um die Sichtbarkeit zu verbessern.",
+    "newsTitle2": "Treffen mit den Berliner Wasserbetrieben",
+    "newsContent2": "Produktive Diskussion über mögliche neue Brunnenstandorte in Pankow.",
+    "newsTitle3": "Community-Workshop",
+    "newsContent3": "Nehmen Sie an unserem Workshop zu Wasserschutz und Zugänglichkeit am 30. Juli teil.",
+    "newsTitle4": "Datenerfassung abgeschlossen",
+    "newsContent4": "Wir haben die Erfassung von Daten zu allen bestehenden Refill-Stationen im Zentrum Berlins abgeschlossen.",
+    "newsTitle5": "Vorschlag eingereicht",
+    "newsContent5": "Unser Vorschlag für fünf neue Trinkbrunnen wurde beim Bezirksamt eingereicht.",
+    "newsTitle6": "Start der Sommerkampagne",
+    "newsContent6": "Unsere Aufklärungskampagne zum Thema Hydration startet nächste Woche."
+  }
+} 

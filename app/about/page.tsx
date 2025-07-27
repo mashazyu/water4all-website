@@ -6,11 +6,11 @@ export default function About() {
   const { language, translations } = useLanguage()
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto">
-      <h1 className="font-normal tracking-tight">{translations.aboutTitle}</h1>
+    <div className="space-y-6 max-w-4xl mx-auto">
+      <h1 className="font-semibold text-gray-800">{translations.aboutTitle}</h1>
 
       <div className="prose max-w-none">
-        <p className="text-lg">{translations.aboutIntro}</p>
+        <p className="text-base text-gray-700 leading-relaxed">{translations.aboutIntro}</p>
 
         {language === "de" ? (
           <>

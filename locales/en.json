@@ -1,0 +1,71 @@
+{
+  "navigation": {
+    "home": "Home",
+    "subproject1": "Water Sources Map",
+    "subproject2": "Drinking Fountains",
+    "about": "About",
+    "faq": "FAQ",
+    "switchLanguage": "Deutsch"
+  },
+  "footer": {
+    "contact": "Contact",
+    "email": "Email",
+    "privacy": "Privacy Policy"
+  },
+  "home": {
+    "projectTitle": "Berlin Drinking Fountains Initiative",
+    "projectIntro": "Our initiative aims to improve access to free drinking water in Berlin, helping people stay hydrated and cool during hot summer days. We focus on making information about existing water sources more accessible and advocating for new drinking fountains in public spaces.",
+    "subproject1Title": "Water Sources Map",
+    "subproject1Description": "We're working to make information about free drinking water sources in Berlin more accessible by adding refill stations to Google Maps.",
+    "subproject2Title": "Public Drinking Fountains",
+    "subproject2Description": "We're advocating for the installation of new drinking fountains in high-traffic areas in Pankow to provide free access to drinking water.",
+    "learnMore": "Learn More",
+    "latestNews": "Latest News"
+  },
+  "subprojects": {
+    "subproject1FullDescription": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps.",
+    "subproject1Details": "Our project addresses this practical problem by adding existing refill stations to Google Maps, making them more visible for Berliners and visitors. We've already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",
+    "subproject2FullDescription": "Another part of our initiative is promoting the installation of new drinking fountains in high-traffic areas in Pankow.",
+    "subproject2Details": "We plan to contact both Berliner Wasserbetriebe and the Pankow district office with this concern. We're inspired by similar successful projects in other districts like Neukölln.",
+    "relatedNews": "Related News"
+  },
+  "about": {
+    "title": "About Our Initiative",
+    "intro": "Learn more about our project and the team behind the Berlin Drinking Fountains Initiative."
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Find answers to common questions about our drinking fountains initiative.",
+    "questions": {
+      "faq1Question": "How can I find drinking fountains near me?",
+      "faq1Answer": "We're working on adding all drinking fountains and refill stations to Google Maps. You can also check the official Berlin Water Works website or use apps like Refill Deutschland.",
+      "faq2Question": "Are the drinking fountains safe to use?",
+      "faq2Answer": "Yes, all public drinking fountains in Berlin are regularly tested and maintained by the Berlin Water Works (Berliner Wasserbetriebe). The water quality meets all EU drinking water standards.",
+      "faq3Question": "How can I suggest a new location for a drinking fountain?",
+      "faq3Answer": "You can contact your local district office (Bezirksamt) or reach out to us directly. We collect suggestions and forward them to the appropriate authorities.",
+      "faq4Question": "What is a refill station?",
+      "faq4Answer": "Refill stations are businesses, cafes, or public buildings that allow people to refill their water bottles for free. Look for the Refill sticker in windows.",
+      "faq5Question": "How can I support your initiative?",
+      "faq5Answer": "You can help by spreading awareness, suggesting new fountain locations, or volunteering to help us map existing water sources. Contact us at berlinertrinkbrunnen@gmail.com.",
+      "faq6Question": "Why focus on Pankow district?",
+      "faq6Answer": "We're starting with Pankow as a pilot project because we live there and can better assess the local needs. We plan to expand to other districts based on our experience."
+    }
+  },
+  "news": {
+    "newsTitle1": "Mapping Project Started",
+    "newsContent1": "We've begun adding the first drinking fountains to Google Maps to improve visibility.",
+    "newsTitle2": "Meeting with Berliner Wasserbetriebe",
+    "newsContent2": "Productive discussion about potential new fountain locations in Pankow.",
+    "newsTitle3": "Community Workshop",
+    "newsContent3": "Join us for a workshop on water conservation and accessibility on July 30.",
+    "newsTitle4": "Data Collection Complete",
+    "newsContent4": "We've finished collecting data on all existing refill stations in central Berlin.",
+    "newsTitle5": "Proposal Submitted",
+    "newsContent5": "Our proposal for five new drinking fountains has been submitted to the district office.",
+    "newsTitle6": "Summer Campaign Launch",
+    "newsContent6": "Our awareness campaign about staying hydrated launches next week."
+  }
+} 
