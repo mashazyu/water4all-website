@@ -1,8 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-
 import "./globals.css"
 import { LanguageProvider } from "@/components/language-provider"
 import Navigation from "@/components/navigation"
@@ -29,7 +27,6 @@ export default function RootLayout({
           <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl">{children}</main>
           <Footer />
         </LanguageProvider>
-        <Analytics />
       </body>
     </html>
   )

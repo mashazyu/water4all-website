@@ -7,17 +7,19 @@ export default function Subproject1() {
   const { language, translations } = useLanguage()
 
   return (
-    <div className="space-y-24">
-      <section className="space-y-8">
-        <h1 className="font-normal tracking-tight">{translations.subproject1Title}</h1>
-        <div className="max-w-4xl space-y-6">
-          <p className="text-lg">{translations.subproject1FullDescription}</p>
-          <p>{translations.subproject1Details}</p>
+    <div className="space-y-8">
+      <section className="space-y-4">
+        <h1 className="font-semibold text-gray-800">{translations.subproject1Title}</h1>
+        <div className="max-w-4xl space-y-3">
+          <p className="text-base text-gray-700 leading-relaxed">{translations.subproject1FullDescription}</p>
+          <p className="text-gray-700 leading-relaxed text-sm">{translations.subproject1Details}</p>
         </div>
       </section>
 
-      <section className="space-y-8">
-        <h2 className="font-normal">{translations.relatedNews}</h2>
+      <section className="space-y-6">
+        <div className="border-b border-gray-300 pb-2">
+          <h2 className="font-semibold text-gray-800">{translations.relatedNews}</h2>
+        </div>
         <NewsGrid projectFilter={1} />
       </section>
     </div>

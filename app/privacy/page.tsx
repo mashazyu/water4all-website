@@ -6,8 +6,8 @@ export default function Privacy() {
   const { language, translations } = useLanguage()
 
   return (
-    <div className="space-y-12 max-w-4xl mx-auto">
-      <h1 className="font-normal tracking-tight">{translations.privacyTitle}</h1>
+    <div className="space-y-6 max-w-4xl mx-auto">
+      <h1 className="font-semibold text-gray-800">{translations.privacyTitle}</h1>
 
       <div className="prose max-w-none">
         {language === "de" ? (

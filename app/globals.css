@@ -5,25 +5,25 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 23 23 23;
+    --foreground: 51 51 51;
     --card: 255 255 255;
-    --card-foreground: 23 23 23;
+    --card-foreground: 51 51 51;
     --popover: 255 255 255;
-    --popover-foreground: 23 23 23;
-    --primary: 23 23 23;
+    --popover-foreground: 51 51 51;
+    --primary: 0 82 158;
     --primary-foreground: 255 255 255;
     --secondary: 245 245 245;
-    --secondary-foreground: 23 23 23;
-    --muted: 250 250 250;
-    --muted-foreground: 115 115 115;
-    --accent: 245 245 245;
-    --accent-foreground: 23 23 23;
-    --destructive: 239 68 68;
+    --secondary-foreground: 51 51 51;
+    --muted: 248 248 248;
+    --muted-foreground: 102 102 102;
+    --accent: 240 240 240;
+    --accent-foreground: 51 51 51;
+    --destructive: 220 38 38;
     --destructive-foreground: 255 255 255;
-    --border: 229 229 229;
-    --input: 229 229 229;
-    --ring: 23 23 23;
-    --radius: 0rem;
+    --border: 221 221 221;
+    --input: 221 221 221;
+    --ring: 0 82 158;
+    --radius: 0.125rem;
   }
 }
 
@@ -32,11 +32,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-light;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: -0.01em;
+    @apply bg-background text-foreground;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
   }
 
   h1,
@@ -45,81 +45,55 @@
   h4,
   h5,
   h6 {
-    @apply font-normal;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.3;
+    color: rgb(51 51 51);
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-    line-height: 1.1;
+    @apply text-2xl md:text-3xl;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl;
-    line-height: 1.2;
+    @apply text-xl md:text-2xl;
   }
 
   h3 {
-    @apply text-xl md:text-2xl;
-    line-height: 1.3;
+    @apply text-lg md:text-xl;
   }
 
   p {
-    @apply text-base;
-    color: rgb(115 115 115);
+    @apply text-sm;
+    color: rgb(51 51 51);
+    line-height: 1.6;
   }
 
   a {
     @apply transition-colors duration-200;
+    color: rgb(0 82 158);
   }
 
   a:hover {
-    @apply text-muted-foreground;
-  }
-}
-
-@layer components {
-  .field-card {
-    @apply bg-white border border-border p-8 transition-all duration-300;
-  }
-
-  .field-card:hover {
-    @apply shadow-sm;
-  }
-
-  .field-button {
-    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-normal bg-transparent border border-foreground text-foreground transition-all duration-200;
-  }
-
-  .field-button:hover {
-    @apply bg-foreground text-background;
-  }
-
-  .field-nav-link {
-    @apply text-sm font-normal text-foreground/70 transition-colors duration-200;
-  }
-
-  .field-nav-link:hover,
-  .field-nav-link.active {
-    @apply text-foreground;
+    color: rgb(0 60 120);
   }
 }
 
 .prose {
-  @apply max-w-none text-foreground;
+  @apply max-w-none;
 }
 
 .prose h2 {
-  @apply text-2xl md:text-3xl font-normal mt-12 mb-6;
-  letter-spacing: -0.02em;
+  @apply text-xl md:text-2xl font-semibold mt-6 mb-4;
+  color: rgb(51 51 51);
 }
 
 .prose h3 {
-  @apply text-xl md:text-2xl font-normal mt-8 mb-4;
-  letter-spacing: -0.02em;
+  @apply text-lg md:text-xl font-semibold mt-5 mb-3;
+  color: rgb(51 51 51);
 }
 
 .prose p {
-  @apply mb-6 text-base;
-  color: rgb(115 115 115);
+  @apply mb-4 text-sm;
+  color: rgb(51 51 51);
+  line-height: 1.6;
 }
