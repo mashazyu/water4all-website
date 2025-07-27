@@ -28,15 +28,25 @@
 }
 
 @layer base {
+  html {
+    background-color: #ffffff !important;
+    min-height: 100vh;
+  }
+  
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
+    background-color: #ffffff !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
   }
 
   h1,
