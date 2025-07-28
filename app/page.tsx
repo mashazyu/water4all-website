@@ -26,7 +26,7 @@ export default function Home() {
           <CardContent className="pt-4">
             <p className="text-gray-700 mb-4 leading-relaxed text-sm">{translations.home.subproject1Description}</p>
             <Link
-              href="/subproject-1"
+              href="/map"
               className="inline-flex items-center gap-2 text-blue-700 font-normal hover:text-blue-800 transition-colors text-sm"
             >
               {translations.home.learnMore}
@@ -42,7 +42,7 @@ export default function Home() {
           <CardContent className="pt-4">
             <p className="text-gray-700 mb-4 leading-relaxed text-sm">{translations.home.subproject2Description}</p>
             <Link
-              href="/subproject-2"
+              href="/installation"
               className="inline-flex items-center gap-2 text-blue-700 font-normal hover:text-blue-800 transition-colors text-sm"
             >
               {translations.home.learnMore}

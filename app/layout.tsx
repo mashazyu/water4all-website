@@ -9,9 +9,8 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Berliner Trinkbrunnen",
-  description: "Initiative for hydration and cooling during hot summer in Berlin",
-  generator: 'v0.dev',
+  title: "Wasser für alle",
+  description: "Initiative for hydration during hot summer in Berlin",
   icons: {
     icon: 'favicon.ico',
   },
