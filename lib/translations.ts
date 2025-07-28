@@ -55,6 +55,8 @@ export type Translations = {
   about: {
     title: string
     intro: string
+    programInfo: string
+    programDescription: string
   }
   
   // Privacy page

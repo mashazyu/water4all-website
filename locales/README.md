@@ -45,6 +45,8 @@ Each language file follows the same structure with the following sections:
 ### About Page
 - `title` - About page title
 - `intro` - About page introduction
+- `programInfo` - Program information section title
+- `programDescription` - Description of Club Dialog program participation with link
 
 ### Privacy Page
 - `title` - Privacy page title
@@ -91,6 +93,15 @@ Array of news items, each containing:
 
 All news dates use the format `YYYY-MM` (e.g., "2025-07") and are displayed as month and year only in the interface.
 
-## Privacy Policy Links
+## Links and References
 
-The privacy policy includes a link to Vercel's privacy policy using markdown format: `[Privacy Policy](https://vercel.com/legal/privacy-policy)`. This link is automatically rendered as a clickable link in the privacy page. 
+### Privacy Policy Links
+The privacy policy includes a link to Vercel's privacy policy using markdown format: `[Privacy Policy](https://vercel.com/legal/privacy-policy)`. This link is automatically rendered as a clickable link in the privacy page.
+
+### Club Dialog Program Links
+The about page includes links to Club Dialog programs:
+- **German**: `["Informieren. Nachdenken. Aktivierung"](https://www.club-dialog.de/ina/)`
+- **English**: `["Informieren. Nachdenken. Aktivierung"](https://www.club-dialog.de/ina/)`
+- **Russian**: `["Лаборатория политического участия"](https://www.club-dialog.de/partizipationslabor/)`
+
+These links are automatically rendered as clickable links in the about page. 
