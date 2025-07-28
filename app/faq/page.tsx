@@ -6,6 +6,35 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 export default function FAQ() {
   const { translations } = useLanguage()
 
+  // Function to render markdown-like links
+  const renderTextWithLinks = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+    const parts = text.split(linkRegex)
+    
+    if (parts.length === 1) {
+      return <span>{text}</span>
+    }
+    
+    const elements = []
+    for (let i = 0; i < parts.length; i += 3) {
+      if (parts[i]) elements.push(<span key={`text-${i}`}>{parts[i]}</span>)
+      if (parts[i + 1] && parts[i + 2]) {
+        elements.push(
+          <a 
+            key={`link-${i}`} 
+            href={parts[i + 2]} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            {parts[i + 1]}
+          </a>
+        )
+      }
+    }
+    return <>{elements}</>
+  }
+
   const faqs = [
     {
       question: translations.faq.questions.faq1Question,
@@ -39,7 +68,9 @@ export default function FAQ() {
               <CardTitle className="text-base font-semibold text-gray-800">{faq.question}</CardTitle>
             </CardHeader>
             <CardContent className="pt-4">
-              <p className="text-gray-700 leading-relaxed text-sm">{faq.answer}</p>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                {renderTextWithLinks(faq.answer)}
+              </p>
             </CardContent>
           </Card>
         ))}

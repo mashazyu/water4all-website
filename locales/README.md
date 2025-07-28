@@ -70,8 +70,8 @@ Each language file follows the same structure with the following sections:
 - `title` - FAQ page title
 - `intro` - FAQ page introduction
 - `questions` - FAQ questions and answers:
-  - `faq1Question` / `faq1Answer` - How to find drinking fountains
-  - `faq2Question` / `faq2Answer` - Safety of drinking fountains
+  - `faq1Question` / `faq1Answer` - How to find drinking fountains (includes links to Berliner Wasserbetriebe and Refill Deutschland)
+  - `faq2Question` / `faq2Answer` - Safety of drinking fountains (includes link to Berliner Wasserbetriebe)
   - `faq5Question` / `faq5Answer` - How to support the initiative
   - `faq6Question` / `faq6Answer` - Why focus on Pankow district
 
@@ -104,4 +104,11 @@ The about page includes links to Club Dialog programs:
 - **English**: `["Informieren. Nachdenken. Aktivierung"](https://www.club-dialog.de/ina/)`
 - **Russian**: `["Лаборатория политического участия"](https://www.club-dialog.de/partizipationslabor/)`
 
-These links are automatically rendered as clickable links in the about page. 
+These links are automatically rendered as clickable links in the about page.
+
+### FAQ External Links
+The FAQ page includes links to external resources:
+- **Berliner Wasserbetriebe**: `[Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php)` - Official drinking fountains map and information
+- **Refill Deutschland**: `[Refill Deutschland](https://refill-deutschland.de/)` - Refill station network
+
+These links are automatically rendered as clickable links in the FAQ answers. 
