@@ -60,6 +60,21 @@ export type Translations = {
   // Privacy page
   privacy: {
     title: string
+    intro: string
+    responsibleParty: string
+    responsiblePartyContent: string
+    dataProcessed: string
+    dataProcessedContent: string
+    analyticsService: string
+    analyticsServiceContent: string
+    purposeOfProcessing: string
+    purposeOfProcessingContent: string
+    cookies: string
+    cookiesContent: string
+    yourRights: string
+    yourRightsIntro: string
+    yourRightsList: string
+    contactInfo: string
   }
   
   // FAQ page

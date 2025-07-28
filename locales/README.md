@@ -48,6 +48,21 @@ Each language file follows the same structure with the following sections:
 
 ### Privacy Page
 - `title` - Privacy page title
+- `intro` - Privacy policy introduction
+- `responsibleParty` - Responsible party section title
+- `responsiblePartyContent` - Responsible party contact information
+- `dataProcessed` - Data processed section title
+- `dataProcessedContent` - Description of data processing
+- `analyticsService` - Analytics service section title
+- `analyticsServiceContent` - Vercel analytics service description with link
+- `purposeOfProcessing` - Purpose of processing section title
+- `purposeOfProcessingContent` - List of processing purposes
+- `cookies` - Cookies section title
+- `cookiesContent` - Cookie usage description
+- `yourRights` - Your rights section title
+- `yourRightsIntro` - Rights introduction text
+- `yourRightsList` - List of GDPR rights
+- `contactInfo` - Contact information for privacy inquiries
 
 ### FAQ Page
 - `title` - FAQ page title
@@ -74,4 +89,8 @@ Array of news items, each containing:
 
 ## Date Format
 
-All news dates use the format `YYYY-MM` (e.g., "2025-07") and are displayed as month and year only in the interface. 
+All news dates use the format `YYYY-MM` (e.g., "2025-07") and are displayed as month and year only in the interface.
+
+## Privacy Policy Links
+
+The privacy policy includes a link to Vercel's privacy policy using markdown format: `[Privacy Policy](https://vercel.com/legal/privacy-policy)`. This link is automatically rendered as a clickable link in the privacy page. 

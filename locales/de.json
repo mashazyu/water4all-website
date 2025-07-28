@@ -34,7 +34,22 @@
     "intro": "Erfahren Sie mehr über unser Projekt und das Team hinter der Berliner Trinkbrunnen Initiative."
   },
   "privacy": {
-    "title": "Datenschutzerklärung"
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten innerhalb unseres Online-Angebots gemäß der in Deutschland geltenden Datenschutz-Grundverordnung (DSGVO).",
+    "responsibleParty": "Verantwortliche Stelle",
+    "responsiblePartyContent": "Berliner Trinkbrunnen Initiative\nE-Mail: berlinertrinkbrunnen@gmail.com",
+    "dataProcessed": "Verarbeitete Daten",
+    "dataProcessedContent": "Unsere Website verarbeitet nur begrenzte Nutzungsdaten, die zur Verbesserung unseres Dienstes erforderlich sind, insbesondere:\n\n• Grundlegende Besuchsstatistiken (wie Seitenaufrufe, Zeitstempel)\n• Technische Informationen wie IP-Adressen nur soweit für anonymisierte Besuchsanalysen erforderlich\n\nKeine anderen personenbezogenen Daten wie Namen, E-Mail-Adressen oder Kontaktdaten werden von uns erfasst oder verarbeitet.",
+    "analyticsService": "Nutzung des Analyse-Dienstes (Vercel)",
+    "analyticsServiceContent": "Wir nutzen Vercel, um aggregierte Besuchsstatistiken zu sammeln und zu verstehen, wie Nutzer mit unserer Website interagieren. Vercel verarbeitet grundlegende Besuchsdaten in unserem Auftrag, erfasst oder nutzt jedoch keine personenbezogenen Daten über das hinaus, was für anonymisierte Besuchsstatistiken erforderlich ist. Wir haben sichergestellt, dass Vercel diese Daten gemäß der DSGVO behandelt und Daten nur für Analysezwecke verarbeitet werden.\n\nWeitere Informationen darüber, wie Vercel Daten verarbeitet, finden Sie in ihrer [Datenschutzerklärung](https://vercel.com/legal/privacy-policy).",
+    "purposeOfProcessing": "Zweck der Verarbeitung",
+    "purposeOfProcessingContent": "• Zur Analyse der Website-Nutzung zur Verbesserung unseres Online-Angebots und unserer Dienstleistungen\n• Zur Gewährleistung der ordnungsgemäßen Funktionsweise und Sicherheit der Website",
+    "cookies": "Cookies",
+    "cookiesContent": "Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Es werden keine Tracking- oder Marketing-Cookies verwendet.",
+    "yourRights": "Ihre Rechte",
+    "yourRightsIntro": "Gemäß der DSGVO haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
+    "yourRightsList": "• Recht auf Auskunft über die von uns verarbeiteten Daten\n• Recht auf Berichtigung unrichtiger oder unvollständiger Daten\n• Recht auf Löschung (\"Recht auf Vergessenwerden\") wo anwendbar\n• Recht auf Einschränkung der Verarbeitung unter bestimmten Bedingungen\n• Recht auf Datenübertragbarkeit wo anwendbar\n• Recht auf Beschwerde bei einer Aufsichtsbehörde, wenn Sie glauben, dass Ihre Datenschutzrechte verletzt wurden",
+    "contactInfo": "Wenn Sie eines dieser Rechte ausüben möchten oder Fragen zu Ihren Daten haben, kontaktieren Sie uns bitte unter berlinertrinkbrunnen@gmail.com."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",

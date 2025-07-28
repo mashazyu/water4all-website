@@ -34,7 +34,22 @@
     "intro": "Learn more about our project and the team behind the Berlin Drinking Fountains Initiative."
   },
   "privacy": {
-    "title": "Privacy Policy"
+    "title": "Privacy Policy",
+    "intro": "This privacy policy informs you about the nature, scope, and purpose of the processing of personal data within our online offering in accordance with the General Data Protection Regulation (GDPR) applicable in Germany.",
+    "responsibleParty": "Responsible Party",
+    "responsiblePartyContent": "Berlin Drinking Fountains Initiative\nEmail: berlinertrinkbrunnen@gmail.com",
+    "dataProcessed": "Data Processed",
+    "dataProcessedContent": "Our website processes only limited usage data necessary to improve our service, specifically:\n\n• Basic visit statistics (such as page views, timestamps)\n• Technical information such as IP addresses only as necessary for anonymized visit analytics\n\nNo other personal data such as names, email addresses, or contact details are collected or processed by us.",
+    "analyticsService": "Use of Analytics Service (Vercel)",
+    "analyticsServiceContent": "We use Vercel to collect aggregated visit statistics to understand how users interact with our website. Vercel processes basic visit data on our behalf but does not collect or use personal data beyond what is required for anonymized visit statistics. We have ensured that Vercel handles this data in compliance with GDPR and data is processed only for analytics purposes.\n\nFor more information about how Vercel processes data, please see their [Privacy Policy](https://vercel.com/legal/privacy-policy).",
+    "purposeOfProcessing": "Purpose of Processing",
+    "purposeOfProcessingContent": "• To analyze website usage for improving our online offering and services\n• To ensure proper functioning and security of the website",
+    "cookies": "Cookies",
+    "cookiesContent": "This website only uses technically necessary cookies required for the operation of the website. No tracking or marketing cookies are used.",
+    "yourRights": "Your Rights",
+    "yourRightsIntro": "Under the GDPR, you have the following rights concerning your personal data:",
+    "yourRightsList": "• Right to access information about the data we process\n• Right to correct inaccurate or incomplete data\n• Right to request deletion (\"right to be forgotten\") where applicable\n• Right to restrict processing under certain conditions\n• Right to data portability where applicable\n• Right to lodge a complaint with a supervisory authority if you believe your data protection rights have been violated",
+    "contactInfo": "If you wish to exercise any of these rights or have questions about your data, please contact us at berlinertrinkbrunnen@gmail.com."
   },
   "faq": {
     "title": "Frequently Asked Questions",
