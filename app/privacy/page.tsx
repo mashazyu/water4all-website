@@ -3,97 +3,98 @@
 import { useLanguage } from "@/components/language-provider"
 
 export default function Privacy() {
-  const { language, translations } = useLanguage()
+  const { translations } = useLanguage()
+
+  // Function to render markdown-like links
+  const renderTextWithLinks = (text: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+    const parts = text.split(linkRegex)
+    
+    if (parts.length === 1) {
+      return <span>{text}</span>
+    }
+    
+    const elements = []
+    for (let i = 0; i < parts.length; i += 3) {
+      if (parts[i]) elements.push(<span key={`text-${i}`}>{parts[i]}</span>)
+      if (parts[i + 1] && parts[i + 2]) {
+        elements.push(
+          <a 
+            key={`link-${i}`} 
+            href={parts[i + 2]} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            {parts[i + 1]}
+          </a>
+        )
+      }
+    }
+    return <>{elements}</>
+  }
+
+  // Function to render text with line breaks
+  const renderTextWithLineBreaks = (text: string) => {
+    return text.split('\n').map((line, index) => (
+      <span key={index}>
+        {renderTextWithLinks(line)}
+        {index < text.split('\n').length - 1 && <br />}
+      </span>
+    ))
+  }
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
-      <h1 className="font-semibold text-gray-800">{translations.privacyTitle}</h1>
+      <div className="space-y-2">
+        <h1 className="font-semibold text-gray-800">{translations.privacy.title}</h1>
+        <p className="text-base text-gray-600">{translations.privacy.intro}</p>
+      </div>
 
-      <div className="prose max-w-none">
-        {language === "de" ? (
-          <>
-            <h2>Datenschutzerklärung</h2>
-            <p>
-              Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von
-              personenbezogenen Daten innerhalb unseres Onlineangebotes auf.
-            </p>
+      <div className="space-y-6">
+        {/* Responsible Party */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.responsibleParty}</h2>
+          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.responsiblePartyContent}</p>
+        </section>
 
-            <h3>Verantwortliche</h3>
-            <p>
-              Berliner Trinkbrunnen Initiative
-              <br />
-              E-Mail: berlinertrinkbrunnen@gmail.com
-            </p>
+        {/* Data Processed */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.dataProcessed}</h2>
+          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.dataProcessedContent}</p>
+        </section>
 
-            <h3>Arten der verarbeiteten Daten</h3>
-            <p>
-              - Bestandsdaten (z.B., Namen)
-              <br />- Kontaktdaten (z.B., E-Mail)
-              <br />- Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten)
-              <br />- Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen)
-            </p>
+        {/* Analytics Service */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.analyticsService}</h2>
+          <p className="text-gray-700">
+            {renderTextWithLineBreaks(translations.privacy.analyticsServiceContent)}
+          </p>
+        </section>
 
-            <h3>Zweck der Verarbeitung</h3>
-            <p>
-              - Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte
-              <br />- Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern
-              <br />- Sicherheitsmaßnahmen
-            </p>
+        {/* Purpose of Processing */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.purposeOfProcessing}</h2>
+          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.purposeOfProcessingContent}</p>
+        </section>
 
-            <h3>Cookies</h3>
-            <p>
-              Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb der Website erforderlich
-              sind.
-            </p>
+        {/* Cookies */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.cookies}</h2>
+          <p className="text-gray-700">{translations.privacy.cookiesContent}</p>
+        </section>
 
-            <h3>Ihre Rechte</h3>
-            <p>
-              Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer
-              personenbezogenen Daten.
-            </p>
-          </>
-        ) : (
-          <>
-            <h2>Privacy Policy</h2>
-            <p>
-              This privacy policy informs you about the nature, scope, and purpose of the processing of personal data
-              within our online offering.
-            </p>
+        {/* Your Rights */}
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.yourRights}</h2>
+          <p className="text-gray-700">{translations.privacy.yourRightsIntro}</p>
+          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.yourRightsList}</p>
+        </section>
 
-            <h3>Responsible Party</h3>
-            <p>
-              Berlin Drinking Fountains Initiative
-              <br />
-              Email: berlinertrinkbrunnen@gmail.com
-            </p>
-
-            <h3>Types of Data Processed</h3>
-            <p>
-              - Inventory data (e.g., names)
-              <br />- Contact data (e.g., email)
-              <br />- Usage data (e.g., websites visited, interest in content)
-              <br />- Meta/communication data (e.g., device information, IP addresses)
-            </p>
-
-            <h3>Purpose of Processing</h3>
-            <p>
-              - Provision of the online offering, its functions, and content
-              <br />- Answering contact requests and communicating with users
-              <br />- Security measures
-            </p>
-
-            <h3>Cookies</h3>
-            <p>
-              This website only uses technically necessary cookies that are required for the operation of the website.
-            </p>
-
-            <h3>Your Rights</h3>
-            <p>
-              You have the right to information, correction, deletion, and restriction of the processing of your
-              personal data.
-            </p>
-          </>
-        )}
+        {/* Contact Info */}
+        <section className="space-y-2">
+          <p className="text-gray-700">{translations.privacy.contactInfo}</p>
+        </section>
       </div>
     </div>
   )

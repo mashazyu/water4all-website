@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-start gap-4">
           <div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-1">{translations.contact}</h3>
+            <h3 className="text-sm font-semibold text-gray-800 mb-1">{translations.footer.contact}</h3>
             <p className="text-sm text-gray-600">
               <a href="mailto:berlinertrinkbrunnen@gmail.com" className="hover:text-blue-700 transition-colors">
                 berlinertrinkbrunnen@gmail.com
@@ -21,7 +21,7 @@ export default function Footer() {
 
           <div>
             <Link href="/privacy" className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
-              {translations.privacy}
+              {translations.footer.privacy}
             </Link>
           </div>
         </div>

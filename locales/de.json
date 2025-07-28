@@ -2,7 +2,7 @@
   "navigation": {
     "home": "Startseite",
     "subproject1": "Wasserquellen-Karte",
-    "subproject2": "Trinkbrunnen",
+    "subproject2": "Trinkbrunnen-Installation",
     "about": "Über uns",
     "faq": "FAQ",
     "switchLanguage": "English"
@@ -13,59 +13,102 @@
     "privacy": "Datenschutzerklärung"
   },
   "home": {
-    "projectTitle": "Berliner Trinkbrunnen Initiative",
-    "projectIntro": "Unsere Initiative zielt darauf ab, den Zugang zu kostenlosem Trinkwasser in Berlin zu verbessern und Menschen zu helfen, während heißer Sommertage hydratisiert und kühl zu bleiben. Wir konzentrieren uns darauf, Informationen über bestehende Wasserquellen zugänglicher zu machen und uns für neue Trinkbrunnen im öffentlichen Raum einzusetzen.",
+    "projectTitle": "Wasser für alle",
+    "projectIntro": "In Berlin fehlen zugängliche und praktische Trinkbrunnen, und Informationen über sauberes Trinkwasser sind oft verstreut und wenig bekannt. Diese Initiative hilft dabei, sauberes Trinkwasser für Stadtbewohner zugänglicher zu machen.",
     "subproject1Title": "Wasserquellen-Karte",
-    "subproject1Description": "Wir arbeiten daran, Informationen über kostenlose Trinkwasserquellen in Berlin zugänglicher zu machen, indem wir Refill-Stationen in Google Maps eintragen.",
-    "subproject2Title": "Öffentliche Trinkbrunnen",
+    "subproject1Description": "Wir möchten, dass Informationen über kostenlose Trinkwasserquellen in Berlin zugänglicher werden. Daher haben wir unsere eigene Karte in Google Maps mit einer Liste von Trinkbrunnen erstellt. Sie können diese Karte zu Ihren Google Maps hinzufügen und bei Bedarf nutzen.",
+    "subproject2Title": "Trinkbrunnen-Installation",
     "subproject2Description": "Wir setzen uns für die Installation neuer Trinkbrunnen an stark frequentierten Orten in Pankow ein, um kostenlosen Zugang zu Trinkwasser zu ermöglichen.",
     "learnMore": "Mehr erfahren",
     "latestNews": "Aktuelle Meldungen"
   },
   "subprojects": {
     "subproject1FullDescription": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden – insbesondere auf Plattformen, die täglich genutzt werden, wie Google Maps.",
-    "subproject1Details": "Unser Projekt greift dieses praktische Problem auf, indem wir bestehende Refill-Stationen in Google Maps eintragen und sie für Berliner:innen und Besucher:innen sichtbarer machen. Wir haben bereits Trinkbrunnen der Berliner Wasserbetriebe eingetragen und möchten eine umfassende Übersicht über kostenlose Wasserquellen in Berlin schaffen.",
+    "subproject1Details": "Wir haben bereits Trinkbrunnen der Berliner Wasserbetriebe eingetragen und möchten eine umfassende Übersicht über kostenlose Wasserquellen in Berlin schaffen.",
     "subproject2FullDescription": "Ein weiterer Teil unserer Initiative ist die Förderung der Einrichtung neuer Trinkbrunnen an stark frequentierten Orten in Pankow.",
-    "subproject2Details": "Wir planen, mit diesem Anliegen sowohl die Berliner Wasserbetriebe als auch das Bezirksamt Pankow zu kontaktieren. Wir sind inspiriert von ähnlichen erfolgreichen Projekten in anderen Bezirken wie Neukölln.",
-    "relatedNews": "Verwandte Meldungen"
+    "subproject2Details": "Wir wissen, dass ähnliche Initiativen bereits erfolgreich in anderen Bezirken der Stadt umgesetzt wurden. Wir hoffen, dass wir am Ende unseres Projekts eine Anleitung erstellen können, die den Bewohnern anderer Bezirke hilft, die Installation von Trinkbrunnen in ihren Gebieten zu erreichen.",
+    "relatedNews": "Projektnachrichten"
   },
   "about": {
     "title": "Über unsere Initiative",
-    "intro": "Erfahren Sie mehr über unser Projekt und das Team hinter der Berliner Trinkbrunnen Initiative."
+    "intro": "Wir, Nina und Maria, arbeiten gerade an einem zivilgesellschaftlichen Projekt, das zum Ziel hat, Informationen über kostenlose Trinkwasserquellen in Berlin besser zugänglich zu machen. Dies geschieht im Rahmen unserer Teilnahme am Programm von Club Dialog e.V.",
+    "programInfo": "Über uns und das Projekt \"Informieren. Nachdenken. Aktivierung\"",
+    "programDescription": "Wir nehmen am Projekt [\"Informieren. Nachdenken. Aktivierung\"](https://www.club-dialog.de/ina/) von Club Dialog e. V. teil. Dieses richtet sich an russischsprachige Einwohner*innen Berlins und möchte deren politische und gesellschaftliche Teilhabe stärken. Das Programm behandelt Themen von Demokratie und Zivilgesellschaft bis hin zu praktischen Fähigkeiten, um eigene zivilgesellschaftliche Initiativen umzusetzen."
   },
   "privacy": {
-    "title": "Datenschutzerklärung"
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten innerhalb unseres Online-Angebots gemäß der in Deutschland geltenden Datenschutz-Grundverordnung (DSGVO).",
+    "responsibleParty": "Verantwortliche Stelle",
+    "responsiblePartyContent": "Berliner Trinkbrunnen Initiative\nE-Mail: berlinertrinkbrunnen@gmail.com",
+    "dataProcessed": "Verarbeitete Daten",
+    "dataProcessedContent": "Unsere Website verarbeitet nur begrenzte Nutzungsdaten, die zur Verbesserung unseres Dienstes erforderlich sind, insbesondere:\n\n• Grundlegende Besuchsstatistiken (wie Seitenaufrufe, Zeitstempel)\n• Technische Informationen wie IP-Adressen nur soweit für anonymisierte Besuchsanalysen erforderlich\n\nKeine anderen personenbezogenen Daten wie Namen, E-Mail-Adressen oder Kontaktdaten werden von uns erfasst oder verarbeitet.",
+    "analyticsService": "Nutzung des Analyse-Dienstes (Vercel)",
+    "analyticsServiceContent": "Wir nutzen Vercel, um aggregierte Besuchsstatistiken zu sammeln und zu verstehen, wie Nutzer mit unserer Website interagieren. Vercel verarbeitet grundlegende Besuchsdaten in unserem Auftrag, erfasst oder nutzt jedoch keine personenbezogenen Daten über das hinaus, was für anonymisierte Besuchsstatistiken erforderlich ist. Wir haben sichergestellt, dass Vercel diese Daten gemäß der DSGVO behandelt und Daten nur für Analysezwecke verarbeitet werden.\n\nWeitere Informationen darüber, wie Vercel Daten verarbeitet, finden Sie in ihrer [Datenschutzerklärung](https://vercel.com/legal/privacy-policy).",
+    "purposeOfProcessing": "Zweck der Verarbeitung",
+    "purposeOfProcessingContent": "• Zur Analyse der Website-Nutzung zur Verbesserung unseres Online-Angebots und unserer Dienstleistungen\n• Zur Gewährleistung der ordnungsgemäßen Funktionsweise und Sicherheit der Website",
+    "cookies": "Cookies",
+    "cookiesContent": "Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Es werden keine Tracking- oder Marketing-Cookies verwendet.",
+    "yourRights": "Ihre Rechte",
+    "yourRightsIntro": "Gemäß der DSGVO haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
+    "yourRightsList": "• Recht auf Auskunft über die von uns verarbeiteten Daten\n• Recht auf Berichtigung unrichtiger oder unvollständiger Daten\n• Recht auf Löschung (\"Recht auf Vergessenwerden\") wo anwendbar\n• Recht auf Einschränkung der Verarbeitung unter bestimmten Bedingungen\n• Recht auf Datenübertragbarkeit wo anwendbar\n• Recht auf Beschwerde bei einer Aufsichtsbehörde, wenn Sie glauben, dass Ihre Datenschutzrechte verletzt wurden",
+    "contactInfo": "Wenn Sie eines dieser Rechte ausüben möchten oder Fragen zu Ihren Daten haben, kontaktieren Sie uns bitte unter berlinertrinkbrunnen@gmail.com."
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "intro": "Hier finden Sie Antworten auf häufige Fragen zu unserer Trinkbrunnen-Initiative.",
     "questions": {
       "faq1Question": "Wie finde ich Trinkbrunnen in meiner Nähe?",
-      "faq1Answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der Berliner Wasserbetriebe besuchen oder Apps wie Refill Deutschland nutzen.",
+      "faq1Answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) besuchen oder Apps wie [Refill Deutschland](https://refill-deutschland.de/) nutzen.",
       "faq2Question": "Sind die Trinkbrunnen sicher zu benutzen?",
-      "faq2Answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den Berliner Wasserbetrieben getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards.",
-      "faq3Question": "Wie kann ich einen neuen Standort für einen Trinkbrunnen vorschlagen?",
-      "faq3Answer": "Sie können sich an Ihr örtliches Bezirksamt wenden oder uns direkt kontaktieren. Wir sammeln Vorschläge und leiten sie an die zuständigen Behörden weiter.",
-      "faq4Question": "Was ist eine Refill-Station?",
-      "faq4Answer": "Refill-Stationen sind Geschäfte, Cafés oder öffentliche Gebäude, die Menschen erlauben, ihre Wasserflaschen kostenlos nachzufüllen. Achten Sie auf den Refill-Aufkleber in den Fenstern.",
+      "faq2Answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den [Berliner Wasserbetrieben](https://www.bwb.de/de/trinkbrunnen.php) getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards.",
       "faq5Question": "Wie kann ich Ihre Initiative unterstützen?",
       "faq5Answer": "Sie können helfen, indem Sie Bewusstsein schaffen, neue Brunnenstandorte vorschlagen oder sich freiwillig melden, um uns beim Kartieren bestehender Wasserquellen zu helfen. Kontaktieren Sie uns unter berlinertrinkbrunnen@gmail.com.",
       "faq6Question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
-      "faq6Answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können. Wir planen, basierend auf unseren Erfahrungen auf andere Bezirke zu expandieren."
+      "faq6Answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können."
     }
   },
-  "news": {
-    "newsTitle1": "Kartierungsprojekt gestartet",
-    "newsContent1": "Wir haben begonnen, die ersten Trinkbrunnen in Google Maps einzutragen, um die Sichtbarkeit zu verbessern.",
-    "newsTitle2": "Treffen mit den Berliner Wasserbetrieben",
-    "newsContent2": "Produktive Diskussion über mögliche neue Brunnenstandorte in Pankow.",
-    "newsTitle3": "Community-Workshop",
-    "newsContent3": "Nehmen Sie an unserem Workshop zu Wasserschutz und Zugänglichkeit am 30. Juli teil.",
-    "newsTitle4": "Datenerfassung abgeschlossen",
-    "newsContent4": "Wir haben die Erfassung von Daten zu allen bestehenden Refill-Stationen im Zentrum Berlins abgeschlossen.",
-    "newsTitle5": "Vorschlag eingereicht",
-    "newsContent5": "Unser Vorschlag für fünf neue Trinkbrunnen wurde beim Bezirksamt eingereicht.",
-    "newsTitle6": "Start der Sommerkampagne",
-    "newsContent6": "Unsere Aufklärungskampagne zum Thema Hydration startet nächste Woche."
-  }
+  "news": [
+    {
+      "id": 1,
+      "title": "Projektstart",
+      "content": "Wir haben erkannt, dass wir mehr Trinkbrunnen in Berlin wollen.",
+      "date": "2025-05",
+      "project": [1, 2]
+    },
+    {
+      "id": 2,
+      "title": "Brief an Berliner Wasserbetriebe",
+      "content": "Wir haben einen Brief an die Berliner Wasserbetriebe geschrieben mit einem Vorschlag, bestehende Trinkbrunnen in Google Maps einzutragen und einer Frage zur Möglichkeit der Installation neuer Trinkbrunnen in Pankow. Warten auf Antwort.",
+      "date": "2025-07",
+      "project": [2]
+    },
+    {
+      "id": 3,
+      "title": "Brief an Refill",
+      "content": "Wir haben uns an Refill gewandt und sie gebeten, ihre Erfahrungen mit der Installation von Trinkbrunnen zu teilen. Refill hat auf unsere Anfrage reagiert.",
+      "date": "2025-07",
+      "project": [1, 2]
+    },
+    {
+      "id": 4,
+      "title": "Brief an VBB Pankow",
+      "content": "Wir haben uns an VBB Pankow gewandt mit einer Frage zu Plänen für die Installation von Trinkbrunnen und einem Vorschlag, sie an zwei aktiv genutzten Spielplätzen zu installieren. Warten auf Antwort.",
+      "date": "2025-07",
+      "project": [2]
+    },
+    {
+      "id": 5,
+      "title": "Beta-Version der Karte zum Testen verfügbar",
+      "content": "Wir haben eine Beta-Version der Karte erstellt, auf der Sie Trinkbrunnen in Pankow finden können, und sie mit anderen Projektteilnehmern geteilt.",
+      "date": "2025-07",
+      "project": [1]
+    },
+    {
+      "id": 6,
+      "title": "Website-Launch",
+      "content": "Wir haben eine Website gestartet, auf der Sie Informationen über unser Projekt finden und Ihre Gedanken teilen können.",
+      "date": "2025-08",
+      "project": [1, 2]
+    }
+  ]
 } 

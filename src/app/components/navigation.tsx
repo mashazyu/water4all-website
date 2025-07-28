@@ -30,8 +30,8 @@ export default function Navigation() {
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center gap-2 text-base font-semibold text-blue-700">
-            <span className="hidden sm:inline">Berliner Trinkbrunnen</span>
-            <span className="sm:hidden">BTB</span>
+            <span className="hidden sm:inline">Wasser für alle</span>
+            <span className="sm:hidden">WfA</span>
           </Link>
 
           <nav className="hidden md:flex gap-1">
