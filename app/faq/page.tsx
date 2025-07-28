@@ -8,36 +8,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: translations.faq1Question,
-      answer: translations.faq1Answer,
+      question: translations.faq.questions.faq1Question,
+      answer: translations.faq.questions.faq1Answer,
     },
     {
-      question: translations.faq2Question,
-      answer: translations.faq2Answer,
+      question: translations.faq.questions.faq2Question,
+      answer: translations.faq.questions.faq2Answer,
     },
     {
-      question: translations.faq3Question,
-      answer: translations.faq3Answer,
+      question: translations.faq.questions.faq5Question,
+      answer: translations.faq.questions.faq5Answer,
     },
     {
-      question: translations.faq4Question,
-      answer: translations.faq4Answer,
-    },
-    {
-      question: translations.faq5Question,
-      answer: translations.faq5Answer,
-    },
-    {
-      question: translations.faq6Question,
-      answer: translations.faq6Answer,
+      question: translations.faq.questions.faq6Question,
+      answer: translations.faq.questions.faq6Answer,
     },
   ]
 
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.faqTitle}</h1>
-        <p className="text-base text-gray-600">{translations.faqIntro}</p>
+        <h1 className="font-semibold text-gray-800">{translations.faq.title}</h1>
+        <p className="text-base text-gray-600">{translations.faq.intro}</p>
       </div>
 
       <div className="space-y-4">

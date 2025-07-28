@@ -16,11 +16,11 @@ export default function Navigation() {
   const [open, setOpen] = useState(false)
 
   const routes = [
-    { href: "/", label: translations.home },
-    { href: "/subproject-1", label: translations.subproject1 },
-    { href: "/subproject-2", label: translations.subproject2 },
-    { href: "/faq", label: translations.faq },
-    { href: "/about", label: translations.about },
+    { href: "/", label: translations.navigation.home },
+    { href: "/subproject-1", label: translations.navigation.subproject1 },
+    { href: "/subproject-2", label: translations.navigation.subproject2 },
+    { href: "/faq", label: translations.navigation.faq },
+    { href: "/about", label: translations.navigation.about },
   ]
 
   const isActive = (path: string) => pathname === path
