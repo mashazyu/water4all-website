@@ -11,7 +11,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Berliner Trinkbrunnen",
   description: "Initiative for hydration and cooling during hot summer in Berlin",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: 'favicon.ico',
+  },
 }
 
 export default function RootLayout({
