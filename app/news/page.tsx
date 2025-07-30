@@ -10,7 +10,7 @@ import { type NewsItem } from "@/lib/translations"
 
 export default function NewsPage() {
   const { language, translations } = useLanguage()
-  const [displayCount, setDisplayCount] = useState(10)
+  const [displayCount, setDisplayCount] = useState(9)
   const [isLoading, setIsLoading] = useState(false)
 
   // Get all news data and sort by date (newest first)
@@ -32,7 +32,7 @@ export default function NewsPage() {
     setIsLoading(true)
     // Simulate loading delay
     await new Promise(resolve => setTimeout(resolve, 500))
-    setDisplayCount(prev => Math.min(prev + 10, allNews.length))
+    setDisplayCount(prev => Math.min(prev + 9, allNews.length))
     setIsLoading(false)
   }
 
