@@ -3,6 +3,7 @@
     "home": "Home",
     "subproject1": "Water Sources Map",
     "subproject2": "Drinking Fountains Installation",
+    "news": "News",
     "about": "About",
     "faq": "FAQ",
     "switchLanguage": "Deutsch"
@@ -27,7 +28,8 @@
     "subproject1Details": "We have already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",
     "subproject2FullDescription": "Another part of our initiative is promoting the installation of new drinking fountains in high-traffic areas in Pankow.",
     "subproject2Details": "We know that similar initiatives have already been successfully implemented in other districts of the city. We hope that by the end of our project, we will be able to prepare a guide that will help residents of other districts achieve the installation of drinking fountains in their areas.",
-    "relatedNews": "Project News"
+    "relatedNews": "Project News",
+    "viewAllNews": "View All News"
   },
   "about": {
     "title": "About Our Initiative",
@@ -66,6 +68,12 @@
       "faq6Question": "Why focus on Pankow district?",
       "faq6Answer": "We are starting with Pankow as a pilot project because we live there and can better assess local needs."
     }
+  },
+  "newsPage": {
+    "title": "Latest News",
+    "intro": "Stay updated with the latest developments in our drinking fountains initiative.",
+    "loadMore": "Load More News",
+    "noMoreNews": "No more news to load"
   },
   "news": [
     {

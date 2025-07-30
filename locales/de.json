@@ -3,6 +3,7 @@
     "home": "Startseite",
     "subproject1": "Wasserquellen-Karte",
     "subproject2": "Trinkbrunnen-Installation",
+    "news": "Nachrichten",
     "about": "Über uns",
     "faq": "FAQ",
     "switchLanguage": "English"
@@ -23,11 +24,12 @@
     "latestNews": "Aktuelle Meldungen"
   },
   "subprojects": {
-    "subproject1FullDescription": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden – insbesondere auf Plattformen, die täglich genutzt werden, wie Google Maps.",
-    "subproject1Details": "Wir haben bereits Trinkbrunnen der Berliner Wasserbetriebe eingetragen und möchten eine umfassende Übersicht über kostenlose Wasserquellen in Berlin schaffen.",
-    "subproject2FullDescription": "Ein weiterer Teil unserer Initiative ist die Förderung der Einrichtung neuer Trinkbrunnen an stark frequentierten Orten in Pankow.",
-    "subproject2Details": "Wir wissen, dass ähnliche Initiativen bereits erfolgreich in anderen Bezirken der Stadt umgesetzt wurden. Wir hoffen, dass wir am Ende unseres Projekts eine Anleitung erstellen können, die den Bewohnern anderer Bezirke hilft, die Installation von Trinkbrunnen in ihren Gebieten zu erreichen.",
-    "relatedNews": "Projektnachrichten"
+    "subproject1FullDescription": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden - besonders auf Plattformen, die täglich genutzt werden, wie Google Maps.",
+    "subproject1Details": "Wir haben bereits Trinkbrunnen von Berliner Wasserbetriebe hinzugefügt und streben an, einen umfassenden Überblick über kostenlose Wasserquellen in Berlin zu erstellen.",
+    "subproject2FullDescription": "Ein weiterer Teil unserer Initiative ist die Förderung der Installation neuer Trinkbrunnen in stark frequentierten Bereichen in Pankow.",
+    "subproject2Details": "Wir wissen, dass ähnliche Initiativen bereits erfolgreich in anderen Bezirken der Stadt umgesetzt wurden. Wir hoffen, dass wir bis zum Ende unseres Projekts einen Leitfaden erstellen können, der den Bewohnern anderer Bezirke hilft, die Installation von Trinkbrunnen in ihren Gebieten zu erreichen.",
+    "relatedNews": "Projektnachrichten",
+    "viewAllNews": "Alle Nachrichten anzeigen"
   },
   "about": {
     "title": "Über unsere Initiative",
@@ -66,6 +68,12 @@
       "faq6Question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
       "faq6Answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können."
     }
+  },
+  "newsPage": {
+    "title": "Aktuelle Nachrichten",
+    "intro": "Bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in unserer Trinkbrunnen-Initiative.",
+    "loadMore": "Weitere Nachrichten laden",
+    "noMoreNews": "Keine weiteren Nachrichten verfügbar"
   },
   "news": [
     {

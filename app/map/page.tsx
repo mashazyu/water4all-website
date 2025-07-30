@@ -20,7 +20,7 @@ export default function Subproject1() {
         <div className="border-b border-gray-300 pb-2">
           <h2 className="font-semibold text-gray-800">{translations.subprojects.relatedNews}</h2>
         </div>
-        <NewsGrid projectFilter={1} />
+        <NewsGrid projectFilter={1} limit={3} showViewAllButton={true} />
       </section>
     </div>
   )
