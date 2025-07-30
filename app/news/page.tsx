@@ -101,13 +101,7 @@ export default function NewsPage() {
             </Button>
           </div>
         )}
-        
-        {!hasMoreNews && allNews.length > 0 && (
-          <div className="text-center text-gray-500 py-4">
-            {translations.newsPage.noMoreNews}
-          </div>
-        )}
       </section>
     </div>
   )
-} 
+}

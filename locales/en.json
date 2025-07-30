@@ -72,8 +72,7 @@
   "newsPage": {
     "title": "Latest News",
     "intro": "Stay updated with the latest developments in our drinking fountains initiative.",
-    "loadMore": "Load More News",
-    "noMoreNews": "No more news to load"
+    "loadMore": "Load More News"
   },
   "news": [
     {

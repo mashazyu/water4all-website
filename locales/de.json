@@ -72,8 +72,7 @@
   "newsPage": {
     "title": "Aktuelle Nachrichten",
     "intro": "Bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in unserer Trinkbrunnen-Initiative.",
-    "loadMore": "Weitere Nachrichten laden",
-    "noMoreNews": "Keine weiteren Nachrichten verfügbar"
+    "loadMore": "Weitere Nachrichten laden"
   },
   "news": [
     {

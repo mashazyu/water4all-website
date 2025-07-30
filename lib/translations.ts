@@ -103,7 +103,6 @@ export type Translations = {
     title: string
     intro: string
     loadMore: string
-    noMoreNews: string
   }
 }
 
