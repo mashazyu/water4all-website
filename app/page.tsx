@@ -57,7 +57,7 @@ export default function Home() {
         <div className="border-b border-gray-300 pb-2">
           <h2 className="font-semibold text-gray-800">{translations.home.latestNews}</h2>
         </div>
-        <NewsGrid />
+        <NewsGrid limit={3} showViewAllButton={true} />
       </section>
     </div>
   )

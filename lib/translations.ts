@@ -18,6 +18,7 @@ export type Translations = {
     home: string
     subproject1: string
     subproject2: string
+    news: string
     about: string
     faq: string
     switchLanguage: string
@@ -49,6 +50,7 @@ export type Translations = {
     subproject2FullDescription: string
     subproject2Details: string
     relatedNews: string
+    viewAllNews: string
   }
   
   // About page
@@ -97,6 +99,11 @@ export type Translations = {
   
   // News
   news: NewsItem[]
+  newsPage: {
+    title: string
+    intro: string
+    loadMore: string
+  }
 }
 
 const translations = {

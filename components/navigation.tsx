@@ -18,6 +18,7 @@ export default function Navigation() {
   const routes = [
     { href: "/map", label: translations.navigation.subproject1 },
     { href: "/installation", label: translations.navigation.subproject2 },
+    { href: "/news", label: translations.navigation.news },
     { href: "/faq", label: translations.navigation.faq },
     { href: "/about", label: translations.navigation.about },
   ]
