@@ -91,7 +91,7 @@ export default function NewsGrid({
       
       {showViewAllButton && limit && sortedNews.length > limit && (
         <div className="flex justify-center">
-          <Link href="/news">
+          <Link href={`/${language}/news`}>
             <Button variant="outline" className="flex items-center gap-2">
               {translations.subprojects.viewAllNews}
               <ArrowRight className="h-4 w-4" />

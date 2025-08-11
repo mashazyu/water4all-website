@@ -15,12 +15,15 @@ export default function Navigation() {
   const { language, translations, setLanguage, languages, availableLanguages } = useLanguage()
   const [open, setOpen] = useState(false)
 
+  // Extract current language from pathname
+  const currentLang = pathname.split('/')[1] || 'en'
+  
   const routes = [
-    { href: "/map", label: translations.navigation.subproject1 },
-    { href: "/installation", label: translations.navigation.subproject2 },
-    { href: "/news", label: translations.navigation.news },
-    { href: "/faq", label: translations.navigation.faq },
-    { href: "/about", label: translations.navigation.about },
+    { href: `/${currentLang}/map`, label: translations.navigation.subproject1 },
+    { href: `/${currentLang}/installation`, label: translations.navigation.subproject2 },
+    { href: `/${currentLang}/news`, label: translations.navigation.news },
+    { href: `/${currentLang}/faq`, label: translations.navigation.faq },
+    { href: `/${currentLang}/about`, label: translations.navigation.about },
   ]
 
   const isActive = (path: string) => pathname === path
@@ -29,7 +32,7 @@ export default function Navigation() {
     <header className="bg-white border-b-4 border-blue-700 shadow-sm">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 text-base font-semibold text-blue-700">
+          <Link href={`/${currentLang}`} className="flex items-center gap-2 text-base font-semibold text-blue-700">
             <span className="hidden sm:inline">Wasser für alle</span>
             <span className="sm:hidden">WfA</span>
           </Link>
@@ -66,7 +69,12 @@ export default function Navigation() {
               {availableLanguages.map((lang) => (
                 <DropdownMenuItem
                   key={lang}
-                  onClick={() => setLanguage(lang)}
+                  onClick={() => {
+                    setLanguage(lang)
+                    // Navigate to the same page in the new language
+                    const currentPath = pathname.split('/').slice(2).join('/')
+                    window.location.href = `/${lang}${currentPath ? `/${currentPath}` : ''}`
+                  }}
                   className={`text-sm ${language === lang ? "bg-blue-50 text-blue-700" : ""}`}
                 >
                   {languages[lang].nativeName}

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useLanguage } from "./language-provider"
 
 export default function Footer() {
-  const { translations } = useLanguage()
+  const { translations, language } = useLanguage()
 
   return (
     <footer className="bg-gray-100 border-t border-gray-300">
@@ -20,7 +20,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <Link href="/privacy" className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
+            <Link href={`/${language}/privacy`} className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
               {translations.footer.privacy}
             </Link>
           </div>

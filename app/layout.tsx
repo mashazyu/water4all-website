@@ -2,10 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { LanguageProvider } from "@/components/language-provider"
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
-import GoogleAnalyticsComponent from "@/components/google-analytics"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,12 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="bg-white min-h-screen">
       <body className={`${inter.className} bg-white text-foreground min-h-screen flex flex-col antialiased`}>
-        <GoogleAnalyticsComponent />
-        <LanguageProvider>
-          <Navigation />
-          <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-white">{children}</main>
-          <Footer />
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   )
