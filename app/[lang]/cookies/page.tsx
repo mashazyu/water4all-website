@@ -113,7 +113,7 @@ export default function Cookies() {
 
         {/* Managing Cookies */}
         <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.cookies.managing}</h2>
+          <h2 className="text-lg font-semibold text-gray-800">{translations.cookies.managing.browser}</h2>
           <div className="space-y-3">
             <div>
               <h3 className="font-medium text-gray-800 mb-1">{translations.cookies.managing.browser}</h3>

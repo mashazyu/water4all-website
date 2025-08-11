@@ -28,6 +28,7 @@ export default function CookieConsent() {
     
     // Enable Google Analytics
     if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
       window.gtag("consent", "update", {
         analytics_storage: "granted",
         ad_storage: "denied",
@@ -46,6 +47,7 @@ export default function CookieConsent() {
     
     // Disable Google Analytics
     if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
       window.gtag("consent", "update", {
         analytics_storage: "denied",
         ad_storage: "denied",
@@ -64,6 +66,7 @@ export default function CookieConsent() {
     
     // Disable Google Analytics
     if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
       window.gtag("consent", "update", {
         analytics_storage: "denied",
         ad_storage: "denied",
