@@ -11,9 +11,15 @@
   },
   "footer": {
     "contact": "Contact",
-    "email": "Email",
-    "cookies": "Cookies",
-    "privacy": "Privacy Policy"
+    "email": "Copy email",
+    "cookies": "Cookie Policy",
+    "privacy": "Privacy Policy",
+    "description": "Promoting access to clean drinking water for everyone in Berlin.",
+    "quickLinks": "Quick Links",
+    "map": "Water Map",
+    "installation": "Installation Guide",
+    "news": "News",
+    "rights": "All rights reserved."
   },
   "home": {
     "projectTitle": "Water for All",

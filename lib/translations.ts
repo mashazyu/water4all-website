@@ -31,6 +31,12 @@ export type Translations = {
     email: string
     cookies: string
     privacy: string
+    description: string
+    quickLinks: string
+    map: string
+    installation: string
+    news: string
+    rights: string
   }
   
   // Home page

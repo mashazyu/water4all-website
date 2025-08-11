@@ -11,9 +11,15 @@
   },
   "footer": {
     "contact": "Kontakt",
-    "email": "E-Mail",
-    "cookies": "Cookies",
-    "privacy": "Datenschutzerklärung"
+    "email": "E-Mail kopieren",
+    "cookies": "Cookie-Richtlinie",
+    "privacy": "Datenschutzerklärung",
+    "description": "Förderung des Zugangs zu sauberem Trinkwasser für alle in Berlin.",
+    "quickLinks": "Schnelllinks",
+    "map": "Wasserkarte",
+    "installation": "Installationsanleitung",
+    "news": "Nachrichten",
+    "rights": "Alle Rechte vorbehalten."
   },
   "home": {
     "projectTitle": "Wasser für alle",

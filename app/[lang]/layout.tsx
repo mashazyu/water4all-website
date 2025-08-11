@@ -2,50 +2,44 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "../globals.css"
+import { getTranslations } from "@/lib/translations"
+import { languages, type Language } from "@/lib/translations"
 import { LanguageProvider } from "@/components/language-provider"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import GoogleAnalyticsComponent from "@/components/google-analytics"
 import CookieConsent from "@/components/cookie-consent"
-import { languages, type Language } from "@/lib/translations"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export async function generateStaticParams() {
-  return Object.keys(languages).map((lang) => ({
-    lang,
-  }))
+  return Object.keys(languages).map((lang) => ({ lang }))
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: Language }>
+}) {
   const { lang } = await params
-  
+  const translations = getTranslations(lang)
+
   return {
     title: "Wasser für alle",
     description: "Initiative for hydration during hot summer in Berlin",
-    icons: {
-      icon: '/favicon.ico',
-    },
-    alternates: {
-      languages: {
-        'en': '/en',
-        'de': '/de', 
-        'ru': '/ru',
-      },
-    },
   }
 }
 
 export default async function LangLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode
-  params: Promise<{ lang: string }>
-}>) {
-  const { lang } = await params
-  const language = lang as Language
-  
+  params: { lang: Language }
+}) {
+  const { lang: language } = await params
+  const translations = getTranslations(language)
+
   return (
     <>
       <script
@@ -56,7 +50,7 @@ export default async function LangLayout({
       <GoogleAnalyticsComponent />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
-        <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-white">{children}</main>
+        <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-background">{children}</main>
         <Footer />
         <CookieConsent />
       </LanguageProvider>

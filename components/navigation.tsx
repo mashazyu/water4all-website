@@ -21,10 +21,10 @@ export default function Navigation() {
   // Safety check - don't render until translations are loaded
   if (!translations || !translations.navigation) {
     return (
-      <header className="bg-white border-b-4 border-blue-700 shadow-sm">
+      <header className="bg-background border-b-4 border-primary shadow-sm">
         <div className="container mx-auto flex h-14 items-center justify-between px-4">
           <div className="flex items-center gap-6">
-            <div className="h-6 w-32 bg-gray-200 animate-pulse rounded"></div>
+            <div className="h-6 w-32 bg-muted animate-pulse rounded"></div>
           </div>
         </div>
       </header>
@@ -43,10 +43,10 @@ export default function Navigation() {
   const isActive = (path: string) => pathname === path
 
   return (
-    <header className="bg-white border-b-4 border-blue-700 shadow-sm">
+    <header className="bg-background border-b-4 border-primary shadow-sm">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
-          <Link href={`/${currentLang}`} className="flex items-center gap-2 text-base font-semibold text-blue-700">
+          <Link href={`/${currentLang}`} className="flex items-center gap-2 text-base font-semibold text-primary">
             <span className="hidden sm:inline">Wasser für alle</span>
             <span className="sm:hidden">WfA</span>
           </Link>
@@ -58,8 +58,8 @@ export default function Navigation() {
                 href={route.href}
                 className={`text-sm font-normal transition-colors px-3 py-2 ${
                   isActive(route.href)
-                    ? "text-blue-700 bg-blue-50"
-                    : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+                    ? "text-primary bg-primary/10"
+                    : "text-foreground hover:text-primary hover:bg-muted"
                 }`}
               >
                 {route.label}
@@ -73,7 +73,7 @@ export default function Navigation() {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="text-sm font-normal text-gray-700 hover:text-blue-700 flex items-center gap-1 px-2 h-8"
+                className="text-sm font-normal text-foreground hover:text-primary flex items-center gap-1 px-2 h-8"
               >
                 {language.toUpperCase()}
                 <ChevronDown className="h-3 w-3" />
@@ -89,7 +89,7 @@ export default function Navigation() {
                     const currentPath = pathname.split('/').slice(2).join('/')
                     window.location.href = `/${lang}${currentPath ? `/${currentPath}` : ''}`
                   }}
-                  className={`text-sm ${language === lang ? "bg-blue-50 text-blue-700" : ""}`}
+                  className={`text-sm ${language === lang ? "bg-primary/10 text-primary" : ""}`}
                 >
                   {languages[lang].nativeName}
                 </DropdownMenuItem>
@@ -116,8 +116,8 @@ export default function Navigation() {
                     onClick={() => setOpen(false)}
                     className={`text-sm font-normal transition-colors px-3 py-2 rounded-md ${
                       isActive(route.href)
-                        ? "text-blue-700 bg-blue-50"
-                        : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground hover:text-primary hover:bg-muted"
                     }`}
                   >
                     {route.label}

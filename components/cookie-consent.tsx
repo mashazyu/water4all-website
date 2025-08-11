@@ -91,7 +91,7 @@ export default function CookieConsent() {
           onClick={updateConsent}
           variant="outline"
           size="sm"
-          className="bg-white/90 backdrop-blur-sm border-gray-300 hover:bg-white"
+          className="bg-background/90 backdrop-blur-sm border-border hover:bg-background"
         >
           {translations.cookieConsent.updatePreferences}
         </Button>
@@ -104,25 +104,25 @@ export default function CookieConsent() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex-1">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex-shrink-0 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="flex-1">
-                <h3 className="text-sm font-medium text-gray-900 mb-1">
+                <h3 className="text-sm font-medium text-foreground mb-1">
                   {translations.cookieConsent.title}
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">
+                <p className="text-sm text-muted-foreground mb-3">
                   {translations.cookieConsent.description}
                   <a 
                     href="/cookies" 
-                    className="text-blue-600 hover:text-blue-800 underline ml-1"
+                    className="text-primary hover:text-secondary underline ml-1"
                   >
                     {translations.cookieConsent.learnMore}
                   </a>
@@ -131,7 +131,7 @@ export default function CookieConsent() {
                   <Button
                     onClick={acceptAll}
                     size="sm"
-                    className="bg-blue-600 hover:bg-blue-700 text-white"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     {translations.cookieConsent.acceptAll}
                   </Button>
@@ -139,7 +139,7 @@ export default function CookieConsent() {
                     onClick={acceptEssential}
                     variant="outline"
                     size="sm"
-                    className="border-gray-300 hover:bg-gray-50"
+                    className="border-border hover:bg-muted"
                   >
                     {translations.cookieConsent.essentialOnly}
                   </Button>
@@ -147,7 +147,7 @@ export default function CookieConsent() {
                     onClick={decline}
                     variant="outline"
                     size="sm"
-                    className="border-gray-300 hover:bg-gray-50 text-gray-600"
+                    className="border-border hover:bg-muted text-muted-foreground"
                   >
                     {translations.cookieConsent.decline}
                   </Button>
@@ -159,7 +159,7 @@ export default function CookieConsent() {
             onClick={decline}
             variant="ghost"
             size="sm"
-            className="flex-shrink-0 text-gray-400 hover:text-gray-600"
+            className="flex-shrink-0 text-muted-foreground hover:text-foreground"
           >
             <X className="w-4 h-4" />
           </Button>
