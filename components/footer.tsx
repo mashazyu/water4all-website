@@ -22,7 +22,10 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col gap-2">
+            <Link href={`/${language}/cookies`} className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
+              {translations.footer.cookies}
+            </Link>
             <Link href={`/${language}/privacy`} className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
               {translations.footer.privacy}
             </Link>

@@ -1,16 +1,18 @@
 {
   "navigation": {
     "home": "Home",
-    "subproject1": "Water Sources Map",
-    "subproject2": "Drinking Fountains Installation",
+    "subproject1": "Map",
+    "subproject2": "Installation",
     "news": "News",
     "about": "About",
     "faq": "FAQ",
-    "switchLanguage": "Deutsch"
+    "cookies": "Cookies",
+    "switchLanguage": "Switch Language"
   },
   "footer": {
     "contact": "Contact",
     "email": "Email",
+    "cookies": "Cookies",
     "privacy": "Privacy Policy"
   },
   "home": {
@@ -39,20 +41,20 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "intro": "This privacy policy explains how we collect, use, and protect your personal information when you visit our website.",
+    "intro": "This privacy policy explains how we collect, use, and protect your personal information when you visit our website, in compliance with the General Data Protection Regulation (GDPR) and applicable German data protection laws.",
     "responsibleParty": "Responsible Party",
     "responsiblePartyContent": "Berlin Drinking Fountains Initiative\nEmail: berlinertrinkbrunnen@gmail.com",
     "dataProcessed": "Data Processed",
-    "dataProcessedContent": "When you visit our website, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the site, we collect information about the individual web pages that you view, what websites or search terms referred you to the site, and information about how you interact with the site.\n\nNo other personal data such as names, email addresses, or contact details are collected or processed by us.",
-    "analyticsService": "Analytics Service",
-    "analyticsServiceContent": "We use Google Analytics 4 to analyze website traffic and user behavior. Google Analytics uses cookies and similar technologies to collect information about your use of our website. This information is used to compile reports and to help us improve our website.\n\nGoogle Analytics may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf.\n\nYou can opt out of Google Analytics by installing the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout).",
+    "dataProcessedContent": "When you visit our website, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the site, we collect information about the individual web pages that you view, what websites or search terms referred you to the site, and information about how you interact with the site.\n\nThis data is processed on the legal basis of our legitimate interest (Art. 6(1)(f) GDPR) in improving our website and understanding user behavior to provide better services.\n\nNo other personal data such as names, email addresses, or contact details are collected or processed by us.",
+    "analyticsService": "Google Analytics 4",
+    "analyticsServiceContent": "We use Google Analytics 4, a web analytics service provided by Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Ireland.\n\nGoogle Analytics uses cookies and similar technologies to collect information about your use of our website. This information is typically transferred to and stored on Google servers in the United States. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf.\n\nFor more information about how Google processes data, please see Google's [Privacy Policy](https://policies.google.com/privacy) and [Terms of Service](https://marketingplatform.google.com/about/analytics/terms/).\n\nYou can opt out of Google Analytics by installing the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout) or by adjusting your browser settings to refuse cookies.",
     "purposeOfProcessing": "Purpose of Processing",
-    "purposeOfProcessingContent": "We process your personal data for the following purposes:\n\n• To provide and maintain our website\n• To analyze how our website is used\n• To improve our website and user experience\n• To detect, prevent and address technical issues",
-    "cookies": "Cookies",
-    "cookiesContent": "Our website uses cookies to enhance your browsing experience. Cookies are small text files that are stored on your device when you visit our website. They help us remember your preferences and provide you with a better user experience.\n\nYou can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site.",
-    "yourRights": "Your Rights",
-    "yourRightsIntro": "Under applicable data protection laws, you have certain rights regarding your personal data:",
-    "yourRightsList": "• Right to access: You have the right to request access to your personal data\n• Right to rectification: You have the right to request correction of inaccurate personal data\n• Right to erasure: You have the right to request deletion of your personal data\n• Right to restrict processing: You have the right to request restriction of processing of your personal data\n• Right to data portability: You have the right to request transfer of your personal data\n• Right to object: You have the right to object to processing of your personal data",
+    "purposeOfProcessingContent": "We process your personal data for the following purposes:\n\n• To provide and maintain our website\n• To analyze how our website is used and improve user experience\n• To understand user behavior and preferences\n• To detect, prevent and address technical issues\n• To ensure the security and proper functioning of our website\n\nThis processing is necessary for our legitimate interests in providing and improving our services (Art. 6(1)(f) GDPR).",
+    "cookies": "Cookies and Tracking Technologies",
+    "cookiesContent": "Our website uses cookies and similar tracking technologies to enhance your browsing experience and collect analytics data. Cookies are small text files that are stored on your device when you visit our website.\n\nWe use the following types of cookies:\n• Essential cookies: Required for the basic functionality of the website\n• Analytics cookies: Used by Google Analytics 4 to collect usage statistics\n\nFor detailed information about the specific cookies we use, their purposes, and how to manage them, please see our [Cookie Policy](/cookies).\n\nYou can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site.",
+    "yourRights": "Your Rights Under GDPR",
+    "yourRightsIntro": "Under the General Data Protection Regulation (GDPR), you have the following rights regarding your personal data:",
+    "yourRightsList": "• Right to access (Art. 15 GDPR): You have the right to request access to your personal data\n• Right to rectification (Art. 16 GDPR): You have the right to request correction of inaccurate personal data\n• Right to erasure (Art. 17 GDPR): You have the right to request deletion of your personal data\n• Right to restrict processing (Art. 18 GDPR): You have the right to request restriction of processing of your personal data\n• Right to data portability (Art. 20 GDPR): You have the right to request transfer of your personal data\n• Right to object (Art. 21 GDPR): You have the right to object to processing of your personal data\n• Right to withdraw consent (Art. 7(3) GDPR): Where processing is based on consent, you have the right to withdraw consent at any time\n• Right to lodge a complaint (Art. 77 GDPR): You have the right to lodge a complaint with a supervisory authority",
     "contactInfo": "If you wish to exercise any of these rights or have questions about your data, please contact us at berlinertrinkbrunnen@gmail.com.",
     "email": "Email"
   },
@@ -118,5 +120,58 @@
       "date": "2025-08",
       "project": [1, 2]
     }
-  ]
+  ],
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "This Cookie Policy explains how we use cookies and similar technologies on our website. It provides detailed information about the types of cookies we use, their purposes, and how you can manage them.",
+    "whatAreCookies": "What are Cookies?",
+    "whatAreCookiesContent": "Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They help websites remember information about your visit, such as your preferred language and other settings, which can make your next visit easier and the site more useful to you.",
+    "howWeUse": "How We Use Cookies",
+    "howWeUseContent": "We use cookies to understand how visitors interact with our website, to improve our services, and to provide you with a better user experience. Cookies help us analyze website traffic and user behavior patterns.",
+    "types": "Types of Cookies We Use",
+    "essential": {
+      "title": "Essential Cookies",
+      "description": "These cookies are necessary for the website to function properly. They enable basic functions like page navigation and access to secure areas of the website.",
+      "duration": "These cookies are typically deleted when you close your browser."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+      "duration": "These cookies can remain on your device for up to 2 years.",
+      "provider": "These cookies are set by Google Analytics 4."
+    },
+    "specificCookies": "Specific Cookies We Use",
+    "table": {
+      "name": "Cookie Name",
+      "purpose": "Purpose",
+      "duration": "Duration",
+      "type": "Type",
+      "analytics": "Analytics",
+      "gaPurpose": "Used to distinguish unique users",
+      "gaContainerPurpose": "Used to persist session state",
+      "gidPurpose": "Used to distinguish users",
+      "gatPurpose": "Used to throttle request rate"
+    },
+    "managing": {
+      "browser": "Managing Cookies in Your Browser",
+      "browserContent": "Most web browsers allow you to control cookies through their settings preferences. You can delete existing cookies and set your browser to refuse cookies. However, if you do this, some parts of our website may not function properly.",
+      "gaOptOut": "Google Analytics Opt-out",
+      "gaOptOutContent": "To opt out of Google Analytics tracking across all websites, you can install the Google Analytics Opt-out Browser Add-on:",
+      "gaOptOutLink": "Google Analytics Opt-out Browser Add-on"
+    },
+    "updates": "Updates to This Policy",
+    "updatesContent": "We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the new Cookie Policy on this page.",
+    "contact": "Contact Us",
+    "contactContent": "If you have any questions about our use of cookies, please contact us at berlinertrinkbrunnen@gmail.com."
+  },
+  
+  "cookieConsent": {
+    "title": "We use cookies to enhance your experience",
+    "description": "We use cookies and similar technologies to help personalize content, provide social media features, and analyze our traffic. We also share information about your use of our site with our social media, advertising, and analytics partners.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept All",
+    "essentialOnly": "Essential Only",
+    "decline": "Decline",
+    "updatePreferences": "Cookie Preferences"
+  }
 } 

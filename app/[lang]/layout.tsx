@@ -6,6 +6,7 @@ import { LanguageProvider } from "@/components/language-provider"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import GoogleAnalyticsComponent from "@/components/google-analytics"
+import CookieConsent from "@/components/cookie-consent"
 import { languages, type Language } from "@/lib/translations"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -57,6 +58,7 @@ export default async function LangLayout({
         <Navigation />
         <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-white">{children}</main>
         <Footer />
+        <CookieConsent />
       </LanguageProvider>
     </>
   )

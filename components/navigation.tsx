@@ -24,6 +24,7 @@ export default function Navigation() {
     { href: `/${currentLang}/news`, label: translations.navigation.news },
     { href: `/${currentLang}/faq`, label: translations.navigation.faq },
     { href: `/${currentLang}/about`, label: translations.navigation.about },
+    { href: `/${currentLang}/cookies`, label: translations.navigation.cookies }
   ]
 
   const isActive = (path: string) => pathname === path
