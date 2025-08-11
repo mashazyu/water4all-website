@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/components/language-provider"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import GoogleAnalyticsComponent from "@/components/google-analytics"
-import { languages } from "@/lib/translations"
+import { languages, type Language } from "@/lib/translations"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -43,12 +43,13 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>
 }>) {
   const { lang } = await params
+  const language = lang as Language
   
   return (
-    <html lang={lang} suppressHydrationWarning className="bg-white min-h-screen">
+    <html lang={language} suppressHydrationWarning className="bg-white min-h-screen">
       <body className={`${inter.className} bg-white text-foreground min-h-screen flex flex-col antialiased`}>
         <GoogleAnalyticsComponent />
-        <LanguageProvider initialLanguage={lang}>
+        <LanguageProvider initialLanguage={language}>
           <Navigation />
           <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-white">{children}</main>
           <Footer />
