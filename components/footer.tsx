@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useLanguage } from "./language-provider"
+import AntiSpamEmail from "./anti-spam-email"
 
 export default function Footer() {
   const { translations, language } = useLanguage()
@@ -12,11 +13,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-4">
           <div>
             <h3 className="text-sm font-semibold text-gray-800 mb-1">{translations.footer.contact}</h3>
-            <p className="text-sm text-gray-600">
-              <a href="mailto:berlinertrinkbrunnen@gmail.com" className="hover:text-blue-700 transition-colors">
-                berlinertrinkbrunnen@gmail.com
-              </a>
-            </p>
+            <div className="text-sm text-gray-600">
+              <AntiSpamEmail 
+                email="berlinertrinkbrunnen@gmail.com"
+                className="hover:text-blue-700 transition-colors"
+                copyMessage={translations.footer.email}
+              />
+            </div>
           </div>
 
           <div>

@@ -119,6 +119,40 @@ https://water4all-berlin.vercel.app/en/map?utm_source=google&utm_medium=cpc&utm_
 https://water4all-berlin.vercel.app/de/news?utm_source=newsletter&utm_medium=email&utm_campaign=weekly_update
 ```
 
+### Anti-Spam Email Protection
+
+This website implements comprehensive anti-spam measures to protect email addresses from automated scraping:
+
+#### Protection Methods:
+
+1. **JavaScript Obfuscation**: Email addresses are encoded and split into parts
+2. **CSS Protection**: Text is made unselectable and uses anti-recognition techniques
+3. **Interactive Reveal**: Emails are only shown after user interaction (click/hover)
+4. **Auto-Re-obfuscation**: Emails are re-hidden after 5 seconds
+5. **Honeypot Traps**: Fake email addresses are hidden to catch bots
+6. **Rate Limiting**: Prevents excessive email reveals
+7. **Bot Detection**: Identifies and blocks known bot user agents
+
+#### Usage:
+
+```tsx
+import AntiSpamEmail from '@/components/anti-spam-email'
+
+<AntiSpamEmail 
+  email="your@email.com"
+  showCopyButton={true}
+  copyMessage="Email copied!"
+/>
+```
+
+#### Configuration:
+
+Anti-spam settings are centralized in `lib/anti-spam-config.ts` and can be customized:
+- Obfuscation methods
+- Rate limiting
+- Honeypot addresses
+- Bot detection patterns
+
 ### Privacy Considerations
 - This implementation respects user privacy settings
 - Consider adding a cookie consent banner for GDPR compliance

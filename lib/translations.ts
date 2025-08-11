@@ -79,6 +79,7 @@ export type Translations = {
     yourRightsIntro: string
     yourRightsList: string
     contactInfo: string
+    email: string
   }
   
   // FAQ page
