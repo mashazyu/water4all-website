@@ -39,6 +39,22 @@
     "relatedNews": "Projektnachrichten",
     "viewAllNews": "Alle Nachrichten anzeigen"
   },
+  "map": {
+    "heroTitle": "WASSER BRAUCHEN?",
+    "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
+    "infoSection": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden - besonders auf Plattformen, die täglich genutzt werden, wie Google Maps. Wir haben bereits Trinkbrunnen von Berliner Wasserbetriebe hinzugefügt und streben an, einen umfassenden Überblick über kostenlose Wasserquellen in Berlin zu erstellen.",
+    "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
+    "englishMap": "Englische Karte",
+    "germanMap": "Deutsche Karte",
+    "addEnglishMap": "Englische Karte hinzufügen",
+    "addGermanMap": "Deutsche Karte hinzufügen",
+    "faqSectionTitle": "Häufig gestellte Fragen",
+    "howMapWorks": "Wie funktioniert diese Karte?",
+    "howRemoveMap": "Wie entferne ich diese Karte aus meinen Google Maps?",
+    "moreQuestions": "Weitere Fragen? Schauen Sie sich unsere FAQ an",
+    "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
+    "contactEmail": "Kontakt: berlintrinkbrunnen@gmail.com"
+  },
   "about": {
     "title": "Über unsere Initiative",
     "intro": "Wir, Nina und Maria, arbeiten gerade an einem zivilgesellschaftlichen Projekt, das zum Ziel hat, Informationen über kostenlose Trinkwasserquellen in Berlin besser zugänglich zu machen. Dies geschieht im Rahmen unserer Teilnahme am Programm von Club Dialog e.V.",

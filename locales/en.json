@@ -39,6 +39,22 @@
     "relatedNews": "Project News",
     "viewAllNews": "View All News"
   },
+  "map": {
+    "heroTitle": "NEED WATER?",
+    "heroSubtitle": "Find nearby taps on our map",
+    "infoSection": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps. We have already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",
+    "googleMapsTitle": "Add Water Sources to Your Google Maps",
+    "englishMap": "English Map",
+    "germanMap": "German Map",
+    "addEnglishMap": "Add English Map",
+    "addGermanMap": "Add German Map",
+    "faqSectionTitle": "Frequently Asked Questions",
+    "howMapWorks": "How does this map work?",
+    "howRemoveMap": "How do I remove this map from my Google Maps?",
+    "moreQuestions": "More questions? Take a look at our FAQ",
+    "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
+    "contactEmail": "Contact: berlintrinkbrunnen@gmail.com"
+  },
   "about": {
     "title": "About Our Initiative",
     "intro": "We, Nina and Maria, are currently working on a civil society project that aims to make information about free drinking water sources in Berlin more accessible. This is part of our participation in the Club Dialog e.V. program.",

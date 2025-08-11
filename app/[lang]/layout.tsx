@@ -50,7 +50,7 @@ export default async function LangLayout({
       <GoogleAnalyticsComponent />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
-        <main className="flex-1 container mx-auto px-6 py-16 max-w-6xl bg-background">{children}</main>
+        <main className="flex-1 bg-background">{children}</main>
         <Footer />
         <CookieConsent />
       </LanguageProvider>

@@ -61,6 +61,24 @@ export type Translations = {
     viewAllNews: string
   }
   
+  // Map page
+  map: {
+    heroTitle: string
+    heroSubtitle: string
+    infoSection: string
+    googleMapsTitle: string
+    englishMap: string
+    germanMap: string
+    addEnglishMap: string
+    addGermanMap: string
+    faqSectionTitle: string
+    howMapWorks: string
+    howRemoveMap: string
+    moreQuestions: string
+    footerCopyright: string
+    contactEmail: string
+  }
+  
   // About page
   about: {
     title: string
