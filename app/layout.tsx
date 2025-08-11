@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   title: "Wasser für alle",
   description: "Initiative for hydration during hot summer in Berlin",
   icons: {
-    icon: 'favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
   },
 }
 

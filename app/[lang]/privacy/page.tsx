@@ -25,7 +25,7 @@ export default function Privacy() {
             href={parts[i + 2]} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-primary hover:text-secondary underline"
           >
             {parts[i + 1]}
           </a>
@@ -61,7 +61,7 @@ export default function Privacy() {
           <AntiSpamEmail
             key={`email-${i}`}
             email="berlinertrinkbrunnen@gmail.com"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-primary hover:text-secondary underline"
             copyMessage={translations.privacy.email}
           />
         )

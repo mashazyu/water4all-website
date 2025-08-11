@@ -55,7 +55,7 @@ export default function NewsGrid({
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {displayedNews.map((item) => (
-          <Card key={item.id} className="border border-gray-300 shadow-sm hover:shadow-md transition-shadow">
+          <Card key={item.id} className="border border-border shadow-sm hover:shadow-md transition-shadow">
             <CardHeader className="pb-2">
               <div className="flex justify-between items-start mb-2">
                 <div className="flex flex-wrap gap-1">
@@ -63,10 +63,10 @@ export default function NewsGrid({
                     <Badge
                       key={projectId}
                       variant="outline"
-                      className={`text-xs font-normal px-2 py-1 ${
+                      className={`text-xs font-normal px-2 py-1 rounded-none ${
                         projectId === 1
-                          ? "border-blue-300 text-blue-700 bg-blue-50"
-                          : "border-gray-400 text-gray-700 bg-gray-50"
+                          ? "bg-primary hover:bg-primary/90 text-primary-foreground border-primary"
+                          : "bg-[#9a89b4] hover:bg-[#9a89b4]/90 text-white border-[#9a89b4]"
                       }`}
                     >
                       {projectId === 1 ? translations.navigation.subproject1 : translations.navigation.subproject2}
@@ -74,8 +74,8 @@ export default function NewsGrid({
                   ))}
                 </div>
               </div>
-              <CardTitle className="text-base font-semibold text-gray-800 leading-tight">{item.title}</CardTitle>
-              <div className="flex items-center gap-2 text-xs text-gray-500">
+              <CardTitle className="text-base font-semibold text-foreground leading-tight">{item.title}</CardTitle>
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <Calendar className="h-3 w-3" />
                 <time dateTime={item.date}>
                   {formatDate(item.date)}
@@ -83,7 +83,7 @@ export default function NewsGrid({
               </div>
             </CardHeader>
             <CardContent className="pt-0">
-              <p className="text-gray-700 leading-relaxed text-sm">{item.content}</p>
+              <p className="text-foreground leading-relaxed text-sm">{item.content}</p>
             </CardContent>
           </Card>
         ))}
@@ -92,7 +92,7 @@ export default function NewsGrid({
       {showViewAllButton && limit && sortedNews.length > limit && (
         <div className="flex justify-center">
           <Link href={`/${language}/news`}>
-            <Button variant="outline" className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="border-border hover:bg-muted">
               {translations.subprojects.viewAllNews}
               <ArrowRight className="h-4 w-4" />
             </Button>

@@ -94,7 +94,7 @@ export default function AntiSpamEmail({
   return (
     <div className={`inline-flex items-center gap-2 ${className}`}>
       <span
-        className="cursor-pointer select-none font-mono hover:text-blue-700 transition-colors"
+        className="cursor-pointer select-none font-mono hover:text-primary transition-colors"
         onClick={handleClick}
         onMouseEnter={revealEmail}
         title={isRevealed ? "Click to copy" : "Click to reveal email"}
@@ -110,7 +110,7 @@ export default function AntiSpamEmail({
       {showCopyButton && isRevealed && (
         <button
           onClick={copyToClipboard}
-          className="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors"
+          className="text-xs px-2 py-1 bg-primary/10 text-primary rounded hover:bg-primary/20 transition-colors"
           title="Copy email"
         >
           {copySuccess ? "✓ Copied!" : "Copy"}
