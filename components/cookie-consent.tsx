@@ -26,15 +26,16 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-    // Enable Google Analytics
-    if (typeof window !== "undefined" && window.gtag) {
-      // @ts-ignore - gtag consent API
-      window.gtag("consent", "update", {
-        analytics_storage: "granted",
-        ad_storage: "denied",
-        functionality_storage: "granted",
-        personalization_storage: "denied",
-        security_storage: "granted"
+    // Enable analytics via GTM
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'cookie_consent_update',
+        consent_type: 'all',
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        functionality_storage: 'granted',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
       })
     }
   }
@@ -45,15 +46,16 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-    // Disable Google Analytics
-    if (typeof window !== "undefined" && window.gtag) {
-      // @ts-ignore - gtag consent API
-      window.gtag("consent", "update", {
-        analytics_storage: "denied",
-        ad_storage: "denied",
-        functionality_storage: "granted",
-        personalization_storage: "denied",
-        security_storage: "granted"
+    // Disable analytics via GTM
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'cookie_consent_update',
+        consent_type: 'essential',
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        functionality_storage: 'granted',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
       })
     }
   }
@@ -64,15 +66,16 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-    // Disable Google Analytics
-    if (typeof window !== "undefined" && window.gtag) {
-      // @ts-ignore - gtag consent API
-      window.gtag("consent", "update", {
-        analytics_storage: "denied",
-        ad_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted"
+    // Disable analytics via GTM
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'cookie_consent_update',
+        consent_type: 'declined',
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
       })
     }
   }
