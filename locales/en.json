@@ -25,7 +25,7 @@
     "projectTitle": "Water for All",
     "projectIntro": "Berlin lacks accessible and convenient drinking fountains, and information about clean drinking water is often scattered and little known. This initiative helps make clean drinking water more accessible to city residents.",
     "subproject1Title": "Water Sources Map",
-    "subproject1Description": "Hello again We want information about free drinking water sources in Berlin to be more accessible. Therefore, we created our own map in Google Maps with a list of drinking fountains. You can add this map to your Google Maps and use it when needed.",
+    "subproject1Description": "We want information about free drinking water sources in Berlin to be more accessible. Therefore, we created our own map in Google Maps with a list of drinking fountains. You can add this map to your Google Maps and use it when needed.",
     "subproject2Title": "Drinking Fountains Installation",
     "subproject2Description": "We advocate for the installation of new drinking fountains in high-traffic areas in Pankow to provide free access to drinking water.",
     "learnMore": "Learn More",
@@ -125,35 +125,35 @@
     {
       "id": 1,
       "title": "Project Start",
-      "content": "We realized that we want more drinking fountains in Berlin.",
+      "content": "The initiative was officially kickstarted as the part of the citizen activation program of the Club Dialog e.V. ",
       "date": "2025-05",
       "project": [1, 2]
     },
     {
       "id": 2,
-      "title": "Letter to Berliner Wasserbetriebe",
-      "content": "We wrote a letter to Berliner Wasserbetriebe with a proposal to add existing drinking fountains to Google Maps and a question about the possibility of installing new drinking fountains in Pankow. Waiting for response.",
+      "title": "Engagement with Berliner Wasserbetriebe",
+      "content": "Our suggestion for a fountain location in Pankow has been accepted for consideration and is now on the list for future possible locations.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 3,
-      "title": "Letter to Refill",
-      "content": "We contacted Refill and asked them to share their experience with installing drinking fountains. Refill responded to our request.",
+      "title": "Engagement with Refill",
+      "content": "Exchanged experience and insights about the water sources mapping.",
       "date": "2025-07",
       "project": [1, 2]
     },
     {
       "id": 4,
-      "title": "Letter to VBB Pankow",
-      "content": "We contacted VBB Pankow with a question about plans for installing drinking fountains and a proposal to install them at two actively used playgrounds. Waiting for response.",
+      "title": "Engagement with the Pankow District Council",
+      "content": "The Left Faction agreed to submit a citizen petition to the Pankow District Council for future discussion.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 5,
-      "title": "Beta version of map available for testing",
-      "content": "We created a beta version of the map where you can find drinking fountains in Pankow and shared it with other project participants.",
+      "title": "Water Map Beta Launch",
+      "content": "We released a beta version of our map showing all known public water points in Berlin, and shared it for feedback with other organizations.",
       "date": "2025-07",
       "project": [1]
     },
