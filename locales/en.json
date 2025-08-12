@@ -23,11 +23,11 @@
   },
   "home": {
     "projectTitle": "Water for All",
-    "projectIntro": "Berlin lacks accessible and convenient drinking fountains, and information about clean drinking water is often scattered and little known. This initiative helps make clean drinking water more accessible to city residents.",
-    "subproject1Title": "Water Sources Map",
-    "subproject1Description": "We want information about free drinking water sources in Berlin to be more accessible. Therefore, we created our own map in Google Maps with a list of drinking fountains. You can add this map to your Google Maps and use it when needed.",
-    "subproject2Title": "Drinking Fountains Installation",
-    "subproject2Description": "We advocate for the installation of new drinking fountains in high-traffic areas in Pankow to provide free access to drinking water.",
+    "projectIntro": "Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Information about clean drinking water is scattered and often hard to find. Our project makes it easy for everyone to locate free, safe drinking water across the city.",
+    "subproject1Title": "Water Map",
+    "subproject1Description": "We created a simple Google Map with all known public drinking fountains in Berlin. Save it to your phone and quickly find water whenever you need it.",
+    "subproject2Title": "New Drinking Fountains",
+    "subproject2Description": "We’re working to bring more drinking fountains to quieter neighborhoods outside Berlin’s busy center — areas that currently lack this essential infrastructure — so everyone has easy access to free water.",
     "learnMore": "Learn More",
     "latestNews": "Latest News"
   },
