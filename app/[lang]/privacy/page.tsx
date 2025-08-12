@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
+import AntiSpamEmail from "@/components/anti-spam-email"
 
 export default function Privacy() {
   const { translations } = useLanguage()
@@ -24,7 +25,7 @@ export default function Privacy() {
             href={parts[i + 2]} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-primary hover:text-secondary underline"
           >
             {parts[i + 1]}
           </a>
@@ -44,6 +45,33 @@ export default function Privacy() {
     ))
   }
 
+  // Function to render text with anti-spam email protection
+  const renderTextWithAntiSpamEmail = (text: string) => {
+    const emailRegex = /(berlinertrinkbrunnen@gmail\.com)/g
+    const parts = text.split(emailRegex)
+    
+    if (parts.length === 1) {
+      return <span>{text}</span>
+    }
+    
+    const elements = []
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i] === 'berlinertrinkbrunnen@gmail.com') {
+        elements.push(
+          <AntiSpamEmail
+            key={`email-${i}`}
+            email="berlinertrinkbrunnen@gmail.com"
+            className="text-primary hover:text-secondary underline"
+            copyMessage={translations.privacy.email}
+          />
+        )
+      } else if (parts[i]) {
+        elements.push(<span key={`text-${i}`}>{parts[i]}</span>)
+      }
+    }
+    return <>{elements}</>
+  }
+
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div className="space-y-2">
@@ -55,7 +83,7 @@ export default function Privacy() {
         {/* Responsible Party */}
         <section className="space-y-2">
           <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.responsibleParty}</h2>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.responsiblePartyContent}</p>
+          <div className="text-gray-700 whitespace-pre-line">{renderTextWithAntiSpamEmail(translations.privacy.responsiblePartyContent)}</div>
         </section>
 
         {/* Data Processed */}
@@ -93,7 +121,7 @@ export default function Privacy() {
 
         {/* Contact Info */}
         <section className="space-y-2">
-          <p className="text-gray-700">{translations.privacy.contactInfo}</p>
+          <div className="text-gray-700">{renderTextWithAntiSpamEmail(translations.privacy.contactInfo)}</div>
         </section>
       </div>
     </div>

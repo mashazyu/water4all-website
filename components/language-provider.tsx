@@ -15,15 +15,26 @@ type LanguageContextType = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
+export function LanguageProvider({ 
+  children, 
+  initialLanguage 
+}: { 
+  children: React.ReactNode
+  initialLanguage?: Language 
+}) {
+  const [language, setLanguage] = useState<Language>(initialLanguage || "en")
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && (savedLanguage === "en" || savedLanguage === "de" || savedLanguage === "ru")) {
-      setLanguage(savedLanguage)
+    if (initialLanguage) {
+      setLanguage(initialLanguage)
+      localStorage.setItem("language", initialLanguage)
+    } else {
+      const savedLanguage = localStorage.getItem("language") as Language
+      if (savedLanguage && (savedLanguage === "en" || savedLanguage === "de" || savedLanguage === "ru")) {
+        setLanguage(savedLanguage)
+      }
     }
-  }, [])
+  }, [initialLanguage])
 
   const toggleLanguage = () => {
     const newLanguage = language === "en" ? "de" : language === "de" ? "ru" : "en"

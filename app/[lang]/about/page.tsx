@@ -24,7 +24,7 @@ export default function About() {
             href={parts[i + 2]} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-primary hover:text-secondary underline"
           >
             {parts[i + 1]}
           </a>

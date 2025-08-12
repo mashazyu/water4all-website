@@ -20,6 +20,144 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Google Analytics Setup
+
+This project includes Google Analytics 4 (GA4) integration using Next.js best practices.
+
+### Setup Steps
+
+1. **Get Your Google Analytics Measurement ID**:
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Create a new property or select an existing one
+   - Go to Admin → Data Streams → Web
+   - Copy your Measurement ID (starts with "G-")
+
+2. **Configure Environment Variables**:
+   - Open `.env.local` file
+   - Replace `G-XXXXXXXXXX` with your actual Measurement ID:
+     ```
+     NEXT_PUBLIC_GA_MEASUREMENT_ID=G-ABC123DEF4
+     ```
+
+3. **Restart Your Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+### Usage
+
+- **Automatic Page Views**: Page views are automatically tracked when users navigate between pages
+- **Custom Events**: Use the `useAnalytics` hook to track custom events:
+
+```tsx
+import { useAnalytics } from '@/lib/use-analytics'
+
+function MyComponent() {
+  const { trackEvent } = useAnalytics()
+
+  const handleButtonClick = () => {
+    trackEvent('button_click', 'engagement', 'cta_button', 1)
+  }
+
+  return (
+    <button onClick={handleButtonClick}>
+      Click Me
+    </button>
+  )
+}
+```
+
+### Event Parameters
+- `action`: The action being tracked (e.g., 'button_click', 'form_submit')
+- `category`: The category of the event (e.g., 'engagement', 'ecommerce')
+- `label`: Optional label for additional context
+- `value`: Optional numeric value
+
+### Verification
+1. Open your website in a browser
+2. Open Developer Tools → Network tab
+3. Look for requests to `google-analytics.com`
+4. Check your Google Analytics Real-Time reports
+
+### UTM Parameter Tracking
+
+This implementation automatically captures and tracks UTM parameters:
+
+- **Automatic Capture**: UTM parameters are automatically extracted from URLs
+- **Event Tracking**: UTM data is included in all page views and custom events
+- **Custom Dimensions**: UTM parameters are set as custom dimensions in GA4
+- **Real-time Updates**: UTM tracking works with client-side navigation
+
+#### Supported UTM Parameters:
+All UTM parameters are centrally configured in `lib/utm-config.ts`:
+
+- `utm_source` - Traffic source (e.g., google, facebook, newsletter)
+- `utm_medium` - Marketing medium (e.g., cpc, email, social)
+- `utm_campaign` - Campaign name (e.g., summer2024, product_launch)
+- `utm_term` - Keywords (e.g., drinking_water, berlin)
+- `utm_content` - Content variation (e.g., banner_a, button_b)
+
+**Configuration**: UTM parameters are defined as constants (`UTM_PARAMETERS`) and imported throughout the codebase for consistency and maintainability.
+
+### UTM Configuration Structure
+
+The UTM tracking system is built with a centralized configuration approach:
+
+- **`lib/utm-config.ts`** - Main configuration file with UTM constants, types, and utility functions
+- **`lib/use-analytics.ts`** - Analytics hook that imports and uses UTM configuration
+- **`components/google-analytics.tsx`** - GA4 component with UTM tracking logic
+
+This structure ensures:
+- **Single source of truth** for UTM parameter definitions
+- **Type safety** across the entire codebase
+- **Easy maintenance** - change UTM parameters in one place
+- **Consistent behavior** across all components
+
+#### Example URLs:
+```
+https://water4all-berlin.vercel.app/en/map?utm_source=google&utm_medium=cpc&utm_campaign=summer2024
+https://water4all-berlin.vercel.app/de/news?utm_source=newsletter&utm_medium=email&utm_campaign=weekly_update
+```
+
+### Anti-Spam Email Protection
+
+This website implements comprehensive anti-spam measures to protect email addresses from automated scraping:
+
+#### Protection Methods:
+
+1. **JavaScript Obfuscation**: Email addresses are encoded and split into parts
+2. **CSS Protection**: Text is made unselectable and uses anti-recognition techniques
+3. **Interactive Reveal**: Emails are only shown after user interaction (click/hover)
+4. **Auto-Re-obfuscation**: Emails are re-hidden after 5 seconds
+5. **Honeypot Traps**: Fake email addresses are hidden to catch bots
+6. **Rate Limiting**: Prevents excessive email reveals
+7. **Bot Detection**: Identifies and blocks known bot user agents
+
+#### Usage:
+
+```tsx
+import AntiSpamEmail from '@/components/anti-spam-email'
+
+<AntiSpamEmail 
+  email="your@email.com"
+  showCopyButton={true}
+  copyMessage="Email copied!"
+/>
+```
+
+#### Configuration:
+
+Anti-spam settings are centralized in `lib/anti-spam-config.ts` and can be customized:
+- Obfuscation methods
+- Rate limiting
+- Honeypot addresses
+- Bot detection patterns
+
+### Privacy Considerations
+- This implementation respects user privacy settings
+- Consider adding a cookie consent banner for GDPR compliance
+- The analytics component only loads when the measurement ID is provided
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -21,6 +21,7 @@ export type Translations = {
     news: string
     about: string
     faq: string
+    cookies: string
     switchLanguage: string
   }
   
@@ -28,7 +29,14 @@ export type Translations = {
   footer: {
     contact: string
     email: string
+    cookies: string
     privacy: string
+    description: string
+    quickLinks: string
+    map: string
+    installation: string
+    news: string
+    rights: string
   }
   
   // Home page
@@ -51,6 +59,28 @@ export type Translations = {
     subproject2Details: string
     relatedNews: string
     viewAllNews: string
+  }
+  
+  // Map page
+  map: {
+    heroTexts: Array<{
+      title: string
+      subtitle: string
+    }>
+    heroTitle: string
+    heroSubtitle: string
+    infoSection: string
+    googleMapsTitle: string
+    englishMap: string
+    germanMap: string
+    addEnglishMap: string
+    addGermanMap: string
+    faqSectionTitle: string
+    howMapWorks: string
+    howRemoveMap: string
+    moreQuestions: string
+    footerCopyright: string
+    contactEmail: string
   }
   
   // About page
@@ -79,6 +109,7 @@ export type Translations = {
     yourRightsIntro: string
     yourRightsList: string
     contactInfo: string
+    email: string
   }
   
   // FAQ page
@@ -99,10 +130,68 @@ export type Translations = {
   
   // News
   news: NewsItem[]
+  
+  // News page
   newsPage: {
     title: string
     intro: string
     loadMore: string
+  }
+  
+  // Cookies page
+  cookies: {
+    title: string
+    intro: string
+    whatAreCookies: string
+    whatAreCookiesContent: string
+    howWeUse: string
+    howWeUseContent: string
+    types: string
+    essential: {
+      title: string
+      description: string
+      duration: string
+    }
+    analytics: {
+      title: string
+      description: string
+      duration: string
+      provider: string
+    }
+    specificCookies: string
+    table: {
+      name: string
+      purpose: string
+      duration: string
+      type: string
+      analytics: string
+      gaPurpose: string
+      gaContainerPurpose: string
+      gidPurpose: string
+      gatPurpose: string
+    }
+    managing: {
+      browser: string
+      browserContent: string
+      gaOptOut: string
+      gaOptOutContent: string
+      gaOptOutLink: string
+    }
+    updates: string
+    updatesContent: string
+    contact: string
+    contactContent: string
+  }
+  
+  // Cookie consent banner
+  cookieConsent: {
+    title: string
+    description: string
+    learnMore: string
+    acceptAll: string
+    essentialOnly: string
+    decline: string
+    updatePreferences: string
   }
 }
 

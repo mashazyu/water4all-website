@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { useLanguage } from "./language-provider"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -15,21 +15,37 @@ export default function Navigation() {
   const { language, translations, setLanguage, languages, availableLanguages } = useLanguage()
   const [open, setOpen] = useState(false)
 
+  // Extract current language from pathname
+  const currentLang = pathname.split('/')[1] || 'en'
+  
+  // Safety check - don't render until translations are loaded
+  if (!translations || !translations.navigation) {
+    return (
+      <header className="bg-background border-b-4 border-primary shadow-sm">
+        <div className="container mx-auto flex h-14 items-center justify-between px-4">
+          <div className="flex items-center gap-6">
+            <div className="h-6 w-32 bg-muted animate-pulse rounded"></div>
+          </div>
+        </div>
+      </header>
+    )
+  }
+  
   const routes = [
-    { href: "/map", label: translations.navigation.subproject1 },
-    { href: "/installation", label: translations.navigation.subproject2 },
-    { href: "/news", label: translations.navigation.news },
-    { href: "/faq", label: translations.navigation.faq },
-    { href: "/about", label: translations.navigation.about },
+    { href: `/${currentLang}/map`, label: translations.navigation.subproject1 },
+    { href: `/${currentLang}/installation`, label: translations.navigation.subproject2 },
+    { href: `/${currentLang}/news`, label: translations.navigation.news },
+    { href: `/${currentLang}/faq`, label: translations.navigation.faq },
+    { href: `/${currentLang}/about`, label: translations.navigation.about }
   ]
 
   const isActive = (path: string) => pathname === path
 
   return (
-    <header className="bg-white border-b-4 border-blue-700 shadow-sm">
+    <header className="bg-background border-b-4 border-primary shadow-sm">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2 text-base font-semibold text-blue-700">
+          <Link href={`/${currentLang}`} className="flex items-center gap-2 text-base font-semibold text-primary">
             <span className="hidden sm:inline">Wasser für alle</span>
             <span className="sm:hidden">WfA</span>
           </Link>
@@ -41,8 +57,8 @@ export default function Navigation() {
                 href={route.href}
                 className={`text-sm font-normal transition-colors px-3 py-2 ${
                   isActive(route.href)
-                    ? "text-blue-700 bg-blue-50"
-                    : "text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+                    ? "text-primary bg-primary/10"
+                    : "text-foreground hover:text-primary hover:bg-muted"
                 }`}
               >
                 {route.label}
@@ -56,7 +72,7 @@ export default function Navigation() {
             <DropdownMenuTrigger asChild>
               <Button
                 variant="ghost"
-                className="text-sm font-normal text-gray-700 hover:text-blue-700 flex items-center gap-1 px-2 h-8"
+                className="text-sm font-normal text-foreground hover:text-primary flex items-center gap-1 px-2 h-8"
               >
                 {language.toUpperCase()}
                 <ChevronDown className="h-3 w-3" />
@@ -66,8 +82,13 @@ export default function Navigation() {
               {availableLanguages.map((lang) => (
                 <DropdownMenuItem
                   key={lang}
-                  onClick={() => setLanguage(lang)}
-                  className={`text-sm ${language === lang ? "bg-blue-50 text-blue-700" : ""}`}
+                  onClick={() => {
+                    setLanguage(lang)
+                    // Navigate to the same page in the new language
+                    const currentPath = pathname.split('/').slice(2).join('/')
+                    window.location.href = `/${lang}${currentPath ? `/${currentPath}` : ''}`
+                  }}
+                  className={`text-sm ${language === lang ? "bg-primary/10 text-primary" : ""}`}
                 >
                   {languages[lang].nativeName}
                 </DropdownMenuItem>
@@ -83,14 +104,19 @@ export default function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetHeader>
+                <SheetTitle className="text-left">Menu</SheetTitle>
+              </SheetHeader>
               <nav className="flex flex-col gap-2 mt-6">
                 {routes.map((route) => (
                   <Link
                     key={route.href}
                     href={route.href}
                     onClick={() => setOpen(false)}
-                    className={`text-sm font-normal transition-colors px-3 py-2 ${
-                      isActive(route.href) ? "text-blue-700 bg-blue-50" : "text-gray-700 hover:text-blue-700"
+                    className={`text-sm font-normal transition-colors px-3 py-2 rounded-md ${
+                      isActive(route.href)
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground hover:text-primary hover:bg-muted"
                     }`}
                   >
                     {route.label}

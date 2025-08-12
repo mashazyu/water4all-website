@@ -1,17 +1,25 @@
 {
   "navigation": {
     "home": "Startseite",
-    "subproject1": "Wasserquellen-Karte",
-    "subproject2": "Trinkbrunnen-Installation",
+    "subproject1": "Karte",
+    "subproject2": "Installation",
     "news": "Nachrichten",
     "about": "Über uns",
     "faq": "FAQ",
-    "switchLanguage": "English"
+    "cookies": "Cookies",
+    "switchLanguage": "Sprache wechseln"
   },
   "footer": {
     "contact": "Kontakt",
-    "email": "E-Mail",
-    "privacy": "Datenschutzerklärung"
+    "email": "E-Mail kopieren",
+    "cookies": "Cookie-Richtlinie",
+    "privacy": "Datenschutzerklärung",
+    "description": "Förderung des Zugangs zu sauberem Trinkwasser für alle in Berlin.",
+    "quickLinks": "Schnelllinks",
+    "map": "Wasserkarte",
+    "installation": "Installationsanleitung",
+    "news": "Nachrichten",
+    "rights": "Alle Rechte vorbehalten."
   },
   "home": {
     "projectTitle": "Wasser für alle",
@@ -31,6 +39,44 @@
     "relatedNews": "Projektnachrichten",
     "viewAllNews": "Alle Nachrichten anzeigen"
   },
+  "map": {
+    "heroTexts": [
+      {
+        "title": "Durstig?",
+        "subtitle": "Kostenlose Trinkstellen in deiner Umgebung."
+      },
+      {
+        "title": "THIRST MAP.",
+        "subtitle": "Scan to stay wet with Berlin's public water sources map."
+      },
+      {
+        "title": "NASS GEMACHT.",
+        "subtitle": "Trinkwasserkarte für Berlin."
+      },
+      {
+        "title": "NEED WATER?",
+        "subtitle": "All drinking water fountains. One map."
+      },
+      {
+        "title": "Хочешь пить?",
+        "subtitle": "Карта вкусной воды Берлина"
+      }
+    ],
+    "heroTitle": "WASSER BRAUCHEN?",
+    "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
+    "infoSection": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden - besonders auf Plattformen, die täglich genutzt werden, wie Google Maps. Wir haben bereits Trinkbrunnen von Berliner Wasserbetriebe hinzugefügt und streben an, einen umfassenden Überblick über kostenlose Wasserquellen in Berlin zu erstellen.",
+    "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
+    "englishMap": "Englische Karte",
+    "germanMap": "Deutsche Karte",
+    "addEnglishMap": "Englische Karte hinzufügen",
+    "addGermanMap": "Deutsche Karte hinzufügen",
+    "faqSectionTitle": "Häufig gestellte Fragen",
+    "howMapWorks": "Wie funktioniert diese Karte?",
+    "howRemoveMap": "Wie entferne ich diese Karte aus meinen Google Maps?",
+    "moreQuestions": "Weitere Fragen? Schauen Sie sich unsere FAQ an",
+    "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
+    "contactEmail": "Kontakt: berlintrinkbrunnen@gmail.com"
+  },
   "about": {
     "title": "Über unsere Initiative",
     "intro": "Wir, Nina und Maria, arbeiten gerade an einem zivilgesellschaftlichen Projekt, das zum Ziel hat, Informationen über kostenlose Trinkwasserquellen in Berlin besser zugänglich zu machen. Dies geschieht im Rahmen unserer Teilnahme am Programm von Club Dialog e.V.",
@@ -39,21 +85,22 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "intro": "Diese Datenschutzerklärung informiert Sie über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten innerhalb unseres Online-Angebots gemäß der in Deutschland geltenden Datenschutz-Grundverordnung (DSGVO).",
+    "intro": "Diese Datenschutzerklärung erklärt, wie wir Ihre persönlichen Informationen sammeln, verwenden und schützen, wenn Sie unsere Website besuchen, in Übereinstimmung mit der Datenschutz-Grundverordnung (DSGVO) und den geltenden deutschen Datenschutzgesetzen.",
     "responsibleParty": "Verantwortliche Stelle",
     "responsiblePartyContent": "Berliner Trinkbrunnen Initiative\nE-Mail: berlinertrinkbrunnen@gmail.com",
     "dataProcessed": "Verarbeitete Daten",
-    "dataProcessedContent": "Unsere Website verarbeitet nur begrenzte Nutzungsdaten, die zur Verbesserung unseres Dienstes erforderlich sind, insbesondere:\n\n• Grundlegende Besuchsstatistiken (wie Seitenaufrufe, Zeitstempel)\n• Technische Informationen wie IP-Adressen nur soweit für anonymisierte Besuchsanalysen erforderlich\n\nKeine anderen personenbezogenen Daten wie Namen, E-Mail-Adressen oder Kontaktdaten werden von uns erfasst oder verarbeitet.",
-    "analyticsService": "Nutzung des Analyse-Dienstes (Vercel)",
-    "analyticsServiceContent": "Wir nutzen Vercel, um aggregierte Besuchsstatistiken zu sammeln und zu verstehen, wie Nutzer mit unserer Website interagieren. Vercel verarbeitet grundlegende Besuchsdaten in unserem Auftrag, erfasst oder nutzt jedoch keine personenbezogenen Daten über das hinaus, was für anonymisierte Besuchsstatistiken erforderlich ist. Wir haben sichergestellt, dass Vercel diese Daten gemäß der DSGVO behandelt und Daten nur für Analysezwecke verarbeitet werden.\n\nWeitere Informationen darüber, wie Vercel Daten verarbeitet, finden Sie in ihrer [Datenschutzerklärung](https://vercel.com/legal/privacy-policy).",
+    "dataProcessedContent": "Wenn Sie unsere Website besuchen, sammeln wir automatisch bestimmte Informationen über Ihr Gerät, einschließlich Informationen über Ihren Webbrowser, IP-Adresse, Zeitzone und einige der Cookies, die auf Ihrem Gerät installiert sind. Zusätzlich sammeln wir beim Durchsuchen der Website Informationen über die einzelnen Webseiten, die Sie anzeigen, welche Websites oder Suchbegriffe Sie zur Website geführt haben, und Informationen darüber, wie Sie mit der Website interagieren.\n\nDiese Daten werden auf der Rechtsgrundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der Verbesserung unserer Website und dem Verständnis des Nutzerverhaltens zur Bereitstellung besserer Dienstleistungen verarbeitet.\n\nEs werden keine anderen persönlichen Daten wie Namen, E-Mail-Adressen oder Kontaktdaten von uns gesammelt oder verarbeitet.",
+    "analyticsService": "Google Analytics 4",
+    "analyticsServiceContent": "Wir verwenden Google Analytics 4, einen Webanalysedienst der Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Irland.\n\nGoogle Analytics verwendet Cookies und ähnliche Technologien, um Informationen über Ihre Nutzung unserer Website zu sammeln. Diese Informationen werden typischerweise an Google-Server in den Vereinigten Staaten übertragen und dort gespeichert. Google kann diese Informationen auch an Dritte übertragen, wenn dies gesetzlich vorgeschrieben ist oder wenn solche Dritten die Informationen im Auftrag von Google verarbeiten.\n\nWeitere Informationen darüber, wie Google Daten verarbeitet, finden Sie in Googles [Datenschutzerklärung](https://policies.google.com/privacy) und [Nutzungsbedingungen](https://marketingplatform.google.com/about/analytics/terms/).\n\nSie können Google Analytics deaktivieren, indem Sie das [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout) installieren oder Ihre Browsereinstellungen so anpassen, dass Cookies abgelehnt werden.",
     "purposeOfProcessing": "Zweck der Verarbeitung",
-    "purposeOfProcessingContent": "• Zur Analyse der Website-Nutzung zur Verbesserung unseres Online-Angebots und unserer Dienstleistungen\n• Zur Gewährleistung der ordnungsgemäßen Funktionsweise und Sicherheit der Website",
-    "cookies": "Cookies",
-    "cookiesContent": "Diese Website verwendet nur technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind. Es werden keine Tracking- oder Marketing-Cookies verwendet.",
-    "yourRights": "Ihre Rechte",
-    "yourRightsIntro": "Gemäß der DSGVO haben Sie folgende Rechte bezüglich Ihrer personenbezogenen Daten:",
-    "yourRightsList": "• Recht auf Auskunft über die von uns verarbeiteten Daten\n• Recht auf Berichtigung unrichtiger oder unvollständiger Daten\n• Recht auf Löschung (\"Recht auf Vergessenwerden\") wo anwendbar\n• Recht auf Einschränkung der Verarbeitung unter bestimmten Bedingungen\n• Recht auf Datenübertragbarkeit wo anwendbar\n• Recht auf Beschwerde bei einer Aufsichtsbehörde, wenn Sie glauben, dass Ihre Datenschutzrechte verletzt wurden",
-    "contactInfo": "Wenn Sie eines dieser Rechte ausüben möchten oder Fragen zu Ihren Daten haben, kontaktieren Sie uns bitte unter berlinertrinkbrunnen@gmail.com."
+    "purposeOfProcessingContent": "Wir verarbeiten Ihre persönlichen Daten für folgende Zwecke:\n\n• Bereitstellung und Wartung unserer Website\n• Analyse der Nutzung unserer Website und Verbesserung der Benutzererfahrung\n• Verständnis des Nutzerverhaltens und der Präferenzen\n• Erkennung, Verhinderung und Behebung technischer Probleme\n• Gewährleistung der Sicherheit und ordnungsgemäßen Funktionsweise unserer Website\n\nDiese Verarbeitung ist für unsere berechtigten Interessen an der Bereitstellung und Verbesserung unserer Dienstleistungen erforderlich (Art. 6 Abs. 1 lit. f DSGVO).",
+    "cookies": "Cookies und Tracking-Technologien",
+    "cookiesContent": "Unsere Website verwendet Cookies und ähnliche Tracking-Technologien, um Ihr Browsing-Erlebnis zu verbessern und Analysedaten zu sammeln. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen.\n\nWir verwenden folgende Arten von Cookies:\n• Notwendige Cookies: Erforderlich für die grundlegende Funktionalität der Website\n• Analyse-Cookies: Werden von Google Analytics 4 verwendet, um Nutzungsstatistiken zu sammeln\n\nFür detaillierte Informationen über die von uns verwendeten Cookies, ihre Zwecke und wie Sie sie verwalten können, siehe unsere [Cookie-Richtlinie](/cookies).\n\nSie können Cookies nach Belieben kontrollieren und/oder löschen. Sie können alle Cookies löschen, die sich bereits auf Ihrem Computer befinden, und Sie können die meisten Browser so einstellen, dass sie verhindern, dass Cookies gesetzt werden. Wenn Sie dies tun, müssen Sie jedoch möglicherweise einige Präferenzen jedes Mal manuell anpassen, wenn Sie eine Website besuchen.",
+    "yourRights": "Ihre Rechte nach der DSGVO",
+    "yourRightsIntro": "Nach der Datenschutz-Grundverordnung (DSGVO) haben Sie folgende Rechte bezüglich Ihrer persönlichen Daten:",
+    "yourRightsList": "• Recht auf Auskunft (Art. 15 DSGVO): Sie haben das Recht, Zugang zu Ihren persönlichen Daten zu verlangen\n• Recht auf Berichtigung (Art. 16 DSGVO): Sie haben das Recht, die Berichtigung ungenauer persönlicher Daten zu verlangen\n• Recht auf Löschung (Art. 17 DSGVO): Sie haben das Recht, die Löschung Ihrer persönlichen Daten zu verlangen\n• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO): Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer persönlichen Daten zu verlangen\n• Recht auf Datenübertragbarkeit (Art. 20 DSGVO): Sie haben das Recht, die Übertragung Ihrer persönlichen Daten zu verlangen\n• Widerspruchsrecht (Art. 21 DSGVO): Sie haben das Recht, der Verarbeitung Ihrer persönlichen Daten zu widersprechen\n• Recht auf Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO): Wenn die Verarbeitung auf einer Einwilligung beruht, haben Sie das Recht, die Einwilligung jederzeit zu widerrufen\n• Beschwerderecht (Art. 77 DSGVO): Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzulegen",
+    "contactInfo": "Wenn Sie eines dieser Rechte ausüben möchten oder Fragen zu Ihren Daten haben, kontaktieren Sie uns bitte unter berlinertrinkbrunnen@gmail.com.",
+    "email": "E-Mail"
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
@@ -117,5 +164,58 @@
       "date": "2025-08",
       "project": [1, 2]
     }
-  ]
+  ],
+  "cookies": {
+    "title": "Cookie-Richtlinie",
+    "intro": "Diese Cookie-Richtlinie erklärt, wie wir Cookies und ähnliche Technologien auf unserer Website verwenden. Sie bietet detaillierte Informationen über die Arten von Cookies, die wir verwenden, ihre Zwecke und wie Sie sie verwalten können.",
+    "whatAreCookies": "Was sind Cookies?",
+    "whatAreCookiesContent": "Cookies sind kleine Textdateien, die auf Ihrem Gerät (Computer, Tablet oder Mobiltelefon) gespeichert werden, wenn Sie eine Website besuchen. Sie helfen Websites dabei, Informationen über Ihren Besuch zu merken, wie Ihre bevorzugte Sprache und andere Einstellungen, was Ihren nächsten Besuch erleichtern und die Website nützlicher für Sie machen kann.",
+    "howWeUse": "Wie wir Cookies verwenden",
+    "howWeUseContent": "Wir verwenden Cookies, um zu verstehen, wie Besucher mit unserer Website interagieren, unsere Dienstleistungen zu verbessern und Ihnen eine bessere Benutzererfahrung zu bieten. Cookies helfen uns dabei, den Website-Verkehr und das Nutzerverhalten zu analysieren.",
+    "types": "Arten von Cookies, die wir verwenden",
+    "essential": {
+      "title": "Notwendige Cookies",
+      "description": "Diese Cookies sind für die ordnungsgemäße Funktionsweise der Website erforderlich. Sie ermöglichen grundlegende Funktionen wie Seitennavigation und Zugang zu sicheren Bereichen der Website.",
+      "duration": "Diese Cookies werden normalerweise gelöscht, wenn Sie Ihren Browser schließen."
+    },
+    "analytics": {
+      "title": "Analyse-Cookies",
+      "description": "Diese Cookies helfen uns dabei, zu verstehen, wie Besucher mit unserer Website interagieren, indem sie Informationen anonym sammeln und melden.",
+      "duration": "Diese Cookies können bis zu 2 Jahre auf Ihrem Gerät verbleiben.",
+      "provider": "Diese Cookies werden von Google Analytics 4 gesetzt."
+    },
+    "specificCookies": "Spezifische Cookies, die wir verwenden",
+    "table": {
+      "name": "Cookie-Name",
+      "purpose": "Zweck",
+      "duration": "Dauer",
+      "type": "Typ",
+      "analytics": "Analyse",
+      "gaPurpose": "Wird verwendet, um eindeutige Benutzer zu unterscheiden",
+      "gaContainerPurpose": "Wird verwendet, um den Sitzungsstatus beizubehalten",
+      "gidPurpose": "Wird verwendet, um Benutzer zu unterscheiden",
+      "gatPurpose": "Wird verwendet, um die Anfragegeschwindigkeit zu drosseln"
+    },
+    "managing": {
+      "browser": "Cookies in Ihrem Browser verwalten",
+      "browserContent": "Die meisten Webbrowser ermöglichen es Ihnen, Cookies über ihre Einstellungen zu kontrollieren. Sie können bestehende Cookies löschen und Ihren Browser so einstellen, dass er Cookies ablehnt. Wenn Sie dies tun, funktionieren jedoch möglicherweise einige Teile unserer Website nicht ordnungsgemäß.",
+      "gaOptOut": "Google Analytics Opt-out",
+      "gaOptOutContent": "Um sich von der Google Analytics-Verfolgung auf allen Websites abzumelden, können Sie das Google Analytics Opt-out Browser Add-on installieren:",
+      "gaOptOutLink": "Google Analytics Opt-out Browser Add-on"
+    },
+    "updates": "Aktualisierungen dieser Richtlinie",
+    "updatesContent": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren, um Änderungen in unseren Praktiken oder aus anderen betrieblichen, rechtlichen oder regulatorischen Gründen widerzuspiegeln. Wir werden Sie über wesentliche Änderungen informieren, indem wir die neue Cookie-Richtlinie auf dieser Seite veröffentlichen.",
+    "contact": "Kontaktieren Sie uns",
+    "contactContent": "Wenn Sie Fragen zur Verwendung von Cookies haben, kontaktieren Sie uns bitte unter berlinertrinkbrunnen@gmail.com."
+  },
+  
+  "cookieConsent": {
+    "title": "Wir verwenden Cookies, um Ihr Erlebnis zu verbessern",
+    "description": "Wir verwenden Cookies und ähnliche Technologien, um Inhalte zu personalisieren, Social-Media-Funktionen bereitzustellen und unseren Verkehr zu analysieren. Wir teilen auch Informationen über Ihre Nutzung unserer Website mit unseren Social-Media-, Werbe- und Analysepartnern.",
+    "learnMore": "Mehr erfahren",
+    "acceptAll": "Alle akzeptieren",
+    "essentialOnly": "Nur notwendige",
+    "decline": "Ablehnen",
+    "updatePreferences": "Cookie-Einstellungen"
+  }
 } 

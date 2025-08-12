@@ -1,6 +1,8 @@
 "use client"
 
-import { useToast } from "@/hooks/use-toast"
+import * as React from "react"
+import { useToast } from "./use-toast"
+import { Button } from "@/components/ui/button"
 import {
   Toast,
   ToastClose,
