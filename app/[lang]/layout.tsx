@@ -7,8 +7,8 @@ import { languages, type Language } from "@/lib/translations"
 import { LanguageProvider } from "@/components/language-provider"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import GoogleAnalyticsComponent from "@/components/google-analytics"
 import CookieConsent from "@/components/cookie-consent"
+import GTMUTMTracker from "@/components/gtm-utm-tracker"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -47,7 +47,17 @@ export default async function LangLayout({
           __html: `document.documentElement.lang = '${language}';`
         }}
       />
-      <GoogleAnalyticsComponent />
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe 
+          src="https://www.googletagmanager.com/ns.html?id=GTM-KQG89G74"
+          height="0" 
+          width="0" 
+          style={{display:'none',visibility:'hidden'}}
+        />
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
+      <GTMUTMTracker />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
         <main className="flex-1 bg-background">{children}</main>
