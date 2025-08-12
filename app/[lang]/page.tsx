@@ -5,23 +5,68 @@ import NewsGrid from "@/components/news-grid"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useState, useEffect } from "react"
+
+interface HeroText {
+  title: string
+  subtitle: string
+}
 
 export default function HomePage() {
   const { language, translations } = useLanguage()
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+
+  // Get hero texts from translations
+  const heroTexts: HeroText[] = translations?.map?.heroTexts || []
+
+  // Auto-rotate hero texts every 4 seconds
+  useEffect(() => {
+    if (heroTexts.length <= 1) return
+
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => 
+        prevIndex === heroTexts.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 4000)
+
+    return () => clearInterval(interval)
+  }, [heroTexts.length])
 
   return (
     <div className="h-screen overflow-y-scroll scroll-smooth">
       <div className="snap-y snap-mandatory">
-        {/* Hero Section */}
+        {/* Animated Hero Section */}
         <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen flex items-center justify-center" style={{ backgroundColor: "#1800ad" }}>
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-7xl md:text-9xl font-black mb-8 text-white tracking-tight leading-none">
-              {translations.map.heroTitle}
-            </h1>
-            <div className="w-32 h-1 bg-white mx-auto mb-8"></div>
-            <p className="text-2xl md:text-3xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
-              {translations.map.heroSubtitle}
-            </p>
+            {heroTexts.length > 0 && (
+              <>
+                <h1 className="text-7xl md:text-9xl font-black mb-8 text-white tracking-tight leading-none transition-all duration-1000 ease-in-out">
+                  {heroTexts[currentTextIndex]?.title}
+                </h1>
+                <div className="w-32 h-1 bg-white mx-auto mb-8 transition-all duration-1000 ease-in-out"></div>
+                <p className="text-2xl md:text-3xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto transition-all duration-1000 ease-in-out">
+                  {heroTexts[currentTextIndex]?.subtitle}
+                </p>
+                
+                {/* Text rotation indicator dots */}
+                {heroTexts.length > 1 && (
+                  <div className="flex justify-center gap-2 mt-8">
+                    {heroTexts.map((_: HeroText, index: number) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentTextIndex(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          index === currentTextIndex 
+                            ? 'bg-white scale-125' 
+                            : 'bg-white/40 hover:bg-white/60'
+                        }`}
+                        aria-label={`Go to hero text ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
+            )}
           </div>
         </section>
 
@@ -58,7 +103,7 @@ export default function HomePage() {
                   <CardContent className="space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{translations.home.subproject2Description}</p>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                      <Link href={`/${language}/installation`}>
+                      <Link href={`/${language}/map`}>
                         {translations.home.learnMore}
                       </Link>
                     </Button>

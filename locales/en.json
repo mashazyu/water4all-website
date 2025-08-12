@@ -40,6 +40,28 @@
     "viewAllNews": "View All News"
   },
   "map": {
+    "heroTexts": [
+      {
+        "title": "Durstig?",
+        "subtitle": "Kostenlose Trinkstellen in deiner Umgebung."
+      },
+      {
+        "title": "THIRST MAP.",
+        "subtitle": "Scan to stay wet with Berlin's public water sources map."
+      },
+      {
+        "title": "NASS GEMACHT.",
+        "subtitle": "Trinkwasserkarte für Berlin."
+      },
+      {
+        "title": "NEED WATER?",
+        "subtitle": "All drinking water fountains. One map."
+      },
+      {
+        "title": "Хочешь пить?",
+        "subtitle": "Карта вкусной воды Берлина"
+      }
+    ],
     "heroTitle": "NEED WATER?",
     "heroSubtitle": "Find nearby taps on our map",
     "infoSection": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps. We have already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",

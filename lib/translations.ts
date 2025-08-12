@@ -63,6 +63,10 @@ export type Translations = {
   
   // Map page
   map: {
+    heroTexts: Array<{
+      title: string
+      subtitle: string
+    }>
     heroTitle: string
     heroSubtitle: string
     infoSection: string
