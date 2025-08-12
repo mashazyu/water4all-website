@@ -27,16 +27,18 @@ export default function GoogleAnalyticsComponent() {
           security_storage: "granted"
         })
         
-        // Initialize with UTM parameter mapping
+        // Initialize with UTM parameter mapping and custom dimensions
         window.gtag('config', measurementId, {
           send_page_view: true,
-          custom_map: {
-            custom_dimension1: 'utm_source',
-            custom_dimension2: 'utm_medium',
-            custom_dimension3: 'utm_campaign',
-            custom_dimension4: 'utm_term',
-            custom_dimension5: 'utm_content'
-          }
+          // GA4 specific configuration for UTM tracking
+          allow_google_signals: true,
+          allow_ad_personalization_signals: false,
+          // Custom parameters for UTM tracking
+          custom_parameter_utm_source: '',
+          custom_parameter_utm_medium: '',
+          custom_parameter_utm_campaign: '',
+          custom_parameter_utm_term: '',
+          custom_parameter_utm_content: ''
         })
       }
     } else if (consent === "essential" || consent === "declined") {
@@ -81,30 +83,106 @@ export default function GoogleAnalyticsComponent() {
         }
       })
       
+      // Debug logging
+      if (Object.keys(utmParams).length > 0) {
+        console.log('🔍 UTM Parameters found in URL:', utmParams)
+      }
+      
       return utmParams
     }
 
-    // Function to set UTM parameters in gtag
+    // Function to set UTM parameters in gtag and track them
     const setUTMParams = (utmParams: UTMParams) => {
       if (typeof window === "undefined" || !window.gtag) return
       
-      Object.entries(utmParams).forEach(([key, value]) => {
-        window.gtag('set', key, value)
-      })
+      if (Object.keys(utmParams).length > 0) {
+        console.log('📊 Sending UTM parameters to Google Analytics:', utmParams)
+        
+        // Store UTM parameters in localStorage for persistence
+        localStorage.setItem('utm_params', JSON.stringify(utmParams))
+        
+        // Method 1: Send UTM parameters as a custom event
+        window.gtag('event', 'utm_parameters_received', {
+          utm_source: utmParams.utm_source || '',
+          utm_medium: utmParams.utm_medium || '',
+          utm_campaign: utmParams.utm_campaign || '',
+          utm_term: utmParams.utm_term || '',
+          utm_content: utmParams.utm_content || ''
+        })
+        
+        // Method 2: Send as page_view event with UTM parameters
+        window.gtag('event', 'page_view', {
+          page_location: window.location.href,
+          page_title: document.title,
+          utm_source: utmParams.utm_source || '',
+          utm_medium: utmParams.utm_medium || '',
+          utm_campaign: utmParams.utm_campaign || '',
+          utm_term: utmParams.utm_term || '',
+          utm_content: utmParams.utm_content || ''
+        })
+        
+        // Method 3: Set as user properties
+        window.gtag('set', 'user_properties', {
+          utm_source: utmParams.utm_source || '',
+          utm_medium: utmParams.utm_medium || '',
+          utm_campaign: utmParams.utm_campaign || '',
+          utm_term: utmParams.utm_term || '',
+          utm_content: utmParams.utm_content || ''
+        })
+        
+        // Method 4: Send as a standard GA4 event that will definitely show up
+        window.gtag('event', 'select_content', {
+          content_type: 'utm_tracking',
+          item_id: 'utm_source_' + (utmParams.utm_source || 'none'),
+          utm_source: utmParams.utm_source || '',
+          utm_medium: utmParams.utm_medium || '',
+          utm_campaign: utmParams.utm_campaign || '',
+          utm_term: utmParams.utm_term || '',
+          utm_content: utmParams.utm_content || ''
+        })
+        
+        console.log('✅ UTM parameters sent to GA4 via multiple methods')
+        
+        // Debug: Test if gtag is working
+        setTimeout(() => {
+          console.log('🔍 Testing GA4 connection...')
+          if (typeof window !== "undefined" && window.gtag) {
+            // Send a test event to verify GA4 is working
+            window.gtag('event', 'test_utm_tracking', {
+              event_category: 'debug',
+              event_label: 'testing_utm_tracking',
+              utm_source: utmParams.utm_source || 'test',
+              timestamp: Date.now()
+            })
+            console.log('🧪 Test event sent to GA4')
+          } else {
+            console.error('❌ gtag not available')
+          }
+        }, 1000)
+      }
     }
 
     // Check for UTM parameters on page load
     const utmParams = extractUTMParamsFromURL()
     if (Object.keys(utmParams).length > 0) {
-      setUTMParams(utmParams)
-      
-      // Track UTM parameter capture
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag('event', 'utm_capture', {
-          event_category: 'engagement',
-          event_label: 'utm_parameters_captured',
-          ...utmParams
-        })
+      // Wait for GA4 to be fully initialized before sending UTM parameters
+      setTimeout(() => {
+        setUTMParams(utmParams)
+      }, 2000) // Wait 2 seconds for GA4 to initialize
+    } else {
+      // Check if we have stored UTM parameters from previous page
+      const storedUTMParams = localStorage.getItem('utm_params')
+      if (storedUTMParams) {
+        try {
+          const parsed = JSON.parse(storedUTMParams)
+          if (Object.keys(parsed).length > 0) {
+            setTimeout(() => {
+              setUTMParams(parsed)
+            }, 2000)
+          }
+        } catch (e) {
+          console.warn('Failed to parse stored UTM parameters:', e)
+        }
       }
     }
 
