@@ -11,19 +11,6 @@ export default function MapPage() {
   return (
     <div className="h-screen overflow-y-scroll scroll-smooth">
       <div className="snap-y snap-mandatory">
-        {/* Hero Section */}
-        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen flex items-center justify-center" style={{ backgroundColor: "#1800ad" }}>
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-7xl md:text-9xl font-black mb-8 text-white tracking-tight leading-none">
-              {translations.map.heroTitle}
-            </h1>
-            <div className="w-32 h-1 bg-white mx-auto mb-8"></div>
-            <p className="text-2xl md:text-3xl text-white/80 font-light leading-relaxed max-w-2xl mx-auto">
-              {translations.map.heroSubtitle}
-            </p>
-          </div>
-        </section>
-
         {/* Information Section */}
         <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen flex items-center justify-center bg-white">
           <div className="max-w-4xl mx-auto px-4">
