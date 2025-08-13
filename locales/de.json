@@ -125,41 +125,41 @@
     {
       "id": 1,
       "title": "Projektstart",
-      "content": "Wir haben erkannt, dass wir mehr Trinkbrunnen in Berlin wollen.",
+      "content": "Die Initiative wurde offiziell als Teil des Aktivierungsprogramms für Bürgerbeteiligung von Club Dialog e.V. gestartet",
       "date": "2025-05",
       "project": [1, 2]
     },
     {
       "id": 2,
-      "title": "Brief an Berliner Wasserbetriebe",
-      "content": "Wir haben einen Brief an die Berliner Wasserbetriebe geschrieben mit einem Vorschlag, bestehende Trinkbrunnen in Google Maps einzutragen und einer Frage zur Möglichkeit der Installation neuer Trinkbrunnen in Pankow. Warten auf Antwort.",
+      "title": "Austausch mit den Berliner Wasserbetrieben",
+      "content": "Unser Vorschlag für einen Trinkbrunnenstandort in Pankow wurde zur zukünftigen Prüfung in die Liste möglicher Standorte aufgenommen.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 3,
-      "title": "Brief an Refill",
-      "content": "Wir haben uns an Refill gewandt und sie gebeten, ihre Erfahrungen mit der Installation von Trinkbrunnen zu teilen. Refill hat auf unsere Anfrage reagiert.",
+      "title": "Austausch mit Refill",
+      "content": "Erfahrung und Erkenntnisse zur Kartierung öffentlicher Wasserquellen ausgetauscht.",
       "date": "2025-07",
       "project": [1, 2]
     },
     {
       "id": 4,
-      "title": "Brief an VBB Pankow",
-      "content": "Wir haben uns an VBB Pankow gewandt mit einer Frage zu Plänen für die Installation von Trinkbrunnen und einem Vorschlag, sie an zwei aktiv genutzten Spielplätzen zu installieren. Warten auf Antwort.",
+      "title": "Austausch mit der BVV Pankow",
+      "content": "Die Linksfraktion hat zugestimmt, einen Bürgerantrag in der Bezirksverordnetenversammlung Pankow zur zukünftigen Diskussion einzubringen.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 5,
-      "title": "Beta-Version der Karte zum Testen verfügbar",
-      "content": "Wir haben eine Beta-Version der Karte erstellt, auf der Sie Trinkbrunnen in Pankow finden können, und sie mit anderen Projektteilnehmern geteilt.",
+      "title": "Wasserkarte – Beta-Version",
+      "content": "Wir haben eine erste Version unserer Karte mit allen bekannten Trinkwasserstellen in Pankow veröffentlicht und zum Testen mit anderen Organisationen geteilt.",
       "date": "2025-07",
       "project": [1]
     },
     {
       "id": 6,
-      "title": "Website-Launch",
+      "title": "Website Launch",
       "content": "Wir haben eine Website gestartet, auf der Sie Informationen über unser Projekt finden und Ihre Gedanken teilen können.",
       "date": "2025-08",
       "project": [1, 2]
