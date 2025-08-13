@@ -23,11 +23,11 @@
   },
   "home": {
     "projectTitle": "Wasser für alle",
-    "projectIntro": "In Berlin fehlen zugängliche und praktische Trinkbrunnen, und Informationen über sauberes Trinkwasser sind oft verstreut und wenig bekannt. Diese Initiative hilft dabei, sauberes Trinkwasser für Stadtbewohner zugänglicher zu machen.",
-    "subproject1Title": "Wasserquellen-Karte",
-    "subproject1Description": "Wir möchten, dass Informationen über kostenlose Trinkwasserquellen in Berlin zugänglicher werden. Daher haben wir unsere eigene Karte in Google Maps mit einer Liste von Trinkbrunnen erstellt. Sie können diese Karte zu Ihren Google Maps hinzufügen und bei Bedarf nutzen.",
+    "projectIntro": "In Berlin gibt es über 220 öffentliche Trinkbrunnen – aber weniger als 40 sind auf Google Maps zu finden. Die Infos sind oft verstreut und schwer zu finden. Unser Projekt macht es einfach, überall in der Stadt sauberes, kostenloses Trinkwasser zu finden.",
+    "subproject1Title": "Wasserkarte",
+    "subproject1Description": "Wir haben eine einfache Google Map mit allen bekannten öffentlichen Trinkbrunnen und anderen Orten mit öffentlich zugänglichem Wasser in Berlin erstellt. Speichere sie auf deinem Handy und finde jederzeit schnell Wasser.",
     "subproject2Title": "Trinkbrunnen-Installation",
-    "subproject2Description": "Wir setzen uns für die Installation neuer Trinkbrunnen an stark frequentierten Orten in Pankow ein, um kostenlosen Zugang zu Trinkwasser zu ermöglichen.",
+    "subproject2Description": "Wir wollen die Aufstellung von mehr Trinkbrunnen in Kiezen außerhalb des belebten Zentrums fördern – in Gegenden, in denen es bisher nur wenige gibt. So hat jede*r einfachen Zugang zu kostenlosem Wasser.",
     "learnMore": "Mehr erfahren",
     "latestNews": "Aktuelle Meldungen"
   },
