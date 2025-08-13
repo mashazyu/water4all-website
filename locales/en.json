@@ -78,10 +78,10 @@
     "contactEmail": "Contact: berlintrinkbrunnen@gmail.com"
   },
   "about": {
-    "title": "About Our Initiative",
+    "title": "About Us",
     "intro": "We, Nina and Maria, are currently working on a civil society project that aims to make information about free drinking water sources in Berlin more accessible. This is part of our participation in the Club Dialog e.V. program.",
-    "programInfo": "About us and the \"Informieren. Nachdenken. Aktivierung\" project",
-    "programDescription": "We are participating in the [\"Informieren. Nachdenken. Aktivierung\"](https://www.club-dialog.de/ina/) project by Club Dialog e.V. This program is aimed at Russian-speaking residents of Berlin and seeks to strengthen their political and social participation. The program covers topics from democracy and civil society to practical skills for implementing one's own civil society initiatives."
+    "programInfo": "About our Program",
+    "programDescription": "We are participating in the [\"Informieren. Nachdenken. Aktivierung\"](https://www.club-dialog.de/ina/) project by Club Dialog e.V. The program supports Berlin residents with a migration background in strengthening their political and social participation. It covers topics ranging from democracy and civil society to practical skills for developing and implementing community infrastructure projects."
   },
   "privacy": {
     "title": "Privacy Policy",
