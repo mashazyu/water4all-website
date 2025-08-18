@@ -54,7 +54,7 @@ export function Hero({
       return (
       <section 
         className={cn(
-          "relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-[60vh] flex items-center justify-center",
+          "relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex items-center justify-center",
           background,
           className
         )}

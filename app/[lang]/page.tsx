@@ -37,12 +37,12 @@ export default function HomePage() {
         <Hero 
           heroTexts={heroTexts}
           animated={true}
-          className="snap-start h-screen"
+          className="snap-start min-h-screen py-8 md:py-12 lg:py-16"
           style={{ backgroundColor: "#1800ad" }}
         />
 
         {/* Project Overview Section */}
-        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen flex items-center justify-center bg-white">
+        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center bg-white py-8 md:py-12 lg:py-16">
           <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
             <div className="space-y-8">
               <div className="space-y-4">
@@ -86,7 +86,7 @@ export default function HomePage() {
         </section>
 
         {/* Latest News Section */}
-        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-screen flex items-center justify-center bg-muted">
+        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center bg-muted py-8 md:py-12 lg:py-16">
           <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
             <div className="space-y-6">
               <div className="border-b border-border pb-2">
