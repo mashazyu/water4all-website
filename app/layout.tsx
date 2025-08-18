@@ -52,7 +52,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} ${poppins.variable} bg-white text-foreground min-h-screen flex flex-col antialiased`}>
+      <body className={`${inter.className} ${poppins.variable} bg-white text-foreground antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 

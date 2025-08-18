@@ -53,11 +53,11 @@ export default function HomePage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <Card className="hover:shadow-lg transition-shadow border border-border">
+                <Card className="hover:shadow-lg transition-shadow border border-border flex flex-col h-full">
                   <CardHeader>
                     <CardTitle className="text-2xl font-semibold text-foreground">{translations.home.subproject1Title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="flex flex-col justify-between flex-1 space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{translations.home.subproject1Description}</p>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
                       <Link href={`/${language}/map`}>
@@ -67,11 +67,11 @@ export default function HomePage() {
                   </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-shadow border border-border">
+                <Card className="hover:shadow-lg transition-shadow border border-border flex flex-col h-full">
                   <CardHeader>
                     <CardTitle className="text-2xl font-semibold text-foreground">{translations.home.subproject2Title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent className="flex flex-col justify-between flex-1 space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{translations.home.subproject2Description}</p>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
                       <Link href={`/${language}/map`}>

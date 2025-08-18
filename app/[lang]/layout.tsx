@@ -50,7 +50,7 @@ export default async function LangLayout({
       <GTMUTMTracker />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
-        <main className="flex-1 bg-background">{children}</main>
+        <main className="bg-background">{children}</main>
         <Footer />
         <CookieConsent />
       </LanguageProvider>
