@@ -46,14 +46,20 @@ export default function NewsPage() {
   }
 
   return (
-    <div className="space-y-8">
-      <section className="space-y-4">
-        <h1 className="font-semibold text-foreground">{translations.newsPage.title}</h1>
-        <p className="text-base text-muted-foreground max-w-4xl leading-relaxed">{translations.newsPage.intro}</p>
-      </section>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Header Section */}
+          <section className="space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.newsPage.title}</h1>
+              <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">{translations.newsPage.intro}</p>
+            </div>
+          </section>
 
-      <section className="space-y-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* News Grid Section */}
+          <section className="space-y-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {displayedNews.map((item) => (
             <Card key={item.id} className="border border-border shadow-sm hover:shadow-md transition-shadow">
               <CardHeader className="pb-2">
@@ -87,21 +93,23 @@ export default function NewsPage() {
               </CardContent>
             </Card>
           ))}
+            </div>
+            
+            {hasMoreNews && (
+              <div className="flex justify-center">
+                <Button 
+                  onClick={handleLoadMore} 
+                  disabled={isLoading}
+                  className="flex items-center gap-2"
+                >
+                  {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+                  {translations.newsPage.loadMore}
+                </Button>
+              </div>
+            )}
+          </section>
         </div>
-        
-        {hasMoreNews && (
-          <div className="flex justify-center">
-            <Button 
-              onClick={handleLoadMore} 
-              disabled={isLoading}
-              className="flex items-center gap-2"
-            >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              {translations.newsPage.loadMore}
-            </Button>
-          </div>
-        )}
-      </section>
+      </div>
     </div>
   )
 }
