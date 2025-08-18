@@ -55,25 +55,33 @@ export default function FAQ() {
   ]
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.faq.title}</h1>
-        <p className="text-base text-gray-600">{translations.faq.intro}</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Header Section */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.faq.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.faq.intro}</p>
+            </div>
+          </div>
 
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <Card key={index} className="border border-gray-300 shadow-sm">
-            <CardHeader className="bg-gray-50 border-b border-gray-200">
-              <CardTitle className="text-base font-semibold text-gray-800">{faq.question}</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-4">
-              <p className="text-gray-700 leading-relaxed text-sm">
-                {renderTextWithLinks(faq.answer)}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
+          {/* FAQ Section */}
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="border border-border shadow-sm hover:shadow-md transition-shadow">
+                <CardHeader className="bg-muted/50 border-b border-border">
+                  <CardTitle className="text-lg font-semibold text-foreground">{faq.question}</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="text-muted-foreground leading-relaxed">
+                    {renderTextWithLinks(faq.answer)}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )
