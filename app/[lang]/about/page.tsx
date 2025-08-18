@@ -35,20 +35,30 @@ export default function About() {
   }
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.about.title}</h1>
-        <p className="text-base text-gray-600">{translations.about.intro}</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Header Section */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.about.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
+            </div>
+          </div>
 
-      <div className="space-y-6">
-        {/* Program Information */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.about.programInfo}</h2>
-          <p className="text-gray-700">
-            {renderTextWithLinks(translations.about.programDescription)}
-          </p>
-        </section>
+          {/* Content Section */}
+          <div className="space-y-8">
+            {/* Program Information */}
+            <section className="space-y-6">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-foreground">{translations.about.programInfo}</h2>
+                <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                  {renderTextWithLinks(translations.about.programDescription)}
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   )

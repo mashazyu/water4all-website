@@ -73,56 +73,76 @@ export default function Privacy() {
   }
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.privacy.title}</h1>
-        <p className="text-base text-gray-600">{translations.privacy.intro}</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Header Section */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.privacy.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.privacy.intro}</p>
+            </div>
+          </div>
 
-      <div className="space-y-6">
-        {/* Responsible Party */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.responsibleParty}</h2>
-          <div className="text-gray-700 whitespace-pre-line">{renderTextWithAntiSpamEmail(translations.privacy.responsiblePartyContent)}</div>
-        </section>
+          {/* Content Section */}
+          <div className="space-y-8">
+            {/* Responsible Party */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.responsibleParty}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {renderTextWithAntiSpamEmail(translations.privacy.responsiblePartyContent)}
+              </div>
+            </section>
 
-        {/* Data Processed */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.dataProcessed}</h2>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.dataProcessedContent}</p>
-        </section>
+            {/* Data Processed */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.dataProcessed}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {translations.privacy.dataProcessedContent}
+              </div>
+            </section>
 
-        {/* Analytics Service */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.analyticsService}</h2>
-          <p className="text-gray-700">
-            {renderTextWithLineBreaks(translations.privacy.analyticsServiceContent)}
-          </p>
-        </section>
+            {/* Analytics Service */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.analyticsService}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {renderTextWithLineBreaks(translations.privacy.analyticsServiceContent)}
+              </div>
+            </section>
 
-        {/* Purpose of Processing */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.purposeOfProcessing}</h2>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.purposeOfProcessingContent}</p>
-        </section>
+            {/* Purpose of Processing */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.purposeOfProcessing}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {translations.privacy.purposeOfProcessingContent}
+              </div>
+            </section>
 
-        {/* Cookies */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.cookies}</h2>
-          <p className="text-gray-700">{translations.privacy.cookiesContent}</p>
-        </section>
+            {/* Cookies */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.cookies}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {translations.privacy.cookiesContent}
+              </div>
+            </section>
 
-        {/* Your Rights */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.yourRights}</h2>
-          <p className="text-gray-700">{translations.privacy.yourRightsIntro}</p>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.yourRightsList}</p>
-        </section>
+            {/* Your Rights */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.yourRights}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
+                <p>{translations.privacy.yourRightsIntro}</p>
+                <div className="whitespace-pre-line">{translations.privacy.yourRightsList}</div>
+              </div>
+            </section>
 
-        {/* Contact Info */}
-        <section className="space-y-2">
-          <div className="text-gray-700">{renderTextWithAntiSpamEmail(translations.privacy.contactInfo)}</div>
-        </section>
+            {/* Contact Info */}
+            <section className="space-y-4">
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {renderTextWithAntiSpamEmail(translations.privacy.contactInfo)}
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   )
