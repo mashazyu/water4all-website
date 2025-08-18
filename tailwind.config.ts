@@ -57,6 +57,11 @@ const config = {
           "Segoe UI",
           "sans-serif",
         ],
+        poppins: [
+          "var(--font-poppins)",
+          "Poppins",
+          "sans-serif",
+        ],
       },
     },
   },

@@ -1,10 +1,15 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
 import GTMProvider from "@/components/gtm-provider"
 
 const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({ 
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins"
+})
 
 export const metadata: Metadata = {
   title: "Wasser für alle",
@@ -47,7 +52,7 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} bg-white text-foreground min-h-screen flex flex-col antialiased`}>
+      <body className={`${inter.className} ${poppins.variable} bg-white text-foreground min-h-screen flex flex-col antialiased`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe 
