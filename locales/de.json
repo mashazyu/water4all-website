@@ -105,16 +105,32 @@
   "faq": {
     "title": "Häufig gestellte Fragen",
     "intro": "Hier finden Sie Antworten auf häufige Fragen zu unserer Trinkbrunnen-Initiative.",
-    "questions": {
-      "faq1Question": "Wie finde ich Trinkbrunnen in meiner Nähe?",
-      "faq1Answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) besuchen oder Apps wie [Refill Deutschland](https://refill-deutschland.de/) nutzen.",
-      "faq2Question": "Sind die Trinkbrunnen sicher zu benutzen?",
-      "faq2Answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den [Berliner Wasserbetrieben](https://www.bwb.de/de/trinkbrunnen.php) getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards.",
-      "faq5Question": "Wie kann ich Ihre Initiative unterstützen?",
-      "faq5Answer": "Sie können helfen, indem Sie Bewusstsein schaffen, neue Brunnenstandorte vorschlagen oder sich freiwillig melden, um uns beim Kartieren bestehender Wasserquellen zu helfen. Kontaktieren Sie uns unter berlinertrinkbrunnen@gmail.com.",
-      "faq6Question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
-      "faq6Answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können."
-    }
+    "questions": [
+      {
+        "id": "faq1",
+        "question": "Wie finde ich Trinkbrunnen in meiner Nähe?",
+        "answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) besuchen oder Apps wie [Refill Deutschland](https://refill-deutschland.de/) nutzen.",
+        "size": "large"
+      },
+      {
+        "id": "faq2",
+        "question": "Sind die Trinkbrunnen sicher zu benutzen?",
+        "answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den [Berliner Wasserbetrieben](https://www.bwb.de/de/trinkbrunnen.php) getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards.",
+        "size": "medium"
+      },
+      {
+        "id": "faq5",
+        "question": "Wie kann ich Ihre Initiative unterstützen?",
+        "answer": "Sie können helfen, indem Sie Bewusstsein schaffen, neue Brunnenstandorte vorschlagen oder sich freiwillig melden, um uns beim Kartieren bestehender Wasserquellen zu helfen. Kontaktieren Sie uns unter berlinertrinkbrunnen@gmail.com.",
+        "size": "large"
+      },
+      {
+        "id": "faq6",
+        "question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
+        "answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können.",
+        "size": "small"
+      }
+    ]
   },
   "newsPage": {
     "title": "Aktuelle Nachrichten",

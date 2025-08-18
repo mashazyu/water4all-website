@@ -1,10 +1,14 @@
 "use client"
 
+import { useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react"
 
 export default function FAQ() {
   const { translations } = useLanguage()
+  const [expandedItem, setExpandedItem] = useState<number>(0)
 
   // Function to render markdown-like links
   const renderTextWithLinks = (text: string) => {
@@ -35,24 +39,14 @@ export default function FAQ() {
     return <>{elements}</>
   }
 
-  const faqs = [
-    {
-      question: translations.faq.questions.faq1Question,
-      answer: translations.faq.questions.faq1Answer,
-    },
-    {
-      question: translations.faq.questions.faq2Question,
-      answer: translations.faq.questions.faq2Answer,
-    },
-    {
-      question: translations.faq.questions.faq5Question,
-      answer: translations.faq.questions.faq5Answer,
-    },
-    {
-      question: translations.faq.questions.faq6Question,
-      answer: translations.faq.questions.faq6Answer,
-    },
-  ]
+  const faqs = (translations.faq.questions as unknown) as any[]
+
+  // Toggle individual FAQ item
+  const toggleItem = (index: number) => {
+    setExpandedItem(expandedItem === index ? -1 : index)
+  }
+
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -68,18 +62,41 @@ export default function FAQ() {
 
           {/* FAQ Section */}
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="border border-border shadow-sm hover:shadow-md transition-shadow">
-                <CardHeader className="bg-muted/50 border-b border-border">
-                  <CardTitle className="text-lg font-semibold text-foreground">{faq.question}</CardTitle>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="text-muted-foreground leading-relaxed">
-                    {renderTextWithLinks(faq.answer)}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {/* FAQ Items */}
+            {faqs.map((faq: any, index: number) => {
+              const isExpanded = expandedItem === index
+              
+              return (
+                <div key={faq.id} className="max-w-4xl mx-auto">
+                  <Card className="border border-border">
+                    <CardHeader 
+                      className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors"
+                      onClick={() => toggleItem(index)}
+                    >
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-lg font-semibold text-foreground pr-4">
+                          {faq.question}
+                        </CardTitle>
+                        <div className="flex-shrink-0">
+                          {isExpanded ? (
+                            <ChevronUp className="h-5 w-5 text-muted-foreground" />
+                          ) : (
+                            <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                          )}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    {isExpanded && (
+                      <CardContent className="pt-6">
+                        <div className="text-muted-foreground leading-relaxed">
+                          {renderTextWithLinks(faq.answer)}
+                        </div>
+                      </CardContent>
+                    )}
+                  </Card>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
