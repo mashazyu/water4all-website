@@ -37,14 +37,14 @@ export function PageSection({
 
   return (
     <section className={cn(
-      "relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] flex items-center justify-center py-8 md:py-12 lg:py-16",
+      "relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24",
       fullHeight && "min-h-screen",
       backgroundClasses[background],
       className
     )}>
-      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 w-full">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full">
         {title && (
-          <div className="mb-12">
+          <div className="mb-8 sm:mb-12">
             <div className="border-b border-border pb-2 group cursor-pointer">
               <h1 className={cn(
                 "text-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2",
@@ -61,7 +61,7 @@ export function PageSection({
             </div>
           </div>
         )}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {children}
         </div>
       </div>
@@ -69,16 +69,23 @@ export function PageSection({
   )
 }
 
+interface PageSectionCenteredProps {
+  children: ReactNode
+  className?: string
+  containerClassName?: string
+  fullWidth?: boolean
+}
+
 export function PageSectionCentered({ 
   children, 
   className = "", 
   containerClassName = "",
   fullWidth = false 
-}: PageSectionProps) {
+}: PageSectionCenteredProps) {
   return (
-    <section className={cn("py-16 flex items-center justify-center", className)}>
+    <section className={cn("py-8 sm:py-12 md:py-16 flex items-center justify-center", className)}>
       <div className={cn(
-        fullWidth ? "w-full" : "max-w-4xl mx-auto px-4 text-center",
+        fullWidth ? "w-full" : "max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center",
         containerClassName
       )}>
         {children}

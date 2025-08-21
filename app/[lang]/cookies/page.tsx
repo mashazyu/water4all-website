@@ -9,109 +9,109 @@ export default function Cookies() {
   return (
     <PageLayout>
       <FullScreenSection background="default">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="space-y-2 mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.cookies.title}</h1>
-            <p className="text-base text-muted-foreground">{translations.cookies.intro}</p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">{translations.cookies.title}</h1>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{translations.cookies.intro}</p>
           </div>
 
-                    {/* Content Section */}
-          <div className="space-y-8">
+          {/* Content Section */}
+          <div className="space-y-6 sm:space-y-8">
             {/* What are Cookies */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.whatAreCookies}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.whatAreCookies}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed">
                 {translations.cookies.whatAreCookiesContent}
               </div>
             </section>
 
             {/* How We Use Cookies */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.howWeUse}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.howWeUse}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed">
                 {translations.cookies.howWeUseContent}
               </div>
             </section>
 
             {/* Types of Cookies */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.types}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.types}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{translations.cookies.essential.title}</h3>
-                  <p className="mb-2">{translations.cookies.essential.description}</p>
-                  <p>{translations.cookies.essential.duration}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">{translations.cookies.essential.title}</h3>
+                  <p className="mb-2 text-sm sm:text-base">{translations.cookies.essential.description}</p>
+                  <p className="text-sm sm:text-base">{translations.cookies.essential.duration}</p>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{translations.cookies.analytics.title}</h3>
-                  <p className="mb-2">{translations.cookies.analytics.description}</p>
-                  <p className="mb-2">{translations.cookies.analytics.duration}</p>
-                  <p>{translations.cookies.analytics.provider}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">{translations.cookies.analytics.title}</h3>
+                  <p className="mb-2 text-sm sm:text-base">{translations.cookies.analytics.description}</p>
+                  <p className="mb-2 text-sm sm:text-base">{translations.cookies.analytics.duration}</p>
+                  <p className="text-sm sm:text-base">{translations.cookies.analytics.provider}</p>
                 </div>
               </div>
             </section>
 
             {/* Specific Cookies Table */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.specificCookies}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-                <div className="overflow-x-auto">
-                  <table className="min-w-full border border-border">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.specificCookies}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed">
+                <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                  <table className="min-w-full border border-border text-xs sm:text-sm">
                     <thead>
                       <tr className="bg-muted">
-                        <th className="border border-border px-4 py-2 text-left text-sm font-medium text-foreground">
+                        <th className="border border-border px-2 sm:px-4 py-2 text-left font-medium text-foreground">
                           {translations.cookies.table.name}
                         </th>
-                        <th className="border border-border px-4 py-2 text-left text-sm font-medium text-foreground">
+                        <th className="border border-border px-2 sm:px-4 py-2 text-left font-medium text-foreground">
                           {translations.cookies.table.purpose}
                         </th>
-                        <th className="border border-border px-4 py-2 text-left text-sm font-medium text-foreground">
+                        <th className="border border-border px-2 sm:px-4 py-2 text-left font-medium text-foreground">
                           {translations.cookies.table.duration}
                         </th>
-                        <th className="border border-border px-4 py-2 text-left text-sm font-medium text-foreground">
+                        <th className="border border-border px-2 sm:px-4 py-2 text-left font-medium text-foreground">
                           {translations.cookies.table.type}
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground font-mono">_ga</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2 font-mono">_ga</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.gaPurpose}
                         </td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">2 years</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2">2 years</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.analytics}
                         </td>
                       </tr>
                       <tr>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground font-mono">_ga_[CONTAINER_ID]</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2 font-mono">_ga_[CONTAINER_ID]</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.gaContainerPurpose}
                         </td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">2 years</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2">2 years</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.analytics}
                         </td>
                       </tr>
                       <tr>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground font-mono">_gid</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2 font-mono">_gid</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.gidPurpose}
                         </td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">24 hours</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2">24 hours</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.analytics}
                         </td>
                       </tr>
                       <tr>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground font-mono">_gat</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2 font-mono">_gat</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.gatPurpose}
                         </td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">1 minute</td>
-                        <td className="border border-border px-4 py-2 text-sm text-foreground">
+                        <td className="border border-border px-2 sm:px-4 py-2">1 minute</td>
+                        <td className="border border-border px-2 sm:px-4 py-2">
                           {translations.cookies.table.analytics}
                         </td>
                       </tr>
@@ -122,22 +122,22 @@ export default function Cookies() {
             </section>
 
             {/* Managing Cookies */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.managing.browser}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.managing.browser}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{translations.cookies.managing.browser}</h3>
-                  <p className="mb-2">{translations.cookies.managing.browserContent}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">{translations.cookies.managing.browser}</h3>
+                  <p className="mb-2 text-sm sm:text-base">{translations.cookies.managing.browserContent}</p>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{translations.cookies.managing.gaOptOut}</h3>
-                  <p className="mb-2">{translations.cookies.managing.gaOptOutContent}</p>
+                  <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">{translations.cookies.managing.gaOptOut}</h3>
+                  <p className="mb-2 text-sm sm:text-base">{translations.cookies.managing.gaOptOutContent}</p>
                   <a 
                     href="https://tools.google.com/dlpage/gaoptout" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-secondary underline"
+                    className="text-primary hover:text-secondary underline text-sm sm:text-base"
                   >
                     {translations.cookies.managing.gaOptOutLink}
                   </a>
@@ -146,17 +146,17 @@ export default function Cookies() {
             </section>
 
             {/* Updates */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.updates}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.updates}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed">
                 {translations.cookies.updatesContent}
               </div>
             </section>
 
             {/* Contact */}
-            <section className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.cookies.contact}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+            <section className="space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{translations.cookies.contact}</h2>
+              <div className="prose prose-sm sm:prose-lg max-w-none text-muted-foreground leading-relaxed">
                 {translations.cookies.contactContent}
               </div>
             </section>
