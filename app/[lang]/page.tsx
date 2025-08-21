@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Hero } from "@/components/ui/hero"
 import { PageSection } from "@/components/ui/page-section"
+import { PageLayout } from "@/components/ui/page-layout"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 
@@ -66,7 +67,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="h-screen overflow-y-scroll scroll-smooth relative">
+    <PageLayout>
       {/* Floating Action Button */}
       {showFAB && (
         <div className="fixed bottom-6 right-6 z-50 animate-float">
@@ -160,6 +161,6 @@ export default function HomePage() {
           </div>
         </PageSection>
       </div>
-    </div>
+    </PageLayout>
   )
 }

@@ -1,18 +1,21 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 
 export default function Cookies() {
   const { translations } = useLanguage()
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.cookies.title}</h1>
-        <p className="text-base text-muted-foreground">{translations.cookies.intro}</p>
-      </div>
+    <PageLayout>
+      <FullScreenSection background="default">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="space-y-2 mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.cookies.title}</h1>
+            <p className="text-base text-muted-foreground">{translations.cookies.intro}</p>
+          </div>
 
-      <div className="space-y-6">
+          <div className="space-y-6">
         {/* What are Cookies */}
         <section className="space-y-2">
           <h2 className="text-lg font-semibold text-foreground">{translations.cookies.whatAreCookies}</h2>
@@ -146,7 +149,9 @@ export default function Cookies() {
           <h2 className="text-lg font-semibold text-foreground">{translations.cookies.contact}</h2>
           <p className="text-foreground">{translations.cookies.contactContent}</p>
         </section>
-      </div>
-    </div>
+          </div>
+        </div>
+      </FullScreenSection>
+    </PageLayout>
   )
 }

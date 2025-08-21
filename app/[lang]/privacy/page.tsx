@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/language-provider"
 import AntiSpamEmail from "@/components/anti-spam-email"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 
 export default function Privacy() {
   const { translations } = useLanguage()
@@ -73,11 +74,11 @@ export default function Privacy() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
+    <PageLayout>
+      <FullScreenSection background="default">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
           {/* Header Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 mb-8">
             <div className="space-y-4">
               <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.privacy.title}</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">{translations.privacy.intro}</p>
@@ -143,7 +144,7 @@ export default function Privacy() {
             </section>
           </div>
         </div>
-      </div>
-    </div>
+      </FullScreenSection>
+    </PageLayout>
   )
 }
