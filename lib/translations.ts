@@ -85,6 +85,10 @@ export type Translations = {
     contactEmail: string
     socialProof: string
     quickHelpTitle: string
+    mapFeatures: string
+    betaTesting: string
+    waterSourceGuide: string
+    contactUs: string
   }
   
   // About page
@@ -120,6 +124,7 @@ export type Translations = {
   faq: {
     title: string
     intro: string
+    viewAllFaqs: string
     questions: Array<{
       id: string
       question: string

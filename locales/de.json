@@ -34,7 +34,7 @@
     "loadingText": "Lade tollen Inhalt..."
   },
   "subprojects": {
-    "subproject1FullDescription": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden - besonders auf Plattformen, die täglich genutzt werden, wie Google Maps.",
+    "subproject1FullDescription": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer einfach zu finden - besonders auf alltäglichen Plattformen wie Google Maps. Um es einfacher zu machen, haben wir eine eigene Google Map erstellt, die Brunnen von Berliner Wasserbetriebe zeigt, die rund um die Uhr verfügbar sind, sowie Regierungsgebäude, wo Sie während der regulären Geschäftszeiten nachfüllen können.",
     "subproject1Details": "Wir haben bereits Trinkbrunnen von Berliner Wasserbetriebe hinzugefügt und streben an, einen umfassenden Überblick über kostenlose Wasserquellen in Berlin zu erstellen.",
     "subproject2FullDescription": "Ein weiterer Teil unserer Initiative ist die Förderung der Installation neuer Trinkbrunnen in stark frequentierten Bereichen in Pankow.",
     "subproject2Details": "Wir wissen, dass ähnliche Initiativen bereits erfolgreich in anderen Bezirken der Stadt umgesetzt wurden. Wir hoffen, dass wir bis zum Ende unseres Projekts einen Leitfaden erstellen können, der den Bewohnern anderer Bezirke hilft, die Installation von Trinkbrunnen in ihren Gebieten zu erreichen.\n\nIm Rahmen des Projekts haben wir uns entschieden, uns auf die Installation von Trinkbrunnen an zwei Standorten zu konzentrieren: am Kissingen-Stadion (Sportplatz Kissingenstraße, Forchheimer Str. 22, 13189 Berlin) und auf dem großen Kinderspielplatz an der Trelleborger Straße. An beiden Orten sehen wir großen Bedarf, da täglich viele Kinder, Jugendliche, Sportler und Familien dorthin kommen. Ein frei zugänglicher Trinkbrunnen würde dort die Lebensqualität erheblich verbessern.",
@@ -66,12 +66,12 @@
     ],
     "heroTitle": "WASSER BRAUCHEN?",
     "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
-    "infoSection": "Obwohl Berlin viele kostenlose Trinkwasserstellen bietet, sind Informationen darüber oft schwer zu finden - besonders auf Plattformen, die täglich genutzt werden, wie Google Maps. Wir haben bereits Trinkbrunnen von Berliner Wasserbetriebe hinzugefügt und streben an, einen umfassenden Überblick über kostenlose Wasserquellen in Berlin zu erstellen.",
+    "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer einfach zu finden - besonders auf alltäglichen Plattformen wie Google Maps. Um es einfacher zu machen, haben wir eine eigene Google Map erstellt, die Brunnen von Berliner Wasserbetriebe zeigt, die rund um die Uhr verfügbar sind, sowie Regierungsgebäude, wo Sie während der regulären Geschäftszeiten nachfüllen können.",
     "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
     "englishMap": "Englische Karte",
     "germanMap": "Deutsche Karte",
-    "addEnglishMap": "Englische Karte hinzufügen",
-    "addGermanMap": "Deutsche Karte hinzufügen",
+    "addEnglishMap": "Karte auf Englisch",
+    "addGermanMap": "Karte auf Deutsch",
     "faqSectionTitle": "Häufig gestellte Fragen",
     "howMapWorks": "Wie funktioniert diese Karte?",
     "howRemoveMap": "Wie entferne ich diese Karte aus meinen Google Maps?",
@@ -79,7 +79,11 @@
     "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
     "contactEmail": "Kontakt: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliner nutzen bereits diese Karte",
-    "quickHelpTitle": "Schnelle Hilfe"
+    "quickHelpTitle": "Schnelle Hilfe",
+    "mapFeatures": "Über 230 Trinkbrunnen und 100 Regierungsgebäude in ganz Berlin.",
+    "betaTesting": "Während der Beta-Tests hatten wir über 1.000 Aufrufe der Karte - hoffentlich haben unsere Tester keinen Durst gelitten.",
+    "waterSourceGuide": "Ein wachsender Leitfaden zu kostenlosen Wasserquellen",
+    "contactUs": "Wie Sie uns kontaktieren können"
   },
   "about": {
     "title": "Über unsere Initiative",
@@ -109,6 +113,7 @@
   "faq": {
     "title": "Häufig gestellte Fragen",
     "intro": "Hier finden Sie Antworten auf häufige Fragen zu unserer Trinkbrunnen-Initiative.",
+    "viewAllFaqs": "Alle FAQs anzeigen",
     "questions": [
       {
         "id": "faq1",
@@ -133,6 +138,20 @@
         "question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
         "answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können.",
         "size": "small"
+      },
+      {
+        "id": "faq9",
+        "question": "Wie entferne ich diese Karte aus meinen Google Maps?",
+        "answer": "Um unsere benutzerdefinierte Karte aus Google Maps zu entfernen: 1) Öffnen Sie die Google Maps App, 2) Tippen Sie unten auf 'Gespeichert', 3) Gehen Sie zum 'Karten' Tab, 4) Finden Sie 'Berlin Water Sources' und tippen Sie auf die drei Punkte, 5) Wählen Sie 'Aus gespeichert entfernen'.",
+        "category": "map",
+        "size": "medium"
+      },
+      {
+        "id": "faq10",
+        "question": "Wie kann ich Sie kontaktieren?",
+        "answer": "Sie erreichen uns unter berlinertrinkbrunnen@gmail.com. Wir freuen uns über Fragen, Vorschläge für neue Brunnenstandorte und Feedback zu unserer Wasserkarte. Wir antworten normalerweise innerhalb von 24-48 Stunden.",
+        "category": "project",
+        "size": "medium"
       }
     ]
   },

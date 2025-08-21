@@ -34,7 +34,7 @@
     "loadingText": "Loading amazing content..."
   },
   "subprojects": {
-    "subproject1FullDescription": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps.",
+    "subproject1FullDescription": "Berlin has plenty of free drinking water points, but they're not always easy to find—especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",
     "subproject1Details": "We have already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",
     "subproject2FullDescription": "Another part of our initiative is promoting the installation of new drinking fountains in high-traffic areas in Pankow.",
     "subproject2Details": "We know that similar initiatives have already been successfully implemented in other districts of the city. We hope that by the end of our project, we will be able to prepare a guide that will help residents of other districts achieve the installation of drinking fountains in their areas.\n\nAs part of the project, we decided to focus on installing drinking fountains in two locations: at Kissingen-Stadion (Kissingenstraße sports ground, Forchheimer Str. 22, 13189 Berlin) and at the large children's playground on Trelleborger Straße. In both places, we see great need, as many children, teenagers, athletes, and families come there daily. A freely accessible drinking fountain would significantly improve the quality of life there.",
@@ -66,12 +66,12 @@
     ],
     "heroTitle": "NEED WATER?",
     "heroSubtitle": "Find nearby taps on our map",
-    "infoSection": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps. We have already added drinking fountains from Berliner Wasserbetriebe and aim to create a comprehensive overview of free water sources in Berlin.",
+    "infoSection": "Berlin has plenty of free drinking water points, but they're not always easy to find—especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",
     "googleMapsTitle": "Add Water Sources to Your Google Maps",
     "englishMap": "English Map",
     "germanMap": "German Map",
-    "addEnglishMap": "Add English Map",
-    "addGermanMap": "Add German Map",
+    "addEnglishMap": "Map in English",
+    "addGermanMap": "Map in German",
     "faqSectionTitle": "Frequently Asked Questions",
     "howMapWorks": "How does this map work?",
     "howRemoveMap": "How do I remove this map from my Google Maps?",
@@ -79,7 +79,11 @@
     "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
     "contactEmail": "Contact: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliners already using this map",
-    "quickHelpTitle": "Quick Help"
+    "quickHelpTitle": "Quick Help",
+    "mapFeatures": "Over 230 drinking fountains and 100 government buildings across Berlin.",
+    "betaTesting": "We had more than 1,000 views of the map during beta testing—hopefully keeping our testers from going thirsty.",
+    "waterSourceGuide": "A growing guide to free water sources",
+    "contactUs": "How to contact us"
   },
   "about": {
     "title": "About Us",
@@ -109,6 +113,7 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "intro": "Find answers to common questions about our drinking fountains initiative.",
+    "viewAllFaqs": "View All FAQs",
     "questions": [
       {
         "id": "faq1",
@@ -164,6 +169,20 @@
         "question": "How often is the map updated?",
         "answer": "We update the map regularly as we receive new information about water sources. The map is also connected to Google Maps, so you'll see real-time updates.",
         "category": "map",
+        "size": "medium"
+      },
+      {
+        "id": "faq9",
+        "question": "How do I remove this map from my Google Maps?",
+        "answer": "To remove our custom map from Google Maps: 1) Open Google Maps app, 2) Tap on 'Saved' at the bottom, 3) Go to 'Maps' tab, 4) Find 'Berlin Water Sources' and tap the three dots, 5) Select 'Remove from saved'.",
+        "category": "map",
+        "size": "medium"
+      },
+      {
+        "id": "faq10",
+        "question": "How can I contact you?",
+        "answer": "You can reach us at berlinertrinkbrunnen@gmail.com. We welcome questions, suggestions for new fountain locations, and feedback about our water map. We typically respond within 24-48 hours.",
+        "category": "project",
         "size": "medium"
       }
     ]

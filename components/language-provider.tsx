@@ -42,12 +42,17 @@ export function LanguageProvider({
     localStorage.setItem("language", newLanguage)
   }
 
+  const translations = getTranslations(language)
+  
+  // Debug logging
+  console.log('LanguageProvider:', { language, translations: !!translations, hasFooter: !!translations?.footer })
+  
   return (
     <LanguageContext.Provider
       value={{
         language,
         setLanguage,
-        translations: getTranslations(language),
+        translations,
         toggleLanguage,
         languages,
         availableLanguages: Object.keys(languages) as Language[],

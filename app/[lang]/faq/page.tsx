@@ -76,7 +76,7 @@ export default function FAQ() {
               const isExpanded = expandedItem === index
               
               return (
-                <div key={faq.id} className="max-w-4xl mx-auto">
+                <div key={faq.id} className="max-w-4xl mx-auto" id={faq.id}>
                   <Card className="border border-border">
                     <CardHeader 
                       className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors"
@@ -119,7 +119,7 @@ export default function FAQ() {
               const isExpanded = expandedItem === index
               
               return (
-                <div key={faq.id} className="max-w-4xl mx-auto">
+                <div key={faq.id} className="max-w-4xl mx-auto" id={faq.id}>
                   <Card className="border border-border">
                     <CardHeader 
                       className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors"

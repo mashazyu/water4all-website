@@ -156,7 +156,7 @@ export default function MapPage() {
           </div>
 
           {/* Enhanced Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Map Features - Enhanced */}
             <div className="group relative overflow-hidden bg-white border border-border/50 transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
               
@@ -164,21 +164,21 @@ export default function MapPage() {
                 {/* Enhanced Header */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="relative">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                       <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">What You Get</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Comprehensive water source coverage</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{translations.map.waterSourceGuide}</p>
                   </div>
                 </div>
 
                 {/* Enhanced Feature List */}
                 <div className="space-y-1">
                   {[
-                    "220+ verified water sources across Berlin",
-                    "Seamless Google Maps integration",
+                    translations.map.mapFeatures,
+                    translations.map.betaTesting,
                     "100% free to use"
                   ].map((feature, index) => (
                     <div 
@@ -193,12 +193,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                {/* Interactive CTA */}
-                <div className="mt-6 pt-6 border-t border-border/30">
-                  <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 font-semibold transition-colors duration-300">
-                    Explore Map Features
-                  </button>
-                </div>
+
               </div>
             </div>
 
@@ -209,7 +204,7 @@ export default function MapPage() {
                 {/* Enhanced Header */}
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="relative">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
                       <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
                   </div>
@@ -222,20 +217,20 @@ export default function MapPage() {
                 {/* Enhanced FAQ Links */}
                 <div className="space-y-1">
                   {[
-                    translations.map.howMapWorks,
-                    translations.map.howRemoveMap,
-                    translations.map.moreQuestions
+                    { text: translations.map.howMapWorks, href: `/${language}/faq#faq3` },
+                    { text: translations.map.howRemoveMap, href: `/${language}/faq#faq9` },
+                    { text: translations.map.contactUs, href: `/${language}/faq#faq10` }
                   ].map((faq, index) => (
                     <a 
                       key={index}
-                      href="/faq"
+                      href={faq.href}
                       className="group/faq block p-4 hover:bg-white/50 transition-all duration-300 border border-transparent hover:border-border/30"
                     >
                       <div className="flex items-center gap-4">
                         <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
-                        <div className="flex-1">
+                        <div className="flex-1 flex items-center">
                           <p className="text-foreground font-medium text-sm leading-relaxed group-hover/faq:text-primary transition-colors duration-300">
-                            {faq}
+                            {faq.text}
                           </p>
                         </div>
                         <div className="flex-shrink-0 opacity-0 group-hover/faq:text-primary transition-all duration-300 transform translate-x-2 group-hover/faq:translate-x-0">
@@ -249,10 +244,10 @@ export default function MapPage() {
                 {/* Interactive CTA */}
                 <div className="mt-6 pt-6 border-t border-border/30">
                   <a 
-                    href="/faq"
+                    href={`/${language}/faq`}
                     className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 font-semibold transition-colors duration-300 inline-block text-center"
                   >
-                    View All FAQs
+                    {translations.faq.viewAllFaqs}
                   </a>
                 </div>
                 <div className="flex-1"></div>
