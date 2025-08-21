@@ -8,7 +8,7 @@ export default function Cookies() {
   return (
     <div className="space-y-6 max-w-4xl mx-auto">
       <div className="space-y-2">
-        <h1 className="font-semibold text-foreground">{translations.cookies.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.cookies.title}</h1>
         <p className="text-base text-muted-foreground">{translations.cookies.intro}</p>
       </div>
 

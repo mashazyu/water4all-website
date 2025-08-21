@@ -49,6 +49,8 @@ export type Translations = {
     subproject2Description: string
     learnMore: string
     latestNews: string
+    loadingTitle: string
+    loadingText: string
   }
   
   // Subproject pages

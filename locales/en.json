@@ -29,7 +29,9 @@
     "subproject2Title": "New Drinking Fountains",
     "subproject2Description": "We’re working to bring more drinking fountains to quieter neighborhoods outside Berlin’s busy center — areas that currently lack this essential infrastructure — so everyone has easy access to free water.",
     "learnMore": "Learn More",
-    "latestNews": "Latest News"
+    "latestNews": "Latest News",
+    "loadingTitle": "Water4All",
+    "loadingText": "Loading amazing content..."
   },
   "subprojects": {
     "subproject1FullDescription": "Although Berlin offers many free drinking water points, information about them is often difficult to find - especially on platforms that are used daily, such as Google Maps.",

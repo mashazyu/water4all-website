@@ -79,7 +79,7 @@ export default function Privacy() {
           {/* Header Section */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.privacy.title}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.privacy.title}</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">{translations.privacy.intro}</p>
             </div>
           </div>

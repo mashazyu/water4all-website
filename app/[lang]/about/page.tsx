@@ -41,7 +41,7 @@ export default function About() {
           {/* Header Section */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground">{translations.about.title}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.about.title}</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
             </div>
           </div>

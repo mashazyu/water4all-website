@@ -2,39 +2,45 @@
 
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
+import { PageSection } from "@/components/ui/page-section"
 import Link from "next/link"
 
 export default function MapPage() {
   const { language, translations } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-muted via-white to-blue-50/20">
       {/* Main Container with Width Constraint */}
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
+        {/* Page Header */}
+        <div className="mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-primary">
+            {translations.map.heroTitle}
+          </h1>
+        </div>
+
         {/* Split Screen Layout */}
-        <div className="flex flex-col lg:flex-row min-h-screen">
+        <div className="flex flex-col lg:flex-row min-h-[70vh]">
           {/* Left Side - Description and Buttons */}
-          <div className="lg:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
+          <div className="lg:w-1/2 flex flex-col justify-center">
             <div className="max-w-lg mx-auto lg:mx-0">
               {/* Description Section */}
-              <div className="mb-6">
-                <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
-                  {translations.map.heroTitle}
-                </h1>
-                <p className="text-base leading-relaxed text-gray-700">
+              <div className="mb-8">
+                <p className="text-lg leading-relaxed text-muted-foreground hover:text-foreground transition-colors duration-300">
                   {translations.map.infoSection}
                 </p>
               </div>
 
               {/* Buttons Section */}
-              <div className="space-y-3">
-                <h2 className="text-lg font-semibold text-gray-800 mb-3">
+              <div className="space-y-4">
+                <h2 className="text-xl font-semibold text-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                  <span className="w-1 h-6 bg-primary rounded-full"></span>
                   {translations.map.googleMapsTitle}
                 </h2>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base" 
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
                     asChild
                   >
                     <Link href="#" target="_blank" rel="noopener noreferrer">
@@ -43,7 +49,7 @@ export default function MapPage() {
                   </Button>
 
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base" 
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105" 
                     asChild
                   >
                     <Link href="#" target="_blank" rel="noopener noreferrer">
@@ -54,15 +60,15 @@ export default function MapPage() {
               </div>
 
               {/* FAQ Links */}
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <div className="space-y-2">
-                  <Link href="/faq" className="block text-blue-600 hover:text-blue-800 underline font-medium text-sm">
+              <div className="mt-8 pt-6 border-t border-border">
+                <div className="space-y-3">
+                  <Link href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
                     {translations.map.howMapWorks}
                   </Link>
-                  <Link href="/faq" className="block text-blue-600 hover:text-blue-800 underline font-medium text-sm">
+                  <Link href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
                     {translations.map.howRemoveMap}
                   </Link>
-                  <Link href="/faq" className="block text-blue-600 hover:text-blue-800 underline font-medium text-sm">
+                  <Link href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
                     {translations.map.moreQuestions}
                   </Link>
                 </div>
@@ -71,9 +77,9 @@ export default function MapPage() {
           </div>
 
           {/* Right Side - Map Preview */}
-          <div className="lg:w-1/2 bg-gray-50 p-4 lg:p-6 flex items-center justify-center">
+          <div className="lg:w-1/2 bg-white/50 backdrop-blur-sm p-6 lg:p-8 flex items-center justify-center mt-8 lg:mt-0">
             <div className="w-full h-full max-h-[400px] lg:max-h-[500px]">
-              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+              <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <iframe
                   src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
                   width="100%"
