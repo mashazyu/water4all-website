@@ -117,11 +117,12 @@ export default function HomePage() {
                   <CardContent className="flex flex-col justify-between flex-1 space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{translations.home.subproject1Description}</p>
                     <div className="mt-auto">
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                        <Link href={`/${language}/map`}>
-                          {translations.home.learnMore}
-                        </Link>
-                      </Button>
+                      <a 
+                        href={`/${language}/map`}
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center py-3 px-4 rounded-lg font-medium transition-colors duration-300 block"
+                      >
+                        {translations.home.learnMore}
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
@@ -133,11 +134,12 @@ export default function HomePage() {
                   <CardContent className="flex flex-col justify-between flex-1 space-y-4">
                     <p className="text-muted-foreground leading-relaxed">{translations.home.subproject2Description}</p>
                     <div className="mt-auto">
-                      <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
-                        <Link href={`/${language}/installation`}>
-                          {translations.home.learnMore}
-                        </Link>
-                      </Button>
+                      <a 
+                        href={`/${language}/installation`}
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-center py-3 px-4 rounded-lg font-medium transition-colors duration-300 block"
+                      >
+                        {translations.home.learnMore}
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
