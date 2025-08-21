@@ -121,11 +121,7 @@ export default function MapPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Berlin Water Sources Map"
                   />
-                  {/* Subtle overlay */}
-                  <div 
-                    className="absolute inset-0 pointer-events-none" 
-                    style={{ backgroundColor: 'rgba(251, 100%, 34%, 0.03)' }}
-                  />
+
                 </div>
               </div>
             </div>
@@ -159,11 +155,9 @@ export default function MapPage() {
           </div>
 
           {/* Enhanced Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Map Features - Enhanced */}
-            <div className="group relative overflow-hidden bg-gradient-to-br from-muted/60 to-muted/40 border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
-              {/* Interactive Background Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative overflow-hidden border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
               
               <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
                 {/* Enhanced Header */}
@@ -209,9 +203,7 @@ export default function MapPage() {
             </div>
 
             {/* FAQ Links - Enhanced */}
-            <div className="group relative overflow-hidden bg-gradient-to-br from-muted/60 to-muted/40 border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
-              {/* Interactive Background Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative overflow-hidden border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
               
               <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
                 {/* Enhanced Header */}
