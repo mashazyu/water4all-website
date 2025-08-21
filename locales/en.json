@@ -114,25 +114,57 @@
         "id": "faq1",
         "question": "How can I find drinking fountains near me?",
         "answer": "We are working on adding all drinking fountains and refill stations to Google Maps. You can also check the official [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) website or use apps like [Refill Deutschland](https://refill-deutschland.de/).",
+        "category": "map",
         "size": "large"
       },
       {
         "id": "faq2",
         "question": "Are the drinking fountains safe to use?",
         "answer": "Yes, all public drinking fountains in Berlin are regularly tested and maintained by [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php). The water quality meets all EU drinking water standards.",
+        "category": "project",
+        "size": "medium"
+      },
+      {
+        "id": "faq3",
+        "question": "How does the water map work?",
+        "answer": "Our water map shows all known public drinking fountains and refill stations in Berlin. You can add it to your Google Maps app to see water sources near you in real-time.",
+        "category": "map",
+        "size": "medium"
+      },
+      {
+        "id": "faq4",
+        "question": "Can I add new water sources to the map?",
+        "answer": "Yes! If you find a drinking fountain or refill station that's not on our map, please contact us at berlinertrinkbrunnen@gmail.com with the location details.",
+        "category": "map",
         "size": "medium"
       },
       {
         "id": "faq5",
         "question": "How can I support your initiative?",
         "answer": "You can help by spreading awareness, suggesting new fountain locations, or volunteering to help us map existing water sources. Contact us at berlinertrinkbrunnen@gmail.com.",
+        "category": "project",
         "size": "large"
       },
       {
         "id": "faq6",
         "question": "Why focus on Pankow district?",
         "answer": "We are starting with Pankow as a pilot project because we live there and can better assess local needs.",
+        "category": "project",
         "size": "small"
+      },
+      {
+        "id": "faq7",
+        "question": "What is the goal of this project?",
+        "answer": "Our goal is to make information about free drinking water sources in Berlin more accessible, helping people stay hydrated while reducing plastic waste from bottled water.",
+        "category": "project",
+        "size": "large"
+      },
+      {
+        "id": "faq8",
+        "question": "How often is the map updated?",
+        "answer": "We update the map regularly as we receive new information about water sources. The map is also connected to Google Maps, so you'll see real-time updates.",
+        "category": "map",
+        "size": "medium"
       }
     ]
   },

@@ -120,16 +120,13 @@ export type Translations = {
   faq: {
     title: string
     intro: string
-    questions: {
-      faq1Question: string
-      faq1Answer: string
-      faq2Question: string
-      faq2Answer: string
-      faq5Question: string
-      faq5Answer: string
-      faq6Question: string
-      faq6Answer: string
-    }
+    questions: Array<{
+      id: string
+      question: string
+      answer: string
+      category: string
+      size: string
+    }>
   }
   
   // News
