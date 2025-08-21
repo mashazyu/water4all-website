@@ -98,10 +98,8 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
             <div className="space-y-8">
               <div className="space-y-4 text-center">
-                <h1 className="text-4xl font-bold text-foreground group cursor-pointer transition-all duration-300 hover:scale-105">
-                  <span className="text-primary hover:text-purple-600 transition-all duration-500">
-                    {translations.home.projectTitle}
-                  </span>
+                <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
+                  {translations.home.projectTitle}
                 </h1>
                 <div className="max-w-4xl space-y-3">
                   <p className="text-lg text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
