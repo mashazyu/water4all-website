@@ -83,6 +83,8 @@ export type Translations = {
     moreQuestions: string
     footerCopyright: string
     contactEmail: string
+    socialProof: string
+    quickHelpTitle: string
   }
   
   // About page

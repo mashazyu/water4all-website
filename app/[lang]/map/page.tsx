@@ -5,83 +5,112 @@ import { PageSection } from "@/components/ui/page-section"
 import NewsGrid from "@/components/news-grid"
 import { MapSection } from "@/components/ui/map-section"
 import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { MapPin, Droplets, Users, Star, ChevronDown } from "lucide-react"
 
 export default function MapPage() {
   const { language, translations } = useLanguage()
 
   return (
     <PageLayout>
-      {/* Map Section - Full Screen */}
-      <FullScreenSection background="gradient">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
-          {/* Page Header */}
-          <div className="mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary">
+      {/* Hero Section - Minimalist with Progressive Disclosure */}
+      {/* Mobile: Text First, Then Map */}
+      <section className="max-md:block md:hidden w-full bg-background snap-start">
+        <div className="px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               {translations.map.heroTitle}
             </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {translations.map.infoSection}
+            </p>
+            
+            {/* Mobile CTA Buttons */}
+            <div className="space-y-3">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
+              >
+                {translations.map.addEnglishMap}
+              </a>
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground py-3 px-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
+              >
+                {translations.map.addGermanMap}
+              </a>
+            </div>
           </div>
+        </div>
+        
+        {/* Map Section */}
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="w-full h-96 sm:h-[450px] lg:h-[450px] bg-muted/30 border border-border overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Berlin Water Sources Map"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-          {/* Split Screen Layout */}
-          <div className="flex flex-col lg:flex-row min-h-[70vh]">
-            {/* Left Side - Description and Buttons */}
-            <div className="lg:w-1/2 flex flex-col justify-center">
-              <div className="max-w-lg mx-auto lg:mx-0">
-                {/* Description Section */}
-                <div className="mb-8">
-                  <p className="text-lg leading-relaxed text-muted-foreground hover:text-foreground transition-colors duration-300">
+
+      {/* Tablet & Desktop: Split Layout */}
+      <FullScreenSection background="default" className="max-md:hidden md:block snap-start">
+        <div className="min-h-screen bg-background flex flex-col">
+          {/* Tablet Content */}
+          <div className="flex min-h-screen">
+            {/* Left Side - Content */}
+            <div className="w-1/2 flex items-center justify-center px-8">
+              <div className="w-full max-w-lg h-[500px] flex flex-col justify-center space-y-12">
+                {/* Hero Content */}
+                <div className="space-y-6">
+                  <h1 className="text-5xl font-bold text-foreground leading-tight">
+                    {translations.map.heroTitle}
+                  </h1>
+                  <p className="text-xl text-muted-foreground leading-relaxed">
                     {translations.map.infoSection}
                   </p>
                 </div>
-
-                {/* Buttons Section */}
-                <div className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground hover:text-primary transition-colors duration-300 flex items-center gap-2">
-                    <span className="w-1 h-6 bg-primary rounded-full"></span>
-                    {translations.map.googleMapsTitle}
-                  </h2>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
-                    >
-                      {translations.map.addEnglishMap}
-                    </a>
-
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-4 text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
-                    >
-                      {translations.map.addGermanMap}
-                    </a>
-                  </div>
-                </div>
-
-                {/* FAQ Links */}
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="space-y-3">
-                    <a href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
-                      {translations.map.howMapWorks}
-                    </a>
-                    <a href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
-                      {translations.map.howRemoveMap}
-                    </a>
-                    <a href="/faq" className="block text-primary hover:text-primary/80 underline font-medium text-sm transition-colors duration-300">
-                      {translations.map.moreQuestions}
-                    </a>
-                  </div>
+                
+                {/* Tablet CTA Buttons - Side by Side */}
+                <div className="flex gap-4">
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-auto bg-primary hover:bg-primary/90 text-primary-foreground py-4 px-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium inline-block"
+                  >
+                    {translations.map.addEnglishMap}
+                  </a>
+                  <a 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground py-4 px-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium inline-block"
+                  >
+                    {translations.map.addGermanMap}
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Right Side - Map Preview */}
-            <div className="lg:w-1/2 bg-white/50 backdrop-blur-sm p-6 lg:p-8 flex items-center justify-center mt-8 lg:mt-0">
-              <div className="w-full h-full max-h-[400px] lg:max-h-[500px]">
-                <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            {/* Right Side - Map */}
+            <div className="w-1/2 flex items-center justify-center px-8">
+              <div className="w-full max-w-lg h-[500px]">
+                <div className="relative w-full h-full overflow-hidden shadow-2xl">
                   <iframe
                     src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
                     width="100%"
@@ -90,13 +119,12 @@ export default function MapPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="rounded-lg"
                     title="Berlin Water Sources Map"
                   />
-                  {/* Theme Color Overlay */}
+                  {/* Subtle overlay */}
                   <div 
-                    className="absolute inset-0 pointer-events-none rounded-lg" 
-                    style={{ backgroundColor: 'rgba(24, 0, 173, 0.1)' }}
+                    className="absolute inset-0 pointer-events-none" 
+                    style={{ backgroundColor: 'rgba(251, 100%, 34%, 0.03)' }}
                   />
                 </div>
               </div>
@@ -105,17 +133,167 @@ export default function MapPage() {
         </div>
       </FullScreenSection>
 
-      {/* Related News Section - Full Screen */}
+
+
+
+
+      {/* Quick Help Section - Progressive Disclosure */}
       <PageSection 
-        title={translations.subprojects.relatedNews}
-        titleSize="md"
-        accentLineHeight="h-6"
+        titleSize="lg"
+        accentLineHeight="h-8"
         background="muted"
         fullHeight={true}
         className="snap-start"
       >
-        <div className="group">
-          <NewsGrid projectFilter={1} limit={3} showViewAllButton={true} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Enhanced Section Header */}
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              <span className="text-primary">
+                Quick Help & Resources
+              </span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
+              Everything you need to know about using our water sources map and getting the most out of it
+            </p>
+          </div>
+
+          {/* Enhanced Grid Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+            {/* Map Features - Enhanced */}
+            <div className="group relative overflow-hidden bg-gradient-to-br from-muted/60 to-muted/40 border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
+              {/* Interactive Background Pattern */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
+                {/* Enhanced Header */}
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="relative">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center shadow-lg">
+                      <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                    </div>
+                    <div className="absolute -inset-1 bg-primary/20 blur-sm opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">What You Get</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Comprehensive water source coverage</p>
+                  </div>
+                </div>
+
+                {/* Enhanced Feature List */}
+                <div className="space-y-1">
+                  {[
+                    "220+ verified water sources across Berlin",
+                    "Seamless Google Maps integration",
+                    "100% free to use"
+                  ].map((feature, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-start gap-4 p-3 hover:bg-white/50 transition-all duration-300 cursor-pointer group/feature"
+                    >
+                      <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                      <p className="text-muted-foreground text-sm leading-relaxed font-medium group-hover/feature:text-foreground transition-colors duration-300">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Interactive CTA */}
+                <div className="mt-6 pt-6 border-t border-border/30">
+                  <button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 font-semibold transition-colors duration-300">
+                    Explore Map Features
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ Links - Enhanced */}
+            <div className="group relative overflow-hidden bg-gradient-to-br from-muted/60 to-muted/40 border border-border/50 shadow-lg sm:hover:shadow-2xl transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
+              {/* Interactive Background Pattern */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
+                {/* Enhanced Header */}
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <div className="relative">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/30 flex items-center justify-center shadow-lg">
+                      <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                    </div>
+                    <div className="absolute -inset-1 bg-primary/20 blur-sm opacity-0 sm:group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">Quick Answers</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Common questions & solutions</p>
+                  </div>
+                </div>
+
+                {/* Enhanced FAQ Links */}
+                <div className="space-y-1">
+                  {[
+                    translations.map.howMapWorks,
+                    translations.map.howRemoveMap,
+                    translations.map.moreQuestions
+                  ].map((faq, index) => (
+                    <a 
+                      key={index}
+                      href="/faq"
+                      className="group/faq block p-4 hover:bg-white/50 transition-all duration-300 border border-transparent hover:border-border/30"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
+                        <div className="flex-1">
+                          <p className="text-foreground font-medium text-sm leading-relaxed group-hover/faq:text-primary transition-colors duration-300">
+                            {faq}
+                          </p>
+                        </div>
+                        <div className="flex-shrink-0 opacity-0 group-hover/faq:text-primary transition-all duration-300 transform translate-x-2 group-hover/faq:translate-x-0">
+                          <ChevronDown className="w-4 h-4 text-primary rotate-[-90deg]" />
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
+                {/* Interactive CTA */}
+                <div className="mt-6 pt-6 border-t border-border/30">
+                  <a 
+                    href="/faq"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 font-semibold transition-colors duration-300 inline-block text-center"
+                  >
+                    View All FAQs
+                  </a>
+                </div>
+                <div className="flex-1"></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </PageSection>
+
+      {/* Related News Section */}
+      <PageSection 
+        titleSize="lg"
+        accentLineHeight="h-8"
+        background="default"
+        fullHeight={true}
+        className="snap-start"
+      >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Enhanced Section Header */}
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+              <span className="text-primary">
+                {translations.subprojects.relatedNews}
+              </span>
+            </h2>
+          </div>
+          
+          <div className="group">
+            <NewsGrid projectFilter={1} limit={3} showViewAllButton={true} />
+          </div>
         </div>
       </PageSection>
     </PageLayout>
