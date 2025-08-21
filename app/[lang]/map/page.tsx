@@ -16,7 +16,7 @@ export default function MapPage() {
       {/* Hero Section - Minimalist with Progressive Disclosure */}
       {/* Mobile: Text First, Then Map */}
       <section className="max-md:block md:hidden w-full bg-background snap-start">
-        <div className="px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <div className="px-4 sm:px-6 lg:px-8 pt-16 pb-16">
           <div className="max-w-4xl mx-auto space-y-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               {translations.map.heroTitle}
@@ -48,7 +48,7 @@ export default function MapPage() {
         </div>
         
         {/* Map Section */}
-        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+        <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-16">
           <div className="max-w-3xl mx-auto">
             <div className="w-full h-96 sm:h-[450px] lg:h-[450px] bg-muted/30 border border-border overflow-hidden shadow-lg">
               <iframe

@@ -151,13 +151,25 @@ export default function HomePage() {
 
         {/* Latest News Section */}
         <PageSection 
-          title={translations.home.latestNews}
-          titleSize="md"
-          accentLineHeight="h-6"
+          titleSize="lg"
+          accentLineHeight="h-8"
+          background="default"
+          fullHeight={true}
           className="snap-start"
         >
-          <div className="group">
-            <NewsGrid limit={3} showViewAllButton={true} />
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Enhanced Section Header */}
+            <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
+                <span className="text-primary">
+                  {translations.home.latestNews}
+                </span>
+              </h2>
+            </div>
+            
+            <div className="group">
+              <NewsGrid limit={3} showViewAllButton={true} />
+            </div>
           </div>
         </PageSection>
       </div>
