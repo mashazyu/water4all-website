@@ -112,68 +112,86 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "intro": "Find answers to common questions about our drinking fountains initiative.",
+    "intro": "Find answers to common questions about our initiative.",
     "viewAllFaqs": "View All FAQs",
     "questions": [
       {
         "id": "faq1",
-        "question": "How can I find drinking fountains near me?",
-        "answer": "We are working on adding all drinking fountains and refill stations to Google Maps. You can also check the official [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) website or use apps like [Refill Deutschland](https://refill-deutschland.de/).",
+        "question": "Why can’t I find most fountains on Google Maps?",
+        "answer": "[The Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), the company that installs the fountains, only lists them on their own website. They do not integrate the locations with Google Maps. Instead, they provide a downloadable .kml file with all fountain coordinates.\n\nWe’ve made it easier for you by turning that data into a Google Maps layer you can add directly to your phone. We also included other public water sources such as libraries, open public schools, and more.\n\nFor even more refill points, check out [Refill](https://refill-deutschland.de/) Berlin, which lists businesses and organizations participating in their program.",
         "category": "map"
       },
       {
         "id": "faq2",
-        "question": "Are the drinking fountains safe to use?",
-        "answer": "Yes, all public drinking fountains in Berlin are regularly tested and maintained by [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php). The water quality meets all EU drinking water standards.",
-        "category": "project"
+        "question": "How does water map work?",
+        "answer": "We’ve taken the BWB data and other sources and created a map you can add to your Google Maps app as an extra layer. This way, you can see all known public water points right in your regular map view.",
+        "category": "map"
       },
       {
         "id": "faq3",
-        "question": "How does the water map work?",
-        "answer": "Our water map shows all known public drinking fountains and refill stations in Berlin. You can add it to your Google Maps app to see water sources near you in real-time.",
+        "question": "How do I add this map to my Google Maps app?",
+        "answer": "Visit our map page, tap the download button, and the new layer will be added to your Google Maps app. You can remove it anytime.",
         "category": "map"
       },
       {
         "id": "faq4",
-        "question": "Can I add new water sources to the map?",
-        "answer": "Yes! If you find a drinking fountain or refill station that's not on our map, please contact us at berlinertrinkbrunnen@gmail.com with the location details.",
+        "question": "Можно ли предложить новое место для карты?",
+        "answer": "Yes! Just write to us at the address listed in the footer.",
         "category": "map"
       },
       {
+        "id": "faq8",
+        "question": "Где вы хотите поставить больше фонтанчиков в первую очередь?",
+        "answer": "В районах за пределами центра, где их мало — начиная с Панкова и Лихтенберга.",
+        "category": "project"
+      },
+      {
         "id": "faq5",
-        "question": "How can I support your initiative?",
-        "answer": "You can help by spreading awareness, suggesting new fountain locations, or volunteering to help us map existing water sources. Contact us at berlinertrinkbrunnen@gmail.com.",
+        "question": "Who decides where new drinking fountains are installed?",
+        "answer": "The Berlin Senate (Senatsverwaltung) decides that together with the Berliner Wasserbetriebe and local district authorities.",
         "category": "project"
       },
       {
         "id": "faq6",
-        "question": "Why focus on Pankow district?",
-        "answer": "We are starting with Pankow as a pilot project because we live there and can better assess local needs.",
+        "question": "Who funds the installation and maintenance of fountains?",
+        "answer": "The Berlin Senate funds both the installation and maintenance, and the Berliner Wasserbetriebe manages the work.",
         "category": "project"
       },
       {
         "id": "faq7",
-        "question": "What is the goal of this project?",
-        "answer": "Our goal is to make information about free drinking water sources in Berlin more accessible, helping people stay hydrated while reducing plastic waste from bottled water.",
+        "question": "How much does it cost to install and maintain a fountain?",
+        "answer": "Installing one fountain costs around €12,000–15,000. Maintenance, including water testing, costs about €3,700 per year.",
         "category": "project"
-      },
-      {
-        "id": "faq8",
-        "question": "How often is the map updated?",
-        "answer": "We update the map regularly as we receive new information about water sources. The map is also connected to Google Maps, so you'll see real-time updates.",
-        "category": "map"
-      },
-      {
-        "id": "faq9",
-        "question": "How do I remove this map from my Google Maps?",
-        "answer": "To remove our custom map from Google Maps: 1) Open Google Maps app, 2) Tap on 'Saved' at the bottom, 3) Go to 'Maps' tab, 4) Find 'Berlin Water Sources' and tap the three dots, 5) Select 'Remove from saved'.",
-        "category": "map"
       },
       {
         "id": "faq10",
-        "question": "How can I contact you?",
-        "answer": "You can reach us at berlinertrinkbrunnen@gmail.com. We welcome questions, suggestions for new fountain locations, and feedback about our water map. We typically respond within 24-48 hours.",
+        "question": "Are the fountains safe to drink from?",
+        "answer": "Yes. Water from each fountain is tested every 4 weeks to ensure it meets safety standards.",
         "category": "project"
+      },
+      {
+        "id": "faq11",
+        "question": "Why do fountains run water constantly? Isn’t that wasteful?",
+        "answer": "The constant flow prevents water from standing in the pipes, which reduces the risk of bacterial growth. The drained water is used to water trees in some locations.",
+        "category": "project"
+      },
+      {
+        "id": "faq13",
+        "question": "When are the fountains operational during the year?",
+        "answer": "They operate from May to October each year to avoid freezing in winter.",
+        "category": "project"
+      },
+      {
+        "id": "faq9",
+        "question": "How can I help support your initiative?",
+        "answer": "If you know anyone in district authorities, the Berlin Senate (especially, the MVKU department), or other relevant offices, please connect us. You can also share our map and project with friends and local community groups.",
+        "category": "project"
+      },
+      {
+        "id": "faq12",
+        "question": "How can I hide or show water sources in Google Maps?",
+        "answer": " If you don’t want to see water sources from the custom map in the Google Maps app, tap “You” at the bottom of the screen, scroll all the way down, and select “Maps.” Then tap the name of the map and choose “Close” to hide the water sources. This will temporarily remove the map from your view.\n\nYou can learn more on the [official Google support page](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
+        "category": "map"
       }
     ]
   },
