@@ -207,7 +207,12 @@ const translations = {
 }
 
 export function getTranslations(language: Language): Translations {
-  return translations[language]
+  const result = translations[language]
+  if (!result) {
+    console.error(`Translations not found for language: ${language}`)
+    return translations.en // fallback to English
+  }
+  return result
 }
 
 export const languages = {
