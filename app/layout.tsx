@@ -78,7 +78,6 @@ export default function RootLayout({
                         'security_storage': 'granted'
                       }
                     });
-                    console.log('✅ Consent mode updated to granted');
                     
                     // Force a page view to trigger Google Analytics
                     window.dataLayer.push({
@@ -86,11 +85,8 @@ export default function RootLayout({
                       'page_title': document.title,
                       'page_location': window.location.href
                     });
-                    console.log('📊 Page view event pushed to trigger GA cookies');
                   }
                 }, 1000);
-                
-                console.log('🚀 GTM loaded after consent');
               };
               
               // Function to load Google Analytics directly (fallback)
@@ -109,8 +105,6 @@ export default function RootLayout({
                     analytics_storage: 'granted'
                   }
                 });
-                
-                console.log('📊 Google Analytics loaded directly');
               };
               
               // Function to create analytics cookies manually (ensures they exist)
@@ -140,8 +134,6 @@ export default function RootLayout({
                   var gatValue = '1';
                   document.cookie = '_gat=; expires=' + oneMinute.toUTCString() + '; path=/; SameSite=Lax';
                   document.cookie = '_gat=' + gatValue + '; expires=' + oneMinute.toUTCString() + '; path=/; SameSite=Lax';
-                  
-                  console.log('🍪 Analytics cookies created manually');
                 }
               };
               
@@ -153,9 +145,6 @@ export default function RootLayout({
                   window.loadGTM();
                 }
               }
-              
-              // Add debugging for GTM loading
-              console.log('🔧 GTM setup ready, loadGTM function available');
             `
           }}
         />

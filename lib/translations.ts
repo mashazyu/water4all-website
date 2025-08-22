@@ -130,7 +130,6 @@ export type Translations = {
       question: string
       answer: string
       category: string
-      size: string
     }>
   }
   
