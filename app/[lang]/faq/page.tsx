@@ -1,80 +1,164 @@
 "use client"
 
+import { useState } from "react"
 import { useLanguage } from "@/components/language-provider"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
+import { renderParagraphs } from "@/lib/utils"
 
 export default function FAQ() {
   const { translations } = useLanguage()
+  const [expandedItem, setExpandedItem] = useState<number>(0)
 
-  // Function to render markdown-like links
-  const renderTextWithLinks = (text: string) => {
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
-    const parts = text.split(linkRegex)
+  // Function to render markdown-like links with line break support
+  const renderTextWithLinksAndBreaks = (text: string) => {
+    // First split by double newlines to get paragraphs
+    const paragraphs = text.split('\n\n')
     
-    if (parts.length === 1) {
-      return <span>{text}</span>
-    }
-    
-    const elements = []
-    for (let i = 0; i < parts.length; i += 3) {
-      if (parts[i]) elements.push(<span key={`text-${i}`}>{parts[i]}</span>)
-      if (parts[i + 1] && parts[i + 2]) {
-        elements.push(
-          <a 
-            key={`link-${i}`} 
-            href={parts[i + 2]} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-primary hover:text-secondary underline"
-          >
-            {parts[i + 1]}
-          </a>
-        )
+    return paragraphs.map((paragraph, pIndex) => {
+      // For each paragraph, handle links
+      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+      const parts = paragraph.split(linkRegex)
+      
+      if (parts.length === 1) {
+        return <p key={`p-${pIndex}`} className="mb-4 last:mb-0">{paragraph}</p>
       }
-    }
-    return <>{elements}</>
+      
+      const elements = []
+      for (let i = 0; i < parts.length; i += 3) {
+        if (parts[i]) elements.push(<span key={`text-${pIndex}-${i}`}>{parts[i]}</span>)
+        if (parts[i + 1] && parts[i + 2]) {
+          elements.push(
+            <a 
+              key={`link-${pIndex}-${i}`} 
+              href={parts[i + 2]} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary underline"
+            >
+              {parts[i + 1]}
+            </a>
+          )
+        }
+      }
+      return <p key={`p-${pIndex}`} className="mb-4 last:mb-0">{elements}</p>
+    })
   }
 
-  const faqs = [
-    {
-      question: translations.faq.questions.faq1Question,
-      answer: translations.faq.questions.faq1Answer,
-    },
-    {
-      question: translations.faq.questions.faq2Question,
-      answer: translations.faq.questions.faq2Answer,
-    },
-    {
-      question: translations.faq.questions.faq5Question,
-      answer: translations.faq.questions.faq5Answer,
-    },
-    {
-      question: translations.faq.questions.faq6Question,
-      answer: translations.faq.questions.faq6Answer,
-    },
-  ]
+  const faqs = (translations.faq.questions as unknown) as any[]
+
+  // Group FAQs by category
+  const projectFaqs = faqs.filter((faq: any) => faq.category === 'project')
+  const mapFaqs = faqs.filter((faq: any) => faq.category === 'map')
+
+  // Toggle individual FAQ item
+  const toggleItem = (index: number) => {
+    setExpandedItem(expandedItem === index ? -1 : index)
+  }
+
+
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.faq.title}</h1>
-        <p className="text-base text-gray-600">{translations.faq.intro}</p>
-      </div>
+    <PageLayout>
+      <FullScreenSection background="default">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+          {/* Header Section */}
+          <div className="space-y-6 mb-8">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.faq.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.faq.intro}</p>
+            </div>
+          </div>
 
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <Card key={index} className="border border-gray-300 shadow-sm">
-            <CardHeader className="bg-gray-50 border-b border-gray-200">
-              <CardTitle className="text-base font-semibold text-gray-800">{faq.question}</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-4">
-              <p className="text-gray-700 leading-relaxed text-sm">
-                {renderTextWithLinks(faq.answer)}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </div>
+          {/* Project FAQ Section */}
+          <div className="space-y-6 mb-12">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-primary mb-2">Project</h2>
+              <p className="text-muted-foreground">{translations.faq.projectFaqsTitle}</p>
+            </div>
+            
+            {projectFaqs.map((faq: any, index: number) => {
+              const isExpanded = expandedItem === index
+              
+              return (
+                <div key={faq.id} className="w-full" id={faq.id}>
+                  <Card className="border border-border w-full min-w-full max-w-full">
+                    <CardHeader 
+                      className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors w-full"
+                      onClick={() => toggleItem(index)}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <CardTitle className="text-lg font-semibold text-foreground pr-4 flex-1">
+                          {faq.question}
+                        </CardTitle>
+                        <div className="flex-shrink-0">
+                          {isExpanded ? (
+                            <ChevronUp className="h-5 w-5 text-muted-foreground" />
+                          ) : (
+                            <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                          )}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    {isExpanded && (
+                      <CardContent className="pt-6 w-full">
+                        <div className="text-muted-foreground leading-relaxed w-full">
+                          {renderTextWithLinksAndBreaks(faq.answer)}
+                        </div>
+                      </CardContent>
+                    )}
+                  </Card>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Map FAQ Section */}
+          <div className="space-y-6">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-primary mb-2">Map</h2>
+              <p className="text-muted-foreground">{translations.faq.mapFaqsTitle}</p>
+            </div>
+            
+            {mapFaqs.map((faq: any, index: number) => {
+              const isExpanded = expandedItem === index
+              
+              return (
+                <div key={faq.id} className="w-full" id={faq.id}>
+                  <Card className="border border-border w-full min-w-full max-w-full">
+                    <CardHeader 
+                      className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors w-full"
+                      onClick={() => toggleItem(index)}
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <CardTitle className="text-lg font-semibold text-foreground pr-4 flex-1">
+                          {faq.question}
+                        </CardTitle>
+                        <div className="flex-shrink-0">
+                          {isExpanded ? (
+                            <ChevronUp className="h-5 w-5 text-muted-foreground" />
+                          ) : (
+                            <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                          )}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    {isExpanded && (
+                      <CardContent className="pt-6 w-full">
+                        <div className="text-muted-foreground leading-relaxed w-full">
+                          {renderTextWithLinksAndBreaks(faq.answer)}
+                        </div>
+                      </CardContent>
+                    )}
+                  </Card>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </FullScreenSection>
+    </PageLayout>
   )
 }

@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/components/language-provider"
 import AntiSpamEmail from "@/components/anti-spam-email"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 
 export default function Privacy() {
   const { translations } = useLanguage()
@@ -73,57 +74,77 @@ export default function Privacy() {
   }
 
   return (
-    <div className="space-y-6 max-w-4xl mx-auto">
-      <div className="space-y-2">
-        <h1 className="font-semibold text-gray-800">{translations.privacy.title}</h1>
-        <p className="text-base text-gray-600">{translations.privacy.intro}</p>
-      </div>
+    <PageLayout>
+      <FullScreenSection background="default">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+          {/* Header Section */}
+          <div className="space-y-6 mb-8">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.privacy.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.privacy.intro}</p>
+            </div>
+          </div>
 
-      <div className="space-y-6">
-        {/* Responsible Party */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.responsibleParty}</h2>
-          <div className="text-gray-700 whitespace-pre-line">{renderTextWithAntiSpamEmail(translations.privacy.responsiblePartyContent)}</div>
-        </section>
+          {/* Content Section */}
+          <div className="space-y-8">
+            {/* Responsible Party */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.responsibleParty}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {renderTextWithAntiSpamEmail(translations.privacy.responsiblePartyContent)}
+              </div>
+            </section>
 
-        {/* Data Processed */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.dataProcessed}</h2>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.dataProcessedContent}</p>
-        </section>
+            {/* Data Processed */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.dataProcessed}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {translations.privacy.dataProcessedContent}
+              </div>
+            </section>
 
-        {/* Analytics Service */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.analyticsService}</h2>
-          <p className="text-gray-700">
-            {renderTextWithLineBreaks(translations.privacy.analyticsServiceContent)}
-          </p>
-        </section>
+            {/* Analytics Service */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.analyticsService}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {renderTextWithLineBreaks(translations.privacy.analyticsServiceContent)}
+              </div>
+            </section>
 
-        {/* Purpose of Processing */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.purposeOfProcessing}</h2>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.purposeOfProcessingContent}</p>
-        </section>
+            {/* Purpose of Processing */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.purposeOfProcessing}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed whitespace-pre-line">
+                {translations.privacy.purposeOfProcessingContent}
+              </div>
+            </section>
 
-        {/* Cookies */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.cookies}</h2>
-          <p className="text-gray-700">{translations.privacy.cookiesContent}</p>
-        </section>
+            {/* Cookies */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.cookies}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {translations.privacy.cookiesContent}
+              </div>
+            </section>
 
-        {/* Your Rights */}
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-800">{translations.privacy.yourRights}</h2>
-          <p className="text-gray-700">{translations.privacy.yourRightsIntro}</p>
-          <p className="text-gray-700 whitespace-pre-line">{translations.privacy.yourRightsList}</p>
-        </section>
+            {/* Your Rights */}
+            <section className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.privacy.yourRights}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-4">
+                <p>{translations.privacy.yourRightsIntro}</p>
+                <div className="whitespace-pre-line">{translations.privacy.yourRightsList}</div>
+              </div>
+            </section>
 
-        {/* Contact Info */}
-        <section className="space-y-2">
-          <div className="text-gray-700">{renderTextWithAntiSpamEmail(translations.privacy.contactInfo)}</div>
-        </section>
-      </div>
-    </div>
+            {/* Contact Info */}
+            <section className="space-y-4">
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {renderTextWithAntiSpamEmail(translations.privacy.contactInfo)}
+              </div>
+            </section>
+          </div>
+        </div>
+      </FullScreenSection>
+    </PageLayout>
   )
 }

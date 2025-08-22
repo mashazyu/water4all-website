@@ -1,22 +1,38 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { useLanguage } from "./language-provider"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronDown } from "lucide-react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 export default function Navigation() {
   const pathname = usePathname()
+  const router = useRouter()
   const { language, translations, setLanguage, languages, availableLanguages } = useLanguage()
   const [open, setOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   // Extract current language from pathname
   const currentLang = pathname.split('/')[1] || 'en'
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
   
   // Safety check - don't render until translations are loaded
   if (!translations || !translations.navigation) {
@@ -68,33 +84,40 @@ export default function Navigation() {
         </div>
 
         <div className="flex items-center gap-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="text-sm font-normal text-foreground hover:text-primary flex items-center gap-1 px-2 h-8"
-              >
-                {language.toUpperCase()}
-                <ChevronDown className="h-3 w-3" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="min-w-[120px]">
-              {availableLanguages.map((lang) => (
-                <DropdownMenuItem
-                  key={lang}
-                  onClick={() => {
-                    setLanguage(lang)
-                    // Navigate to the same page in the new language
-                    const currentPath = pathname.split('/').slice(2).join('/')
-                    window.location.href = `/${lang}${currentPath ? `/${currentPath}` : ''}`
-                  }}
-                  className={`text-sm ${language === lang ? "bg-primary/10 text-primary" : ""}`}
-                >
-                  {languages[lang].nativeName}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+
+          <div className="relative" ref={dropdownRef}>
+            <Button
+              variant="ghost"
+              className="text-sm font-normal text-foreground hover:text-primary flex items-center gap-1 px-2 h-8"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              {language.toUpperCase()}
+              <ChevronDown className="h-3 w-3" />
+            </Button>
+            
+            {dropdownOpen && (
+              <div className="absolute right-0 top-full mt-1 min-w-[120px] bg-popover border border-border rounded-md shadow-lg z-[9999]">
+                {availableLanguages.map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => {
+                      setLanguage(lang)
+                      setDropdownOpen(false)
+                      // Navigate to the same page in the new language using Next.js router
+                      const currentPath = pathname.split('/').slice(2).join('/')
+                      const newPath = `/${lang}${currentPath ? `/${currentPath}` : ''}`
+                      router.push(newPath)
+                    }}
+                    className={`w-full text-left px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground ${
+                      language === lang ? "bg-primary/10 text-primary" : ""
+                    }`}
+                  >
+                    {languages[lang].nativeName}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">

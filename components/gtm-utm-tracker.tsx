@@ -21,10 +21,7 @@ export default function GTMUTMTracker() {
         }
       })
       
-      // Debug logging
-      if (Object.keys(utmParams).length > 0) {
-        console.log('🔍 UTM Parameters found in URL:', utmParams)
-      }
+      // Debug logging removed
       
       return utmParams
     }
@@ -34,8 +31,6 @@ export default function GTMUTMTracker() {
       if (typeof window === "undefined" || !window.dataLayer) return
       
       if (Object.keys(utmParams).length > 0) {
-        console.log('📊 Sending UTM parameters to Google Tag Manager:', utmParams)
-        
         // Method 1: Send UTM parameters as a custom event (following Google's recommendation)
         window.dataLayer.push({
           event: 'custom_utm_tracking',
@@ -77,7 +72,6 @@ export default function GTMUTMTracker() {
         
         // Store UTM parameters in localStorage for persistence across page navigation
         localStorage.setItem('utm_params', JSON.stringify(utmParams))
-        console.log('✅ UTM parameters sent to GTM via multiple methods following Google documentation')
       }
     }
 

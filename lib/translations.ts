@@ -13,6 +13,15 @@ export type NewsItem = {
 }
 
 export type Translations = {
+  // Metadata
+  metadata: {
+    homeTitle: string
+    homeDescription: string
+    mapTitle: string
+    mapDescription: string
+    keywords: string[]
+  }
+  
   // Navigation
   navigation: {
     home: string
@@ -49,6 +58,8 @@ export type Translations = {
     subproject2Description: string
     learnMore: string
     latestNews: string
+    loadingTitle: string
+    loadingText: string
   }
   
   // Subproject pages
@@ -81,6 +92,17 @@ export type Translations = {
     moreQuestions: string
     footerCopyright: string
     contactEmail: string
+    socialProof: string
+    quickHelpTitle: string
+    mapFeatures: string
+    betaTesting: string
+    waterSourceGuide: string
+
+    whatYouGetTitle: string
+    quickAnswersTitle: string
+    commonQuestionsSubtitle: string
+    freeToUse: string
+    mapDescription: string
   }
   
   // About page
@@ -116,16 +138,15 @@ export type Translations = {
   faq: {
     title: string
     intro: string
-    questions: {
-      faq1Question: string
-      faq1Answer: string
-      faq2Question: string
-      faq2Answer: string
-      faq5Question: string
-      faq5Answer: string
-      faq6Question: string
-      faq6Answer: string
-    }
+    viewAllFaqs: string
+    projectFaqsTitle: string
+    mapFaqsTitle: string
+    questions: Array<{
+      id: string
+      question: string
+      answer: string
+      category: string
+    }>
   }
   
   // News
@@ -202,7 +223,12 @@ const translations = {
 }
 
 export function getTranslations(language: Language): Translations {
-  return translations[language]
+  const result = translations[language]
+  if (!result) {
+    console.error(`Translations not found for language: ${language}`)
+    return translations.en // fallback to English
+  }
+  return result
 }
 
 export const languages = {

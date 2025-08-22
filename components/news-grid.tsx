@@ -55,7 +55,7 @@ export default function NewsGrid({
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {displayedNews.map((item) => (
-          <Card key={item.id} className="border border-border shadow-sm hover:shadow-md transition-shadow">
+          <Card key={item.id} className="border border-border shadow-none hover:shadow-none">
             <CardHeader className="pb-2">
               <div className="flex justify-between items-start mb-2">
                 <div className="flex flex-wrap gap-1">

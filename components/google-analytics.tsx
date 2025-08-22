@@ -83,11 +83,6 @@ export default function GoogleAnalyticsComponent() {
         }
       })
       
-      // Debug logging
-      if (Object.keys(utmParams).length > 0) {
-        console.log('🔍 UTM Parameters found in URL:', utmParams)
-      }
-      
       return utmParams
     }
 
@@ -96,9 +91,6 @@ export default function GoogleAnalyticsComponent() {
       if (typeof window === "undefined" || !window.gtag) return
       
       if (Object.keys(utmParams).length > 0) {
-        console.log('📊 Sending UTM parameters to Google Analytics:', utmParams)
-        
-        // Store UTM parameters in localStorage for persistence
         localStorage.setItem('utm_params', JSON.stringify(utmParams))
         
         // Method 1: Send UTM parameters as a custom event
@@ -140,25 +132,6 @@ export default function GoogleAnalyticsComponent() {
           utm_term: utmParams.utm_term || '',
           utm_content: utmParams.utm_content || ''
         })
-        
-        console.log('✅ UTM parameters sent to GA4 via multiple methods')
-        
-        // Debug: Test if gtag is working
-        setTimeout(() => {
-          console.log('🔍 Testing GA4 connection...')
-          if (typeof window !== "undefined" && window.gtag) {
-            // Send a test event to verify GA4 is working
-            window.gtag('event', 'test_utm_tracking', {
-              event_category: 'debug',
-              event_label: 'testing_utm_tracking',
-              utm_source: utmParams.utm_source || 'test',
-              timestamp: Date.now()
-            })
-            console.log('🧪 Test event sent to GA4')
-          } else {
-            console.error('❌ gtag not available')
-          }
-        }, 1000)
       }
     }
 

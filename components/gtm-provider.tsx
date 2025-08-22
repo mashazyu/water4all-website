@@ -19,8 +19,6 @@ export default function GTMProvider({ children }: { children: React.ReactNode })
         event: 'gtm.init',
         timestamp: Date.now()
       })
-      
-      console.log('🚀 GTM Provider initialized, dataLayer ready')
     }
   }, [])
 

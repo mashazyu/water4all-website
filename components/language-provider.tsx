@@ -42,12 +42,19 @@ export function LanguageProvider({
     localStorage.setItem("language", newLanguage)
   }
 
+  // Update language when it changes
+  useEffect(() => {
+    localStorage.setItem("language", language)
+  }, [language])
+
+  const translations = getTranslations(language)
+  
   return (
     <LanguageContext.Provider
       value={{
         language,
         setLanguage,
-        translations: getTranslations(language),
+        translations,
         toggleLanguage,
         languages,
         availableLanguages: Object.keys(languages) as Language[],

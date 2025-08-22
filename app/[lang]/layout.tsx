@@ -9,7 +9,6 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import CookieConsent from "@/components/cookie-consent"
 import GTMUTMTracker from "@/components/gtm-utm-tracker"
-import GTMDebug from "@/components/gtm-debug"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,8 +25,26 @@ export async function generateMetadata({
   const translations = getTranslations(lang)
 
   return {
-    title: "Wasser für alle",
-    description: "Initiative for hydration during hot summer in Berlin",
+    title: translations.metadata.homeTitle,
+    description: translations.metadata.homeDescription,
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'en': '/en',
+        'de': '/de',
+        'ru': '/ru',
+      },
+    },
+    openGraph: {
+      title: translations.metadata.homeTitle,
+      description: translations.metadata.homeDescription,
+      locale: lang === "en" ? "en_US" : lang === "de" ? "de_DE" : "ru_RU",
+      url: `https://www.water4all.com.de/${lang}`,
+    },
+    twitter: {
+      title: translations.metadata.homeTitle,
+      description: translations.metadata.homeDescription,
+    },
   }
 }
 
@@ -49,10 +66,9 @@ export default async function LangLayout({
         }}
       />
       <GTMUTMTracker />
-      <GTMDebug />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
-        <main className="flex-1 bg-background">{children}</main>
+        <main className="bg-background">{children}</main>
         <Footer />
         <CookieConsent />
       </LanguageProvider>
