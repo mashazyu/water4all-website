@@ -117,35 +117,81 @@
     "questions": [
       {
         "id": "faq1",
-        "question": "Wie finde ich Trinkbrunnen in meiner Nähe?",
-        "answer": "Wir arbeiten daran, alle Trinkbrunnen und Refill-Stationen in Google Maps einzutragen. Sie können auch die offizielle Website der [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php) besuchen oder Apps wie [Refill Deutschland](https://refill-deutschland.de/) nutzen."
-      },
-      {
-        "id": "faq2",
-        "question": "Sind die Trinkbrunnen sicher zu benutzen?",
-        "answer": "Ja, alle öffentlichen Trinkbrunnen in Berlin werden regelmäßig von den [Berliner Wasserbetrieben](https://www.bwb.de/de/trinkbrunnen.php) getestet und gewartet. Die Wasserqualität entspricht allen EU-Trinkwasserstandards."
-      },
-      {
-        "id": "faq5",
-        "question": "Wie kann ich Ihre Initiative unterstützen?",
-        "answer": "Sie können helfen, indem Sie Bewusstsein schaffen, neue Brunnenstandorte vorschlagen oder sich freiwillig melden, um uns beim Kartieren bestehender Wasserquellen zu helfen. Kontaktieren Sie uns unter berlinertrinkbrunnen@gmail.com."
-      },
-      {
-        "id": "faq6",
-        "question": "Warum konzentrieren Sie sich auf den Bezirk Pankow?",
-        "answer": "Wir beginnen mit Pankow als Pilotprojekt, weil wir dort leben und die lokalen Bedürfnisse besser einschätzen können."
-      },
-      {
-        "id": "faq9",
-        "question": "Wie entferne ich diese Karte aus meinen Google Maps?",
-        "answer": "Um unsere benutzerdefinierte Karte aus Google Maps zu entfernen: 1) Öffnen Sie die Google Maps App, 2) Tippen Sie unten auf 'Gespeichert', 3) Gehen Sie zum 'Karten' Tab, 4) Finden Sie 'Berlin Water Sources' und tippen Sie auf die drei Punkte, 5) Wählen Sie 'Aus gespeichert entfernen'.",
+        "question": "Warum finde ich die meisten Trinkbrunnen nicht auf Google Maps?",
+        "answer": "[Die Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), das Unternehmen, das die Trinkbrunnen installiert, listen diese nur auf ihrer eigenen Website. Sie integrieren die Standorte nicht in Google Maps. Stattdessen stellen sie eine herunterladbare .kml-Datei mit allen Brunnenkoordinaten zur Verfügung, die Sie hier finden können.\n\nWir haben es Ihnen einfacher gemacht, indem wir diese Daten in eine Google-Maps-Ebene umgewandelt haben, die Sie direkt auf Ihrem Smartphone speichern können. Außerdem haben wir weitere öffentliche Wasserquellen wie Bibliotheken, Volkshochschulen und andere Standorte hinzugefügt.\n\nFür noch mehr Nachfüllstationen schauen Sie bei [Refill](https://refill-deutschland.de/) vorbei, wo Geschäfte und Organisationen gelistet sind, die an deren Programm teilnehmen.",
         "category": "map"
       },
       {
-        "id": "faq10",
-        "question": "Wie kann ich Sie kontaktieren?",
-        "answer": "Sie erreichen uns unter berlinertrinkbrunnen@gmail.com. Wir freuen uns über Fragen, Vorschläge für neue Brunnenstandorte und Feedback zu unserer Wasserkarte. Wir antworten normalerweise innerhalb von 24-48 Stunden.",
+        "id": "faq2",
+        "question": "Wie funktioniert Wasserkarte?",
+        "answer": "Wir haben die Daten der BWB sowie weitere Quellen zusammengeführt und eine Karte erstellt, die Sie als zusätzliche Ebene in Ihre Google-Maps-App integrieren können. So sehen Sie alle bekannten öffentlichen Wasserstellen direkt in Ihrer gewohnten Kartenansicht.",
+        "category": "map"
+      },
+      {
+        "id": "faq3",
+        "question": "Wie füge ich die Karte zu meiner Google-Maps-App hinzu?",
+        "answer": "Besuchen Sie unsere Karten-Seite, tippen Sie auf die Download-Schaltfläche, und die neue Ebene wird in Ihrer Google Maps App hinzugefügt. Sie können sie jederzeit wieder entfernen.",
+        "category": "map"
+      },
+      {
+        "id": "faq4",
+        "question": "Kann ich einen neuen Standort für die Karte vorschlagen?",
+        "answer": "Ja, schreiben Sie uns einfach an die unten auf der Seite angegebene E-Mail.",
+        "category": "map"
+      },
+      {
+        "id": "faq8",
+        "question": "Auf welche Bezirke konzentriert ihr euch zuerst?",
+        "answer": "Wir starten mit unterversorgten Bezirken außerhalb des belebten Stadtzentrums, zunächst in Pankow und Lichtenberg.",
         "category": "project"
+      },
+      {
+        "id": "faq5",
+        "question": "Wer entscheidet, wo neue Trinkbrunnen installiert werden?",
+        "answer": "Der Berliner Senat (Senatsverwaltung) entscheidet dies gemeinsam mit den Berliner Wasserbetrieben und den zuständigen Bezirksämtern.",
+        "category": "project"
+      },
+      {
+        "id": "faq6",
+        "question": "Wer finanziert die Installation und Wartung der Brunnen?",
+        "answer": "Die Finanzierung für Installation und Wartung übernimmt der Berliner Senat. Die Berliner Wasserbetriebe setzen die Arbeiten um.",
+        "category": "project"
+      },
+      {
+        "id": "faq7",
+        "question": "Wie viel kostet die Installation und Wartung eines Brunnens?",
+        "answer": "Die Installation eines Brunnens kostet etwa 12.000–15.000 €. Die Wartung, einschließlich Wasserproben, kostet rund 3.700 € pro Jahr.",
+        "category": "project"
+      },
+      {
+        "id": "faq10",
+        "question": "Sind die Brunnen sicher zum Trinken?",
+        "answer": "Ja. Das Wasser aus jedem Brunnen wird alle 4 Wochen getestet, um sicherzustellen, dass es den Sicherheitsstandards entspricht.",
+        "category": "project"
+      },
+      {
+        "id": "faq11",
+        "question": "Warum läuft das Wasser in den Brunnen ständig? Ist das nicht Verschwendung?",
+        "answer": "Der kontinuierliche Wasserfluss verhindert, dass das Wasser in den Leitungen steht, und reduziert so das Risiko von Bakterienwachstum. Am einigen Orten wird das abfließende Wasser zum Bewässern von Bäumen genutzt.",
+        "category": "project"
+      },
+      {
+        "id": "faq13",
+        "question": "Wann sind die Brunnen im Jahr in Betrieb?",
+        "answer": "Sie sind jedes Jahr von Mai bis Oktober in Betrieb, um ein Einfrieren im Winter zu vermeiden.",
+        "category": "project"
+      },
+      {
+        "id": "faq9",
+        "question": "Wie kann ich eure Initiative unterstützen?",
+        "answer": "Wenn Sie jemanden bei den Bezirksämtern, im Berliner Senat (insbesondere in der SenMVKU) oder anderen relevanten Stellen kennen, stellen Sie gerne einen Kontakt her. Teilen Sie außerdem unsere Karte und unser Projekt mit Freund*innen und lokalen Gemeinschaften.",
+        "category": "project"
+      },
+      {
+        "id": "faq12",
+        "question": "Wie kann ich Wasserquellen in Google Maps ausblenden oder wieder anzeigen?",
+        "answer": "Wenn Sie die Wasserquellen aus der benutzerdefinierten Karte in der Google Maps App nicht sehen möchten, tippen Sie unten auf dem Bildschirm auf „Sie“, scrollen Sie ganz nach unten und wählen Sie „Karten“. Tippen Sie dann auf den Namen der Karte und wählen Sie „Schließen“, um die Wasserquellen auszublenden. Dadurch wird die Karte vorübergehend aus Ihrer Ansicht entfernt.\n\nMehr dazu erfahren Sie auf der [offiziellen Google-Hilfeseite](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
+        "category": "map"
       }
     ]
   },
