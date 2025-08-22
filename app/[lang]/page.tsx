@@ -9,6 +9,7 @@ import { PageSection } from "@/components/ui/page-section"
 import { PageLayout } from "@/components/ui/page-layout"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { Droplets, Waves } from "lucide-react"
 
 interface HeroText {
   title: string
@@ -108,13 +109,29 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <Card className="hover:shadow-lg transition-shadow border border-border flex flex-col h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-foreground">{translations.home.subproject1Title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col justify-between flex-1 space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">{translations.home.subproject1Description}</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-4xl mx-auto">
+                {/* Map Project Tile */}
+                <div className="group relative overflow-hidden bg-white border border-border/50 transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
+                  <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
+                    {/* Enhanced Header */}
+                    <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                      <div className="relative">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                          <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{translations.home.subproject1Title}</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Water sources mapping</p>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <p className="text-muted-foreground leading-relaxed text-sm mb-6">{translations.home.subproject1Description}</p>
+                    </div>
+
+                    {/* CTA Button */}
                     <div className="mt-auto">
                       <a 
                         href={`/${language}/map`}
@@ -123,15 +140,31 @@ export default function HomePage() {
                         {translations.home.learnMore}
                       </a>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="hover:shadow-lg transition-shadow border border-border flex flex-col h-full">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-semibold text-foreground">{translations.home.subproject2Title}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex flex-col justify-between flex-1 space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">{translations.home.subproject2Description}</p>
+                {/* Installation Project Tile */}
+                <div className="group relative overflow-hidden bg-white border border-border/50 transition-all duration-500 sm:hover:scale-[1.02] sm:hover:-translate-y-1 h-full">
+                  <div className="relative p-4 sm:p-6 lg:p-8 h-full flex flex-col justify-between">
+                    {/* Enhanced Header */}
+                    <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                      <div className="relative">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                          <Waves className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{translations.home.subproject2Title}</h3>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Community engagement</p>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <p className="text-muted-foreground leading-relaxed text-sm mb-6">{translations.home.subproject2Description}</p>
+                    </div>
+
+                    {/* CTA Button */}
                     <div className="mt-auto">
                       <a 
                         href={`/${language}/installation`}
@@ -140,8 +173,8 @@ export default function HomePage() {
                         {translations.home.learnMore}
                       </a>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
