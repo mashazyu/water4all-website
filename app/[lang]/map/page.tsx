@@ -71,11 +71,12 @@ export default function MapPage() {
       {/* Tablet & Desktop: Split Layout */}
       <FullScreenSection background="default" className="max-md:hidden md:block snap-start">
         <div className="min-h-screen bg-background flex flex-col">
-          {/* Tablet Content */}
-          <div className="flex min-h-screen">
-            {/* Left Side - Content */}
-            <div className="w-1/2 flex items-center justify-center px-8">
-              <div className="w-full max-w-lg h-[500px] flex flex-col justify-center space-y-12">
+          <div className="max-w-6xl mx-auto w-full">
+            {/* Tablet Content */}
+            <div className="flex min-h-screen">
+              {/* Left Side - Content */}
+              <div className="w-1/2 flex items-center justify-center px-8">
+                <div className="w-full max-w-lg h-[500px] flex flex-col justify-center space-y-12">
                 {/* Hero Content */}
                 <div className="space-y-6">
                   <h1 className="text-5xl font-bold text-foreground leading-tight">
@@ -127,6 +128,7 @@ export default function MapPage() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </FullScreenSection>
 
