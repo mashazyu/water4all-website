@@ -147,11 +147,11 @@ export default function MapPage() {
           <div className="text-center mb-6 sm:mb-8 lg:mb-12">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
               <span className="text-primary">
-                Quick Help & Resources
+                {translations.map.quickHelpTitle}
               </span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-              Everything you need to know about using our water sources map and getting the most out of it
+              {translations.map.mapDescription}
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function MapPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">What You Get</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{translations.map.whatYouGetTitle}</h3>
                     <p className="text-xs sm:text-sm text-muted-foreground">{translations.map.waterSourceGuide}</p>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function MapPage() {
                   {[
                     translations.map.mapFeatures,
                     translations.map.betaTesting,
-                    "100% free to use"
+                    translations.map.freeToUse
                   ].map((feature, index) => (
                     <div 
                       key={index}
@@ -209,26 +209,26 @@ export default function MapPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">Quick Answers</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Common questions & solutions</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{translations.map.quickAnswersTitle}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{translations.map.commonQuestionsSubtitle}</p>
                   </div>
                 </div>
 
                 {/* Enhanced FAQ Links */}
                 <div className="space-y-1">
                   {[
-                    { text: translations.map.howMapWorks, href: `/${language}/faq#faq3` },
-                    { text: translations.map.howRemoveMap, href: `/${language}/faq#faq9` },
-                    { text: translations.map.contactUs, href: `/${language}/faq#faq10` }
+                    { text: translations.faq.questions.find(q => q.id === "faq3")?.question || "", href: `/${language}/faq#faq3` },
+                    { text: translations.faq.questions.find(q => q.id === "faq12")?.question || "", href: `/${language}/faq#faq12` },
+                    { text: translations.faq.questions.find(q => q.id === "faq9")?.question || "", href: `/${language}/faq#faq9` }
                   ].map((faq, index) => (
                     <a 
                       key={index}
                       href={faq.href}
                       className="group/faq block p-4 hover:bg-white/50 transition-all duration-300 border border-transparent hover:border-border/30"
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
-                        <div className="flex-1 flex items-center">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2.5"></div>
+                        <div className="flex-1">
                           <p className="text-foreground font-medium text-sm leading-relaxed group-hover/faq:text-primary transition-colors duration-300">
                             {faq.text}
                           </p>
@@ -241,16 +241,7 @@ export default function MapPage() {
                   ))}
                 </div>
 
-                {/* Interactive CTA */}
-                <div className="mt-6 pt-6 border-t border-border/30">
-                  <a 
-                    href={`/${language}/faq`}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-6 font-semibold transition-colors duration-300 inline-block text-center"
-                  >
-                    {translations.faq.viewAllFaqs}
-                  </a>
-                </div>
-                <div className="flex-1"></div>
+
               </div>
             </div>
           </div>

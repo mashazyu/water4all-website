@@ -79,11 +79,17 @@
     "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
     "contactEmail": "Contact: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliners already using this map",
-    "quickHelpTitle": "Quick Help",
-    "mapFeatures": "Over 230 drinking fountains and 100 government buildings across Berlin.",
+
+    "mapFeatures": "Over 210 drinking fountains and 100 government buildings across Berlin.",
     "betaTesting": "We had more than 1,000 views of the map during beta testing—hopefully keeping our testers from going thirsty.",
     "waterSourceGuide": "A growing guide to free water sources",
-    "contactUs": "How to contact us"
+
+    "quickHelpTitle": "Quick Help & Resources",
+    "whatYouGetTitle": "What You Get",
+    "quickAnswersTitle": "Quick Answers",
+    "commonQuestionsSubtitle": "Common questions & solutions",
+    "freeToUse": "100% free to use",
+    "mapDescription": "Everything you need to know about using our water sources map and getting the most out of it"
   },
   "about": {
     "title": "About Us",
@@ -137,14 +143,14 @@
       },
       {
         "id": "faq4",
-        "question": "Можно ли предложить новое место для карты?",
+        "question": "Can I suggest a new location for the map?",
         "answer": "Yes! Just write to us at the address listed in the footer.",
         "category": "map"
       },
       {
         "id": "faq8",
-        "question": "Где вы хотите поставить больше фонтанчиков в первую очередь?",
-        "answer": "В районах за пределами центра, где их мало — начиная с Панкова и Лихтенберга.",
+        "question": "What areas are you focusing on first?",
+        "answer": "We are starting with underserved districts outside the busy city center, beginning in Pankow and Lichtenberg.",
         "category": "project"
       },
       {
@@ -205,7 +211,7 @@
   },
   "newsPage": {
     "title": "Latest News",
-    "intro": "Stay updated with the latest developments in our drinking fountains initiative.",
+    "intro": "Stay updated with the latest developments in our initiative.",
     "loadMore": "Load More News"
   },
   "news": [

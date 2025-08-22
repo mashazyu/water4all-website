@@ -88,7 +88,12 @@ export type Translations = {
     mapFeatures: string
     betaTesting: string
     waterSourceGuide: string
-    contactUs: string
+
+    whatYouGetTitle: string
+    quickAnswersTitle: string
+    commonQuestionsSubtitle: string
+    freeToUse: string
+    mapDescription: string
   }
   
   // About page

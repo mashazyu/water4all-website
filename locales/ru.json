@@ -79,11 +79,17 @@
     "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
     "contactEmail": "Контакты: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ берлинцев уже используют эту карту",
-    "quickHelpTitle": "Быстрая помощь",
-    "mapFeatures": "Более 230 питьевых фонтанчиков и 100 правительственных зданий по всему Берлину.",
+
+    "mapFeatures": "Более 210 питьевых фонтанчиков и 100 правительственных зданий по всему Берлину.",
     "betaTesting": "Во время бета-тестирования у нас было более 1000 просмотров карты — надеемся, наши тестировщики не страдали от жажды.",
-    "waterSourceGuide": "Растущий справочник бесплатных источников воды",
-    "contactUs": "Как с нами связаться"
+    "waterSourceGuide": "Карта бесплатных источников воды",
+
+    "quickHelpTitle": "Быстрая помощь и ресурсы",
+    "whatYouGetTitle": "Что вы получаете",
+    "quickAnswersTitle": "Быстрые ответы",
+    "commonQuestionsSubtitle": "Частые вопросы и решения",
+    "freeToUse": "100% бесплатно",
+    "mapDescription": "Всё, что нужно знать об использовании нашей карты источников воды и получении максимальной пользы от неё"
   },
   "about": {
     "title": "О нашей инициативе",
@@ -194,12 +200,18 @@
         "question": "Как скрыть или снова добавить источники воды в Google Maps?",
         "answer": "Если вы не хотите видеть источники воды из пользовательской карты в приложении Google Maps, коснитесь внизу экрана пункта «Вы», прокрутите до самого низа и выберите «Карты». Затем нажмите на название карты и выберите «Закрыть», чтобы скрыть источники воды. Так вы временно уберёте эту карту с отображения.\n\nПодробнее можно узнать на [официальной странице Google](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
         "category": "map"
+      },
+      {
+        "id": "faq13",
+        "question": "Откуда вы взяли данные для карты?",
+        "answer": "Мы использовали общедоступные данные. Список питьевых фонтанов взят с сайта [Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php](https://www.bwb.de/de/trinkbrunnen.php), список Volkshochschulen (VHS) — с официального [сайта города Берлина](https://www.berlin.de/vhs/volkshochschulen/](https://www.berlin.de/vhs/volkshochschulen/), а список библиотек — с сайта [Verbund der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
+        "category": "map"
       }
     ]
   },
   "newsPage": {
     "title": "Последние новости",
-    "intro": "Будьте в курсе последних событий нашей инициативы по питьевым фонтанчикам.",
+    "intro": "Будьте в курсе последних событий нашей инициативы.",
     "loadMore": "Загрузить еще новости"
   },
   "news": [
@@ -244,12 +256,6 @@
       "content": "Мы запустили веб-сайт, где вы можете найти информацию о нашем проекте и поделиться своими мыслями.",
       "date": "2025-08",
       "project": [1, 2]
-    },
-    {
-      "id": "faq13",
-      "question": "Откуда вы взяли данные для карты?",
-      "answer": "Мы использовали общедоступные данные. Список питьевых фонтанов взят с сайта [Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php](https://www.bwb.de/de/trinkbrunnen.php), список Volkshochschulen (VHS) — с официального [сайта города Берлина](https://www.berlin.de/vhs/volkshochschulen/](https://www.berlin.de/vhs/volkshochschulen/), а список библиотек — с сайта [Verbund der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
-      "category": "map"
     }
   ],
   "cookies": {

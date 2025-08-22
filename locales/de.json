@@ -64,7 +64,7 @@
         "subtitle": "Карта вкусной воды Берлина"
       }
     ],
-    "heroTitle": "WASSER BRAUCHEN?",
+    "heroTitle": "DURSTIG?",
     "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
     "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer einfach zu finden - besonders auf alltäglichen Plattformen wie Google Maps. Um es einfacher zu machen, haben wir eine eigene Google Map erstellt, die Brunnen von Berliner Wasserbetriebe zeigt, die rund um die Uhr verfügbar sind, sowie Regierungsgebäude, wo Sie während der regulären Geschäftszeiten nachfüllen können.",
     "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
@@ -79,11 +79,18 @@
     "footerCopyright": "© 2025 Berliner Trinkbrunnen Initiative",
     "contactEmail": "Kontakt: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliner nutzen bereits diese Karte",
-    "quickHelpTitle": "Schnelle Hilfe",
-    "mapFeatures": "Über 230 Trinkbrunnen und 100 Regierungsgebäude in ganz Berlin.",
+
+    "mapFeatures": "Über 210 Trinkbrunnen und 100 Regierungsgebäude in ganz Berlin.",
     "betaTesting": "Während der Beta-Tests hatten wir über 1.000 Aufrufe der Karte - hoffentlich haben unsere Tester keinen Durst gelitten.",
     "waterSourceGuide": "Ein wachsender Leitfaden zu kostenlosen Wasserquellen",
-    "contactUs": "Wie Sie uns kontaktieren können"
+
+    "howCanIHelp": "Wie kann ich helfen?",
+    "quickHelpTitle": "FAQ & Ressourcen",
+    "whatYouGetTitle": "Was Sie bekommen",
+    "quickAnswersTitle": "Schnelle Antworten",
+    "commonQuestionsSubtitle": "Häufige Fragen & Lösungen",
+    "freeToUse": "100% kostenlos",
+    "mapDescription": "Alles, was Sie über die Nutzung unserer Wasserkarten und das Beste daraus wissen müssen"
   },
   "about": {
     "title": "Über unsere Initiative",
@@ -205,7 +212,7 @@
   },
   "newsPage": {
     "title": "Aktuelle Nachrichten",
-    "intro": "Bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in unserer Trinkbrunnen-Initiative.",
+    "intro": "Bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in unserer Initiative.",
     "loadMore": "Weitere Nachrichten laden"
   },
   "news": [
