@@ -1,4 +1,15 @@
 {
+  "metadata": {
+    "homeTitle": "Wasser für alle - Free Drinking Water in Berlin",
+    "homeDescription": "Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Our project makes it easy for everyone to locate free, safe drinking water across the city.",
+    "mapTitle": "Water Map - Find Free Drinking Water in Berlin",
+    "mapDescription": "Find over 230 drinking fountains and 100 government buildings across Berlin. Our custom Google Map shows fountains from Berliner Wasserbetriebe and government buildings where you can refill during business hours.",
+    "keywords": [
+      "drinking water", "water fountains", "Berlin", "free water", 
+      "hydration", "water refill", "public water", "drinking fountains",
+      "tap water fountains", "water access"
+    ]
+  },
   "navigation": {
     "home": "Home",
     "subproject1": "Map",

@@ -1,4 +1,15 @@
 {
+  "metadata": {
+    "homeTitle": "Wasser für alle - Kostenloses Trinkwasser in Berlin",
+    "homeDescription": "In Berlin gibt es über 220 öffentliche Trinkbrunnen – aber weniger als 40 sind auf Google Maps zu finden. Unser Projekt macht es einfach, überall in der Stadt sauberes, kostenloses Trinkwasser zu finden.",
+    "mapTitle": "Wasserkarte - Kostenloses Trinkwasser in Berlin finden",
+    "mapDescription": "Finden Sie über 230 Trinkbrunnen und 100 Regierungsgebäude in ganz Berlin. Unsere eigene Google Map zeigt Brunnen von Berliner Wasserbetriebe und Regierungsgebäude, wo Sie während der Geschäftszeiten nachfüllen können.",
+    "keywords": [
+      "Trinkwasser", "Wasserbrunnen", "Berlin", "kostenloses Wasser", 
+      "Hydration", "Wassernachfüllung", "öffentliches Wasser", "Trinkbrunnen",
+      "Wasserhahn-Brunnen", "Wasserzugang"
+    ]
+  },
   "navigation": {
     "home": "Startseite",
     "subproject1": "Karte",

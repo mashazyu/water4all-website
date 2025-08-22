@@ -12,12 +12,77 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Wasser für alle",
-  description: "Initiative for hydration during hot summer in Berlin",
+  title: {
+    default: "Wasser für alle - Free Drinking Water in Berlin",
+    template: "%s | Wasser für alle"
+  },
+  description: "Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Our project makes it easy for everyone to locate free, safe drinking water across the city.",
+  keywords: [
+    "drinking water", "water fountains", "Berlin", "free water", 
+    "hydration", "water refill", "public water", "drinking fountains",
+    "tap water fountains", "water access"
+  ],
+  authors: [{ name: "Wasser für alle" }],
+  creator: "Wasser für alle",
+  publisher: "Wasser für alle",
+  metadataBase: new URL('https://www.water4all.com.de'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/en',
+      'de': '/de', 
+      'ru': '/ru',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://www.water4all.com.de',
+    siteName: 'Wasser für alle',
+    title: 'Wasser für alle - Free Drinking Water in Berlin',
+    description: 'Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Our project makes it easy for everyone to locate free, safe drinking water across the city.',
+    images: [
+      {
+        url: '/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'Wasser für alle - Free Drinking Water in Berlin',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Wasser für alle - Free Drinking Water in Berlin',
+    description: 'Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Our project makes it easy for everyone to locate free, safe drinking water across the city.',
+    images: ['/android-chrome-512x512.png'],
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
+  other: {
+    'theme-color': '#1800ad',
+    'msapplication-TileColor': '#1800ad',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
   },
 }
 

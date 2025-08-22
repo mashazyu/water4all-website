@@ -25,8 +25,26 @@ export async function generateMetadata({
   const translations = getTranslations(lang)
 
   return {
-    title: "Wasser für alle",
-    description: "Initiative for hydration during hot summer in Berlin",
+    title: translations.metadata.homeTitle,
+    description: translations.metadata.homeDescription,
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'en': '/en',
+        'de': '/de',
+        'ru': '/ru',
+      },
+    },
+    openGraph: {
+      title: translations.metadata.homeTitle,
+      description: translations.metadata.homeDescription,
+      locale: lang === "en" ? "en_US" : lang === "de" ? "de_DE" : "ru_RU",
+      url: `https://www.water4all.com.de/${lang}`,
+    },
+    twitter: {
+      title: translations.metadata.homeTitle,
+      description: translations.metadata.homeDescription,
+    },
   }
 }
 

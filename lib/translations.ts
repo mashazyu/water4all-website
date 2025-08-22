@@ -13,6 +13,15 @@ export type NewsItem = {
 }
 
 export type Translations = {
+  // Metadata
+  metadata: {
+    homeTitle: string
+    homeDescription: string
+    mapTitle: string
+    mapDescription: string
+    keywords: string[]
+  }
+  
   // Navigation
   navigation: {
     home: string
