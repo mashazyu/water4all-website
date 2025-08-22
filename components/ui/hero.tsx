@@ -79,19 +79,19 @@ export function Hero({
       <div className="absolute inset-0">
         {/* Floating orbs with parallax effect */}
         <div 
-          className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full blur-xl animate-pulse transition-transform duration-1000"
+          className="absolute top-1/4 left-1/4 w-32 h-32 bg-white/5 rounded-full blur-xl transition-transform duration-1000"
           style={{
             transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`
           }}
         />
         <div 
-          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl animate-pulse delay-1000 transition-transform duration-1000"
+          className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl delay-1000 transition-transform duration-1000"
           style={{
             transform: `translate(${mousePosition.x * -15}px, ${mousePosition.y * -15}px)`
           }}
         />
         <div 
-          className="absolute top-1/2 right-1/3 w-16 h-16 bg-white/5 rounded-full blur-xl animate-pulse delay-2000 transition-transform duration-1000"
+          className="absolute top-1/2 right-1/3 w-16 h-16 bg-white/5 rounded-full blur-xl delay-2000 transition-transform duration-1000"
           style={{
             transform: `translate(${mousePosition.x * 10}px, ${mousePosition.y * 10}px)`
           }}
@@ -159,7 +159,7 @@ export function Hero({
                 aria-label={`Go to hero text ${index + 1}`}
               >
                 {index === currentTextIndex && (
-                  <div className="absolute inset-0 bg-white rounded-full animate-ping" />
+                  <div className="absolute inset-0 bg-white rounded-full" />
                 )}
               </button>
             ))}
