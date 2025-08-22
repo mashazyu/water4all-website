@@ -125,6 +125,8 @@ export type Translations = {
     title: string
     intro: string
     viewAllFaqs: string
+    projectFaqsTitle: string
+    mapFaqsTitle: string
     questions: Array<{
       id: string
       question: string

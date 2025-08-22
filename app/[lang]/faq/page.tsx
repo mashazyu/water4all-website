@@ -69,7 +69,7 @@ export default function FAQ() {
           <div className="space-y-6 mb-12">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Project</h2>
-              <p className="text-muted-foreground">Questions about our initiative and goals</p>
+              <p className="text-muted-foreground">{translations.faq.projectFaqsTitle}</p>
             </div>
             
             {projectFaqs.map((faq: any, index: number) => {
@@ -112,7 +112,7 @@ export default function FAQ() {
           <div className="space-y-6">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-primary mb-2">Map</h2>
-              <p className="text-muted-foreground">Questions about using our water map</p>
+              <p className="text-muted-foreground">{translations.faq.mapFaqsTitle}</p>
             </div>
             
             {mapFaqs.map((faq: any, index: number) => {

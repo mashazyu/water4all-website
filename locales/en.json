@@ -114,6 +114,8 @@
     "title": "Frequently Asked Questions",
     "intro": "Find answers to common questions about our initiative.",
     "viewAllFaqs": "View All FAQs",
+    "projectFaqsTitle": "Questions about our initiative and goals",
+    "mapFaqsTitle": "Questions about using our water map",
     "questions": [
       {
         "id": "faq1",
