@@ -190,7 +190,13 @@
       {
         "id": "faq12",
         "question": "How can I hide or show water sources in Google Maps?",
-        "answer": " If you don’t want to see water sources from the custom map in the Google Maps app, tap “You” at the bottom of the screen, scroll all the way down, and select “Maps.” Then tap the name of the map and choose “Close” to hide the water sources. This will temporarily remove the map from your view.\n\nYou can learn more on the [official Google support page](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
+        "answer": "If you don’t want to see water sources from the custom map in the Google Maps app, tap “You” at the bottom of the screen, scroll all the way down, and select “Maps.” Then tap the name of the map and choose “Close” to hide the water sources. This will temporarily remove the map from your view.\n\nYou can learn more on the [official Google support page](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
+        "category": "map"
+      },
+      {
+        "id": "faq13",
+        "question": "Where did you get the data for the map?",
+        "answer": "We used publicly available data. The list of drinking fountains comes from the [Berliner Wasserbetriebe (BWB) website](https://www.bwb.de/de/trinkbrunnen.php), the list of Volkshochschulen (VHS) is from the [official City of Berlin website](https://www.berlin.de/vhs/volkshochschulen/), and the list of libraries is from the [Verbund der Öffentlichen Bibliotheken Berlins website](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
         "category": "map"
       }
     ]

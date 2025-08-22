@@ -242,6 +242,12 @@
       "content": "Мы запустили веб-сайт, где вы можете найти информацию о нашем проекте и поделиться своими мыслями.",
       "date": "2025-08",
       "project": [1, 2]
+    },
+    {
+      "id": "faq13",
+      "question": "Откуда вы взяли данные для карты?",
+      "answer": "Мы использовали общедоступные данные. Список питьевых фонтанов взят с сайта [Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php](https://www.bwb.de/de/trinkbrunnen.php), список Volkshochschulen (VHS) — с официального [сайта города Берлина](https://www.berlin.de/vhs/volkshochschulen/](https://www.berlin.de/vhs/volkshochschulen/), а список библиотек — с сайта [Verbund der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
+      "category": "map"
     }
   ],
   "cookies": {

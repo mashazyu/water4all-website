@@ -192,6 +192,12 @@
         "question": "Wie kann ich Wasserquellen in Google Maps ausblenden oder wieder anzeigen?",
         "answer": "Wenn Sie die Wasserquellen aus der benutzerdefinierten Karte in der Google Maps App nicht sehen möchten, tippen Sie unten auf dem Bildschirm auf „Sie“, scrollen Sie ganz nach unten und wählen Sie „Karten“. Tippen Sie dann auf den Namen der Karte und wählen Sie „Schließen“, um die Wasserquellen auszublenden. Dadurch wird die Karte vorübergehend aus Ihrer Ansicht entfernt.\n\nMehr dazu erfahren Sie auf der [offiziellen Google-Hilfeseite](https://support.google.com/maps/answer/3045850?hl=en&co=GENIE.Platform%3DiOS).",
         "category": "map"
+      },
+      {
+        "id": "faq13",
+        "question": "Woher stammen die Daten für die Karte?",
+        "answer": "Wir haben öffentlich zugängliche Daten verwendet. Die Liste der Trinkbrunnen stammt von der [Website der Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), die Liste der Volkshochschulen (VHS) von der offiziellen [Website der Stadt Berlin](https://www.berlin.de/vhs/volkshochschulen/), und die Liste der Bibliotheken von der [Website des Verbunds der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
+        "category": "map"
       }
     ]
   },
