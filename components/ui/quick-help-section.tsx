@@ -19,10 +19,10 @@ export function QuickHelpSection({
 
   return (
     <PageLayout>
-    <FullScreenSection background={background} className={cn("!p-0", className)}>
-      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full ">
-        {/* Section Header */}
-        <div className="text-center">
+    <FullScreenSection background={background} className={className}>
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             <span className="text-primary">
               {translations.map.quickHelpTitle}
@@ -30,8 +30,9 @@ export function QuickHelpSection({
           </h2>
         </div>
         
-        {/* Feature Tiles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+        <div className="group">
+          {/* Feature Tiles Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
               {/* What You Get Tile */}
               <InfoTile
                 icon={<MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />}
@@ -83,6 +84,7 @@ export function QuickHelpSection({
                   </ul>
                 }
               />
+          </div>
         </div>
       </div>
     </FullScreenSection>
