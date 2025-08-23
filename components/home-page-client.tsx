@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Hero } from "@/components/ui/hero"
 import { PageSection } from "@/components/ui/page-section"
 import { PageLayout } from "@/components/ui/page-layout"
+import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Droplets, Waves } from "lucide-react"
@@ -90,13 +91,17 @@ export default function HomePageClient() {
         <Hero 
           heroTexts={heroTexts}
           animated={true}
-          className="snap-start min-h-screen py-8 md:py-12 lg:py-16"
+          className="snap-start min-h-screen py-20 md:py-20 lg:py-24"
           style={{ backgroundColor: "#1800ad" }}
         />
 
         {/* Project Overview Section */}
-        <section className="snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20 py-8 md:py-12 lg:py-16">
-          <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+        <PageSection 
+          background="white"
+          fullHeight={true}
+          className="snap-start"
+        >
+          <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {/* Section Header */}
               <div className="text-center space-y-4">
@@ -160,7 +165,10 @@ export default function HomePageClient() {
               </div>
             </div>
           </div>
-        </section>
+        </PageSection>
+
+        {/* Quick Help Section */}
+        <QuickHelpSection background="default" className="snap-start" />
 
         {/* Latest News Section */}
         <PageSection 

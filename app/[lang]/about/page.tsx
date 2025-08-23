@@ -1,7 +1,10 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
+import { PageLayout } from "@/components/ui/page-layout"
+import { PageSection } from "@/components/ui/page-section"
+import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { Container } from "@/components/ui/container"
 
 export default function About() {
   const { translations } = useLanguage()
@@ -37,8 +40,8 @@ export default function About() {
 
   return (
     <PageLayout>
-      <FullScreenSection background="default">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+      <PageSection background="default" fullHeight={true}>
+        <Container>
           {/* Header Section */}
           <div className="space-y-6 mb-8">
             <div className="space-y-4">
@@ -59,8 +62,11 @@ export default function About() {
               </div>
             </section>
           </div>
-        </div>
-      </FullScreenSection>
+        </Container>
+      </PageSection>
+
+      {/* Quick Help Section */}
+      <QuickHelpSection background="muted" />
     </PageLayout>
   )
 }

@@ -8,6 +8,7 @@ import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { useState, useEffect, useRef } from "react"
 import { ChevronDown } from "lucide-react"
+import { Container } from "@/components/ui/container"
 
 export default function Navigation() {
   const pathname = usePathname()
@@ -38,11 +39,11 @@ export default function Navigation() {
   if (!translations || !translations.navigation) {
     return (
       <header className="bg-background border-b-4 border-primary shadow-sm">
-        <div className="container mx-auto flex h-14 items-center justify-between px-4">
+        <Container className="flex h-14 items-center justify-between">
           <div className="flex items-center gap-6">
             <div className="h-6 w-32 bg-muted animate-pulse rounded"></div>
           </div>
-        </div>
+        </Container>
       </header>
     )
   }
@@ -63,7 +64,7 @@ export default function Navigation() {
 
   return (
     <header className="bg-background border-b-4 border-primary shadow-sm">
-      <div className="container mx-auto flex h-14 items-center justify-between px-4">
+      <Container className="flex h-14 items-center justify-between">
         <div className="flex items-center gap-6">
           <Link href={`/${currentLang}`} className="flex items-center gap-2 text-base font-semibold text-primary">
             <span className="hidden sm:inline">Wasser für alle</span>
@@ -153,7 +154,7 @@ export default function Navigation() {
             </SheetContent>
           </Sheet>
         </div>
-      </div>
+      </Container>
     </header>
   )
 }

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useLanguage } from "./language-provider"
 import AntiSpamEmail from "./anti-spam-email"
 import { Mail, Shield, FileText } from "lucide-react"
+import { Container } from "@/components/ui/container"
 
 export default function Footer() {
   const { language, translations } = useLanguage()
@@ -12,20 +13,20 @@ export default function Footer() {
   if (!translations || !translations.footer) {
     return (
       <footer className="bg-background border-t border-border">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+        <Container>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 py-6 md:py-8">
             <div className="text-xs sm:text-sm text-muted-foreground">
               Loading...
             </div>
           </div>
-        </div>
+        </Container>
       </footer>
     )
   }
 
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <Container>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 py-6 md:py-8">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground w-full max-w-4xl">
             <span className="flex items-center gap-1 sm:gap-2 min-w-0 flex-1 sm:flex-none">
@@ -49,7 +50,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

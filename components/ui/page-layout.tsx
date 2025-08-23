@@ -34,7 +34,7 @@ export function FullScreenSection({ children, className, background = "default" 
 
   return (
     <section className={cn(
-      "md:snap-start relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] min-h-screen md:min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24",
+      "md:snap-start relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] min-h-screen md:min-h-screen flex items-center justify-center py-20 sm:py-20 md:py-24 lg:py-32",
       backgroundClasses[background],
       className
     )}>

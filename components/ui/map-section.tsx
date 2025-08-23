@@ -12,7 +12,7 @@ export function MapSection({ className }: MapSectionProps) {
   const { language, translations } = useLanguage()
 
   return (
-    <section className={`snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-white to-blue-50/20 py-8 md:py-12 lg:py-16 ${className || ''}`}>
+    <section className={`snap-start relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-white to-blue-50/20 py-20 md:py-20 lg:py-24 ${className || ''}`}>
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
         {/* Page Header */}
         <div className="mb-12">

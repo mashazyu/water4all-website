@@ -3,7 +3,8 @@
 import { useLanguage } from "@/components/language-provider"
 import NewsGrid from "@/components/news-grid"
 import { PageSection } from "@/components/ui/page-section"
-import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
+import { PageLayout } from "@/components/ui/page-layout"
+import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import { renderParagraphs } from "@/lib/utils"
 
 export default function Subproject2() {
@@ -12,8 +13,8 @@ export default function Subproject2() {
   return (
     <PageLayout>
       {/* Main Content Section - Full Screen */}
-      <FullScreenSection background="gradient">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+      <PageSection background="gradient" fullHeight={true}>
+        <div className="max-w-4xl mx-auto">
           {/* Page Header */}
           <div className="mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-primary">
@@ -33,7 +34,10 @@ export default function Subproject2() {
             </div>
           </div>
         </div>
-      </FullScreenSection>
+      </PageSection>
+
+      {/* Quick Help Section */}
+      <QuickHelpSection background="default" />
 
       {/* Related News Section - Full Screen */}
       <PageSection 
