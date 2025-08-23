@@ -2,9 +2,9 @@
 
 import { useLanguage } from "@/components/language-provider"
 import { PageSection } from "@/components/ui/page-section"
-import NewsGrid from "@/components/news-grid"
 import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { NewsSection } from "@/components/ui/news-section"
 import { ButtonNew } from "@/components/ui/button-new"
 
 export default function MapPageClient() {
@@ -13,7 +13,7 @@ export default function MapPageClient() {
   return (
     <PageLayout>
       {/* Hero Section - Mobile */}
-      <PageSection background="default" className="max-md:block md:hidden snap-start">
+      <PageSection background="default" className="max-md:block md:hidden">
         <div className="px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="max-w-4xl mx-auto space-y-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
@@ -63,7 +63,7 @@ export default function MapPageClient() {
       </PageSection>
 
       {/* Tablet & Desktop: Split Layout */}
-      <FullScreenSection background="default" className="max-md:hidden md:block snap-start">
+      <FullScreenSection background="default" className="max-md:hidden md:block">
         <div className="min-h-screen bg-background flex flex-col">
           <div className="max-w-6xl mx-auto w-full">
             <div className="flex min-h-screen">
@@ -121,31 +121,10 @@ export default function MapPageClient() {
       </FullScreenSection>
 
       {/* Quick Help Section */}
-      <QuickHelpSection background="muted" className="snap-start" />
+      <QuickHelpSection background="muted" />
 
       {/* Related News Section */}
-      <PageSection 
-        titleSize="lg"
-        accentLineHeight="h-8"
-        background="default"
-        fullHeight={true}
-        className="snap-start"
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              <span className="text-primary">
-                {translations.subprojects.relatedNews}
-              </span>
-            </h2>
-          </div>
-          
-          <div className="group">
-            <NewsGrid projectFilter={1} limit={3} showViewAllButton={true} />
-          </div>
-        </div>
-      </PageSection>
+      <NewsSection background="default" limit={3} showViewAllButton={true} />
     </PageLayout>
   )
 }

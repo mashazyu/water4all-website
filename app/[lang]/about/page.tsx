@@ -3,7 +3,6 @@
 import { useLanguage } from "@/components/language-provider"
 import { PageLayout } from "@/components/ui/page-layout"
 import { PageSection } from "@/components/ui/page-section"
-import { QuickHelpSection } from "@/components/ui/quick-help-section"
 
 export default function About() {
   const { translations } = useLanguage()
@@ -62,8 +61,6 @@ export default function About() {
         </div>
       </PageSection>
 
-      {/* Quick Help Section */}
-      <QuickHelpSection background="muted" />
     </PageLayout>
   )
 }

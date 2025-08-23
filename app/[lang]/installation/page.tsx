@@ -1,10 +1,10 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import NewsGrid from "@/components/news-grid"
 import { PageSection } from "@/components/ui/page-section"
 import { PageLayout } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { NewsSection } from "@/components/ui/news-section"
 import { renderParagraphs } from "@/lib/utils"
 
 export default function Subproject2() {
@@ -40,28 +40,7 @@ export default function Subproject2() {
       <QuickHelpSection background="default" />
 
       {/* Related News Section - Full Screen */}
-      <PageSection 
-        titleSize="lg"
-        accentLineHeight="h-8"
-        background="muted"
-        fullHeight={true}
-        className="snap-start"
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Enhanced Section Header */}
-          <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-              <span className="text-primary">
-                {translations.subprojects.relatedNews}
-              </span>
-            </h2>
-          </div>
-          
-          <div className="group">
-            <NewsGrid projectFilter={2} limit={3} showViewAllButton={true} />
-          </div>
-        </div>
-      </PageSection>
+      <NewsSection background="muted" limit={3} showViewAllButton={true} />
     </PageLayout>
   )
 }

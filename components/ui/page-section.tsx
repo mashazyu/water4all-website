@@ -38,7 +38,7 @@ export function PageSection({
 
   return (
     <section className={cn(
-      "relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] flex items-center justify-center",
+      "relative w-full flex items-center justify-center",
       fullHeight && "min-h-screen",
       backgroundClasses[background],
       className

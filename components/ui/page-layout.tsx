@@ -10,8 +10,8 @@ interface PageLayoutProps {
 
 export function PageLayout({ children, className }: PageLayoutProps) {
   return (
-    <div className={cn("min-h-screen md:h-screen overflow-y-scroll scroll-smooth relative", className)}>
-      <div className="md:snap-y md:snap-mandatory">
+    <div className={cn("min-h-screen relative", className)}>
+      <div>
         {children}
       </div>
     </div>
@@ -34,7 +34,7 @@ export function FullScreenSection({ children, className, background = "default" 
 
   return (
     <section className={cn(
-      "md:snap-start relative w-full md:w-screen md:left-1/2 md:right-1/2 md:-ml-[50vw] md:-mr-[50vw] min-h-screen md:min-h-screen flex items-center justify-center py-20 sm:py-20 md:py-24 lg:py-32",
+      "relative w-full min-h-screen flex items-center justify-center py-20 sm:py-20 md:py-24 lg:py-32",
       backgroundClasses[background],
       className
     )}>

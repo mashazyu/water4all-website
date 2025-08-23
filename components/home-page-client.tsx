@@ -1,7 +1,6 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import NewsGrid from "@/components/news-grid"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ButtonNew } from "@/components/ui/button-new"
@@ -9,6 +8,7 @@ import { Hero } from "@/components/ui/hero"
 import { PageSection } from "@/components/ui/page-section"
 import { PageLayout } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { NewsSection } from "@/components/ui/news-section"
 import { InfoTile } from "@/components/ui/info-tile"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -72,7 +72,7 @@ export default function HomePageClient() {
         <Hero 
           heroTexts={heroTexts}
           animated={true}
-          className="snap-start min-h-screen py-20 md:py-20 lg:py-24"
+          className="min-h-screen py-20 md:py-20 lg:py-24"
           style={{ backgroundColor: "#1800ad" }}
         />
 
@@ -80,7 +80,6 @@ export default function HomePageClient() {
         <PageSection 
           background="white"
           fullHeight={true}
-          className="snap-start"
         >
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -143,31 +142,10 @@ export default function HomePageClient() {
         </PageSection>
 
         {/* Quick Help Section */}
-        <QuickHelpSection background="default" className="snap-start" />
+        <QuickHelpSection background="default" />
 
         {/* Latest News Section */}
-        <PageSection 
-          titleSize="lg"
-          accentLineHeight="h-8"
-          background="muted"
-          fullHeight={true}
-          className="snap-start"
-        >
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Enhanced Section Header */}
-            <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-                <span className="text-primary">
-                  {translations.home.latestNews}
-                </span>
-              </h2>
-            </div>
-            
-            <div className="group">
-              <NewsGrid limit={3} showViewAllButton={true} />
-            </div>
-          </div>
-        </PageSection>
+        <NewsSection background="muted" />
       </div>
     </PageLayout>
   )
