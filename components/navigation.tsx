@@ -52,7 +52,11 @@ export default function Navigation() {
     { href: `/${currentLang}/installation`, label: translations.navigation.subproject2 },
     { href: `/${currentLang}/news`, label: translations.navigation.news },
     { href: `/${currentLang}/faq`, label: translations.navigation.faq },
-    { href: `/${currentLang}/about`, label: translations.navigation.about }
+    { href: `/${currentLang}/about`, label: translations.navigation.about },
+    // Development/Testing routes
+    ...(process.env.NODE_ENV === 'development' ? [
+      { href: `/${currentLang}/gtm-test`, label: 'GTM Test' }
+    ] : [])
   ]
 
   const isActive = (path: string) => pathname === path
