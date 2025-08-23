@@ -9,7 +9,7 @@ import { Loader2 } from "lucide-react"
 
 export default function NewsPage() {
   const { language, translations } = useLanguage()
-  const [displayCount, setDisplayCount] = useState(9)
+  const [displayCount, setDisplayCount] = useState(3)
   const [isLoading, setIsLoading] = useState(false)
 
   // Get all news data and sort by date (newest first)
@@ -37,7 +37,7 @@ export default function NewsPage() {
   return (
     <PageLayout>
       <FullScreenSection background="default">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-[900px] mx-auto px-6 md:px-8 lg:px-12">
           {/* Header Section */}
           <section className="space-y-6 mb-8">
             <div className="space-y-4">

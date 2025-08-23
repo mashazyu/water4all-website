@@ -11,7 +11,7 @@ interface PageLayoutProps {
 export function PageLayout({ children, className }: PageLayoutProps) {
   return (
     <div className={cn("min-h-screen relative", className)}>
-      <div>
+      <div className="max-w-[900px] mx-auto">
         {children}
       </div>
     </div>

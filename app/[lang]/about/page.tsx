@@ -1,8 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import { PageLayout } from "@/components/ui/page-layout"
-import { PageSection } from "@/components/ui/page-section"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 
 export default function About() {
   const { translations } = useLanguage()
@@ -38,29 +37,30 @@ export default function About() {
 
   return (
     <PageLayout>
-      <PageSection background="default" fullHeight={true}>
-        {/* Header Section */}
-        <div className="space-y-6 mb-8">
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.about.title}</h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
+      <FullScreenSection background="default">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+          {/* Header Section */}
+          <div className="space-y-6 mb-8">
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.about.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="space-y-8">
+            {/* Program Information */}
+            <section className="space-y-6">
+              <div className="space-y-4">
+                <h2 className="text-2xl font-semibold text-foreground">{translations.about.programInfo}</h2>
+                <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                  {renderTextWithLinks(translations.about.programDescription)}
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-
-        {/* Content Section */}
-        <div className="space-y-8">
-          {/* Program Information */}
-          <section className="space-y-6">
-            <div className="space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">{translations.about.programInfo}</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-                {renderTextWithLinks(translations.about.programDescription)}
-              </div>
-            </div>
-          </section>
-        </div>
-      </PageSection>
-
+      </FullScreenSection>
     </PageLayout>
   )
 }

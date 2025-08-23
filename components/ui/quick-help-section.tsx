@@ -69,19 +69,19 @@ export function QuickHelpSection({
                   <ul className="space-y-3 text-sm text-muted-foreground">
                     <li className="flex items-center">
                       <span className="text-primary mr-3 flex-shrink-0 text-lg">•</span>
-                      <a href={`/${language}/faq#faq3`} className="text-primary hover:text-secondary underline leading-relaxed">
+                      <a href={`/${language}/faq#faq11`} className="text-primary hover:text-secondary underline leading-relaxed">
                         {translations.faq.questions.find(q => q.id === "faq3")?.question || ""}
                       </a>
                     </li>
                     <li className="flex items-center">
                       <span className="text-primary mr-3 flex-shrink-0 text-lg">•</span>
-                      <a href={`/${language}/faq#faq10`} className="text-primary hover:text-secondary underline leading-relaxed">
+                      <a href={`/${language}/faq#faq5`} className="text-primary hover:text-secondary underline leading-relaxed">
                         {translations.faq.questions.find(q => q.id === "faq10")?.question || ""}
                       </a>
                     </li>
                     <li className="flex items-center">
                       <span className="text-primary mr-3 flex-shrink-0 text-lg">•</span>
-                      <a href={`/${language}/faq#faq9`} className="text-primary hover:text-secondary underline leading-relaxed">
+                      <a href={`/${language}/faq#faq8`} className="text-primary hover:text-secondary underline leading-relaxed">
                         {translations.faq.questions.find(q => q.id === "faq9")?.question || ""}
                       </a>
                     </li>
