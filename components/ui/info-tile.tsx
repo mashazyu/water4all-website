@@ -28,7 +28,7 @@ export function InfoTile({
 }: InfoTileProps) {
   return (
     <div className={cn(
-      "group relative overflow-hidden bg-white border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300",
+      "group relative overflow-hidden bg-white border border-border rounded-lg transition-all duration-300",
       className
     )}>
       <div className="p-6 sm:p-8 flex flex-col h-full">
