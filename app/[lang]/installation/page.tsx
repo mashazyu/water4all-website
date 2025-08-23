@@ -1,8 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import { PageSection } from "@/components/ui/page-section"
-import { PageLayout } from "@/components/ui/page-layout"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { NewsSection } from "@/components/ui/news-section"
 import { renderParagraphs } from "@/lib/utils"
 
@@ -12,7 +11,7 @@ export default function Subproject2() {
   return (
     <PageLayout>
       {/* Main Content Section - Full Screen */}
-      <PageSection background="gradient" fullHeight={true}>
+      <FullScreenSection background="default">
         <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
           {/* Page Header */}
           <div className="mb-12">
@@ -33,7 +32,7 @@ export default function Subproject2() {
             </div>
           </div>
         </div>
-      </PageSection>
+      </FullScreenSection>
 
       {/* Related News Section - Full Screen */}
       <NewsSection background="muted" limit={3} showViewAllButton={true} />

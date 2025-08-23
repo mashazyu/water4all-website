@@ -1,7 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
-import { PageSection } from "@/components/ui/page-section"
+import { FullScreenSection } from "@/components/ui/page-layout"
 import { MapPin, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { InfoTile } from "@/components/ui/info-tile"
@@ -18,14 +18,8 @@ export function QuickHelpSection({
   const { language, translations } = useLanguage()
 
   return (
-    <PageSection 
-      titleSize="lg"
-      accentLineHeight="h-8"
-      background={background}
-      fullHeight={true}
-      className={cn("!p-0", className)}
-    >
-      <div className="max-w-4xl mx-auto space-y-8">
+    <FullScreenSection background={background} className={cn("!p-0", className)}>
+      <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full space-y-8">
         {/* Section Header */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
@@ -90,6 +84,6 @@ export function QuickHelpSection({
               />
         </div>
       </div>
-    </PageSection>
+    </FullScreenSection>
   )
 }

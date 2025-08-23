@@ -5,9 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ButtonNew } from "@/components/ui/button-new"
 import { Hero } from "@/components/ui/hero"
-import { PageSection } from "@/components/ui/page-section"
-import { PageLayout } from "@/components/ui/page-layout"
-import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { NewsSection } from "@/components/ui/news-section"
 import { InfoTile } from "@/components/ui/info-tile"
 import Link from "next/link"
@@ -51,10 +49,7 @@ export default function HomePageClient() {
         />
 
         {/* Project Overview Section */}
-        <PageSection 
-          background="white"
-          fullHeight={true}
-        >
+        <FullScreenSection background="white">
           <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
             <div className="space-y-8">
               {/* Section Header */}
@@ -113,10 +108,9 @@ export default function HomePageClient() {
               </div>
             </div>
           </div>
-        </PageSection>
+        </FullScreenSection>
 
-        {/* Quick Help Section */}
-        <QuickHelpSection background="default" />
+
 
         {/* Latest News Section */}
         <NewsSection background="muted" />
