@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLanguage } from "./language-provider"
 
 interface AntiSpamEmailProps {
   email: string
@@ -15,51 +16,25 @@ export default function AntiSpamEmail({
   showCopyButton = true,
   copyMessage = "Email copied to clipboard!"
 }: AntiSpamEmailProps) {
+  const { translations } = useLanguage()
   const [displayEmail, setDisplayEmail] = useState<string>("")
   const [isRevealed, setIsRevealed] = useState(false)
   const [copySuccess, setCopySuccess] = useState(false)
 
   useEffect(() => {
-    // Advanced anti-spam obfuscation
-    const obfuscateEmail = () => {
-      const [localPart, domain] = email.split('@')
-      const [domainName, tld] = domain.split('.')
-      
-      // Create multiple obfuscation layers
-      const obfuscated = [
-        btoa(localPart).split('').reverse().join(''),
-        '@',
-        btoa(domainName).split('').reverse().join(''),
-        '.',
-        btoa(tld).split('').reverse().join('')
-      ].join('')
-      
-      setDisplayEmail(obfuscated)
-    }
-
-    obfuscateEmail()
-  }, [email])
+    // Show translated hover message instead of obfuscated email
+    setDisplayEmail(translations?.antispam?.hoverToSeeEmail || "Please hover over to see email")
+  }, [email, translations])
 
   const revealEmail = () => {
     if (!isRevealed) {
       setDisplayEmail(email)
       setIsRevealed(true)
       
-      // Auto-re-obfuscate after 5 seconds
+      // Auto-re-hide after 5 seconds
       setTimeout(() => {
         setIsRevealed(false)
-        const [localPart, domain] = email.split('@')
-        const [domainName, tld] = domain.split('.')
-        
-        const obfuscated = [
-          btoa(localPart).split('').reverse().join(''),
-          '@',
-          btoa(domainName).split('').reverse().join(''),
-          '.',
-          btoa(tld).split('').reverse().join('')
-        ].join('')
-        
-        setDisplayEmail(obfuscated)
+        setDisplayEmail(translations?.antispam?.hoverToSeeEmail || "Please hover over to see email")
       }, 5000)
     }
   }

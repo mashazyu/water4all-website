@@ -48,6 +48,11 @@ export type Translations = {
     rights: string
   }
   
+  // Anti-spam
+  antispam: {
+    hoverToSeeEmail: string
+  }
+  
   // Home page
   home: {
     projectTitle: string

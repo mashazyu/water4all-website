@@ -3,7 +3,7 @@
 import { useLanguage } from "./language-provider"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { ButtonNew } from "@/components/ui/button-new"
 import { Calendar, ArrowRight } from "lucide-react"
 import { type NewsItem } from "@/lib/translations"
 import Link from "next/link"
@@ -55,7 +55,7 @@ export default function NewsGrid({
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {displayedNews.map((item) => (
-          <Card key={item.id} className="border border-border shadow-none hover:shadow-none">
+          <Card key={item.id} className="border border-border shadow-none hover:shadow-none transition-none">
             <CardHeader className="pb-2">
               <div className="flex justify-between items-start mb-2">
                 <div className="flex flex-wrap gap-1">
@@ -65,8 +65,8 @@ export default function NewsGrid({
                       variant="outline"
                       className={`text-xs font-normal px-2 py-1 rounded-none ${
                         projectId === 1
-                          ? "bg-primary hover:bg-primary/90 text-primary-foreground border-primary"
-                          : "bg-[#9a89b4] hover:bg-[#9a89b4]/90 text-white border-[#9a89b4]"
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-[#9a89b4] text-white border-[#9a89b4]"
                       }`}
                     >
                       {projectId === 1 ? translations.navigation.subproject1 : translations.navigation.subproject2}
@@ -92,10 +92,9 @@ export default function NewsGrid({
       {showViewAllButton && limit && sortedNews.length > limit && (
         <div className="flex justify-center">
           <Link href={`/${language}/news`}>
-            <Button variant="outline" size="sm" className="border-border hover:bg-muted">
+            <ButtonNew variant="action" size="sm">
               {translations.subprojects.viewAllNews}
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            </ButtonNew>
           </Link>
         </div>
       )}

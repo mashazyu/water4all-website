@@ -10,6 +10,7 @@ import Footer from "@/components/footer"
 import CookieConsent from "@/components/cookie-consent"
 import GTMUTMTracker from "@/components/gtm-utm-tracker"
 
+
 const inter = Inter({ subsets: ["latin"] })
 
 export async function generateStaticParams() {

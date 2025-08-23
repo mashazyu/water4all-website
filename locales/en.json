@@ -32,6 +32,9 @@
     "news": "News",
     "rights": "All rights reserved."
   },
+  "antispam": {
+    "hoverToSeeEmail": "Please hover over to see email"
+  },
   "home": {
     "projectTitle": "Water for All",
     "projectIntro": "Berlin has over 220 public drinking fountains — but fewer than 40 are visible on Google Maps. Information about clean drinking water is scattered and often hard to find. Our project makes it easy for everyone to locate free, safe drinking water across the city.",
@@ -77,7 +80,7 @@
     ],
     "heroTitle": "NEED WATER?",
     "heroSubtitle": "Find nearby taps on our map",
-    "infoSection": "Berlin has plenty of free drinking water points, but they're not always easy to find—especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",
+    "infoSection": "Berlin has plenty of free drinking water points, but they're not always easy to find - especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",
     "googleMapsTitle": "Add Water Sources to Your Google Maps",
     "englishMap": "English Map",
     "germanMap": "German Map",

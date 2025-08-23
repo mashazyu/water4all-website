@@ -32,6 +32,9 @@
     "news": "Nachrichten",
     "rights": "Alle Rechte vorbehalten."
   },
+  "antispam": {
+    "hoverToSeeEmail": "Bitte fahren Sie mit der Maus darüber, um die E-Mail zu sehen"
+  },
   "home": {
     "projectTitle": "Wasser für alle",
     "projectIntro": "In Berlin gibt es über 220 öffentliche Trinkbrunnen – aber weniger als 40 sind auf Google Maps zu finden. Die Infos sind oft verstreut und schwer zu finden. Unser Projekt macht es einfach, überall in der Stadt sauberes, kostenloses Trinkwasser zu finden.",

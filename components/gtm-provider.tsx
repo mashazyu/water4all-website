@@ -10,15 +10,16 @@ declare global {
 
 export default function GTMProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    // Ensure dataLayer is initialized
+    // Ensure dataLayer is initialized for the official Next.js GTM integration
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || []
       
-      // Push initial GTM event
-      window.dataLayer.push({
-        event: 'gtm.init',
-        timestamp: Date.now()
-      })
+      // Initialize gtag if not already present
+      if (!window.gtag) {
+        window.gtag = function() {
+          window.dataLayer.push(arguments)
+        }
+      }
     }
   }, [])
 

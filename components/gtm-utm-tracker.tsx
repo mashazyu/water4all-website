@@ -21,17 +21,15 @@ export default function GTMUTMTracker() {
         }
       })
       
-      // Debug logging removed
-      
       return utmParams
     }
 
-    // Function to send UTM parameters to GTM following official Google documentation
+    // Function to send UTM parameters to GTM and GA4
     const sendUTMParamsToGTM = (utmParams: Record<string, string>) => {
       if (typeof window === "undefined" || !window.dataLayer) return
       
       if (Object.keys(utmParams).length > 0) {
-        // Method 1: Send UTM parameters as a custom event (following Google's recommendation)
+        // Send UTM parameters as a custom event to GTM
         window.dataLayer.push({
           event: 'custom_utm_tracking',
           utm_source: utmParams.utm_source || '',
@@ -44,13 +42,12 @@ export default function GTMUTMTracker() {
           timestamp: Date.now()
         })
         
-        // Method 2: Send as page_view event with UTM parameters (standard GA4 approach)
+        // Send as page_view event with UTM parameters to GTM
         window.dataLayer.push({
           event: 'page_view',
           page_location: window.location.href,
           page_title: document.title,
           page_referrer: document.referrer,
-          // Include UTM parameters directly in the event
           utm_source: utmParams.utm_source || '',
           utm_medium: utmParams.utm_medium || '',
           utm_campaign: utmParams.utm_campaign || '',
@@ -58,48 +55,61 @@ export default function GTMUTMTracker() {
           utm_content: utmParams.utm_content || ''
         })
         
-        // Method 3: Set UTM parameters as user properties (for GA4 user-level tracking)
-        window.dataLayer.push({
-          event: 'set_user_properties',
-          user_properties: {
-            utm_source: utmParams.utm_source || '',
-            utm_medium: utmParams.utm_medium || '',
-            utm_campaign: utmParams.utm_campaign || '',
-            utm_term: utmParams.utm_term || '',
-            utm_content: utmParams.utm_content || ''
+        // Also send UTM parameters directly to GA4 via gtag
+        if (window.gtag) {
+          try {
+            window.gtag('event', 'page_view', {
+              page_title: document.title,
+              page_location: window.location.href,
+              page_referrer: document.referrer,
+              utm_source: utmParams.utm_source || '',
+              utm_medium: utmParams.utm_medium || '',
+              utm_campaign: utmParams.utm_campaign || '',
+              utm_term: utmParams.utm_term || '',
+              utm_content: utmParams.utm_content || ''
+            })
+          } catch (error) {
+            // Silently fail if gtag is not properly configured
           }
-        })
+        }
         
-        // Store UTM parameters in localStorage for persistence across page navigation
+        // Store UTM parameters in localStorage for persistence
         localStorage.setItem('utm_params', JSON.stringify(utmParams))
       }
     }
 
-    // Function to wait for GTM to be ready
-    const waitForGTM = (callback: () => void, maxWait = 5000) => {
-      const startTime = Date.now()
+    // Function to send a standard page view
+    const sendPageView = () => {
+      if (typeof window === "undefined" || !window.dataLayer) return
       
-      const checkGTM = () => {
-        if (typeof window !== "undefined" && window.dataLayer) {
-          callback()
-        } else if (Date.now() - startTime < maxWait) {
-          setTimeout(checkGTM, 100)
-        } else {
-          console.warn('GTM not ready after', maxWait, 'ms, proceeding anyway')
-          callback()
+      // Send to GTM dataLayer
+      window.dataLayer.push({
+        event: 'page_view',
+        page_location: window.location.href,
+        page_title: document.title,
+        page_referrer: document.referrer,
+        timestamp: Date.now()
+      })
+      
+      // Also send via gtag to GA4
+      if (window.gtag) {
+        try {
+          window.gtag('event', 'page_view', {
+            page_title: document.title,
+            page_location: window.location.href,
+            page_referrer: document.referrer
+          })
+        } catch (error) {
+          // Silently fail if gtag is not properly configured
         }
       }
-      
-      checkGTM()
     }
 
     // Check for UTM parameters on page load
     const utmParams = extractUTMParams()
     if (Object.keys(utmParams).length > 0) {
-      // Wait for GTM to be fully loaded (following Google's recommendation)
-      waitForGTM(() => {
-        sendUTMParamsToGTM(utmParams)
-      })
+      sendUTMParamsToGTM(utmParams)
+      sendPageView()
     } else {
       // Check if we have stored UTM parameters from previous page
       const storedUTMParams = localStorage.getItem('utm_params')
@@ -107,17 +117,20 @@ export default function GTMUTMTracker() {
         try {
           const parsed = JSON.parse(storedUTMParams)
           if (Object.keys(parsed).length > 0) {
-            waitForGTM(() => {
-              sendUTMParamsToGTM(parsed)
-            })
+            sendUTMParamsToGTM(parsed)
+            sendPageView()
+          } else {
+            sendPageView()
           }
         } catch (e) {
-          console.warn('Failed to parse stored UTM parameters:', e)
+          sendPageView()
         }
+      } else {
+        sendPageView()
       }
     }
 
-    // Override History API to detect URL changes (for SPA behavior)
+    // Override History API to detect URL changes
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
 
@@ -125,9 +138,10 @@ export default function GTMUTMTracker() {
       originalPushState.apply(history, args)
       const newUTMParams = extractUTMParams()
       if (Object.keys(newUTMParams).length > 0) {
-        waitForGTM(() => {
-          sendUTMParamsToGTM(newUTMParams)
-        })
+        sendUTMParamsToGTM(newUTMParams)
+        sendPageView()
+      } else {
+        sendPageView()
       }
     }
 
@@ -135,19 +149,21 @@ export default function GTMUTMTracker() {
       originalReplaceState.apply(history, args)
       const newUTMParams = extractUTMParams()
       if (Object.keys(newUTMParams).length > 0) {
-        waitForGTM(() => {
-          sendUTMParamsToGTM(newUTMParams)
-        })
+        sendUTMParamsToGTM(newUTMParams)
+        sendPageView()
+      } else {
+        sendPageView()
       }
     }
 
-    // Listen for popstate events (browser back/forward)
+    // Listen for popstate events
     const handlePopState = () => {
       const newUTMParams = extractUTMParams()
       if (Object.keys(newUTMParams).length > 0) {
-        waitForGTM(() => {
-          sendUTMParamsToGTM(newUTMParams)
-        })
+        sendUTMParamsToGTM(newUTMParams)
+        sendPageView()
+      } else {
+        sendPageView()
       }
     }
 
@@ -161,5 +177,5 @@ export default function GTMUTMTracker() {
     }
   }, [])
 
-  return null // This component doesn't render anything
+  return null
 }

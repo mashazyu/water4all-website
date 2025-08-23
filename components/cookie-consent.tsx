@@ -150,46 +150,38 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-
+    // Enable Google Analytics via gtag
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
+      window.gtag("consent", "update", {
+        analytics_storage: "granted",
+        ad_storage: "denied",
+        functionality_storage: "granted",
+        personalization_storage: "denied",
+        security_storage: "granted"
+      })
+    }
     
-    // Ensure essential cookies are set
-    ensureEssentialCookies()
+    // Enable analytics via GTM dataLayer
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'cookie_consent_update',
+        consent_type: 'all',
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        functionality_storage: 'granted',
+        personalization_storage: 'denied',
+        security_storage: 'granted'
+      })
+    }
     
-    // Load GTM and enable analytics
-    if (typeof window !== "undefined") {
-      // Try GTM first
-      if (window.loadGTM) {
-        window.loadGTM()
-      }
-      
-      // Also try direct Google Analytics as fallback
-      if (window.loadGoogleAnalytics) {
-        setTimeout(() => {
-          window.loadGoogleAnalytics!()
-        }, 1500)
-      }
-      
-      // Create analytics cookies manually to ensure they exist
-      if (window.createAnalyticsCookies) {
-        setTimeout(() => {
-          window.createAnalyticsCookies!()
-        }, 2000)
-      }
-      
-      // Push consent event to dataLayer
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'cookie_consent_update',
-          consent_type: 'all',
-          analytics_storage: 'granted',
-          ad_storage: 'denied',
-          functionality_storage: 'granted',
-          personalization_storage: 'denied',
-          security_storage: 'granted'
-        })
-      }
-      
-
+    // Send a page view event to confirm tracking is working
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_referrer: document.referrer
+      })
     }
   }
 
@@ -199,15 +191,19 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-
+    // Disable Google Analytics
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        functionality_storage: "granted",
+        personalization_storage: "denied",
+        security_storage: "granted"
+      })
+    }
     
-    // Ensure essential cookies are set
-    ensureEssentialCookies()
-    
-    // Remove analytics cookies and disable tracking
-    removeAnalyticsCookies()
-    
-    // Push consent event to dataLayer if it exists
+    // Disable analytics via GTM
     if (typeof window !== "undefined" && window.dataLayer) {
       window.dataLayer.push({
         event: 'cookie_consent_update',
@@ -227,12 +223,19 @@ export default function CookieConsent() {
     setShowBanner(false)
     setConsentGiven(true)
     
-
+    // Disable Google Analytics
+    if (typeof window !== "undefined" && window.gtag) {
+      // @ts-ignore - gtag consent API
+      window.gtag("consent", "update", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted"
+      })
+    }
     
-    // Remove ALL cookies when declining
-    removeAllCookies()
-    
-    // Push consent event to dataLayer if it exists
+    // Disable analytics via GTM
     if (typeof window !== "undefined" && window.dataLayer) {
       window.dataLayer.push({
         event: 'cookie_consent_update',

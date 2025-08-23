@@ -1,51 +1,18 @@
 "use client"
 
-import { useState } from "react"
 import { useLanguage } from "@/components/language-provider"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ChevronDown, ChevronUp, ChevronsDown, ChevronsUp } from "lucide-react"
 import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
-import { renderParagraphs } from "@/lib/utils"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { TextParser } from "@/components/ui/text-parser"
+import { Lightbulb, MapPin } from "lucide-react"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
 
 export default function FAQ() {
   const { translations } = useLanguage()
-  const [expandedItem, setExpandedItem] = useState<number>(0)
-
-  // Function to render markdown-like links with line break support
-  const renderTextWithLinksAndBreaks = (text: string) => {
-    // First split by double newlines to get paragraphs
-    const paragraphs = text.split('\n\n')
-    
-    return paragraphs.map((paragraph, pIndex) => {
-      // For each paragraph, handle links
-      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
-      const parts = paragraph.split(linkRegex)
-      
-      if (parts.length === 1) {
-        return <p key={`p-${pIndex}`} className="mb-4 last:mb-0">{paragraph}</p>
-      }
-      
-      const elements = []
-      for (let i = 0; i < parts.length; i += 3) {
-        if (parts[i]) elements.push(<span key={`text-${pIndex}-${i}`}>{parts[i]}</span>)
-        if (parts[i + 1] && parts[i + 2]) {
-          elements.push(
-            <a 
-              key={`link-${pIndex}-${i}`} 
-              href={parts[i + 2]} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-secondary underline"
-            >
-              {parts[i + 1]}
-            </a>
-          )
-        }
-      }
-      return <p key={`p-${pIndex}`} className="mb-4 last:mb-0">{elements}</p>
-    })
-  }
+  const router = useRouter()
+  const [openProjectItem, setOpenProjectItem] = useState<string | undefined>(undefined)
+  const [openMapItem, setOpenMapItem] = useState<string | undefined>(undefined)
 
   const faqs = (translations.faq.questions as unknown) as any[]
 
@@ -53,109 +20,112 @@ export default function FAQ() {
   const projectFaqs = faqs.filter((faq: any) => faq.category === 'project')
   const mapFaqs = faqs.filter((faq: any) => faq.category === 'map')
 
-  // Toggle individual FAQ item
-  const toggleItem = (index: number) => {
-    setExpandedItem(expandedItem === index ? -1 : index)
-  }
-
-
+  // Function to handle hash navigation
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash
+      if (hash) {
+        const faqNumber = hash.replace('#faq', '')
+        const faqIndex = parseInt(faqNumber) - 1
+        
+        if (faqIndex >= 0 && faqIndex < projectFaqs.length) {
+          // FAQ is in Project section
+          setOpenProjectItem(`project-${projectFaqs[faqIndex].id}`)
+          setOpenMapItem(undefined)
+        } else if (faqIndex >= projectFaqs.length && faqIndex < projectFaqs.length + mapFaqs.length) {
+          // FAQ is in Map section
+          setOpenProjectItem(undefined)
+          setOpenMapItem(`map-${mapFaqs[faqIndex - projectFaqs.length].id}`)
+        }
+      }
+    }
+  }, [projectFaqs.length, mapFaqs.length])
 
   return (
     <PageLayout>
       <FullScreenSection background="default">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
           {/* Header Section */}
           <div className="space-y-6 mb-8">
             <div className="space-y-4">
               <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.faq.title}</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">{translations.faq.intro}</p>
             </div>
           </div>
 
           {/* Project FAQ Section */}
-          <div className="space-y-6 mb-12">
+          <div className="space-y-6 mt-20">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Project</h2>
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Lightbulb className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-foreground">Project</h2>
+              </div>
               <p className="text-muted-foreground">{translations.faq.projectFaqsTitle}</p>
             </div>
             
-            {projectFaqs.map((faq: any, index: number) => {
-              const isExpanded = expandedItem === index
-              
-              return (
-                <div key={faq.id} className="w-full" id={faq.id}>
-                  <Card className="border border-border w-full min-w-full max-w-full">
-                    <CardHeader 
-                      className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors w-full"
-                      onClick={() => toggleItem(index)}
-                    >
-                      <div className="flex items-center justify-between w-full">
-                        <CardTitle className="text-lg font-semibold text-foreground pr-4 flex-1">
-                          {faq.question}
-                        </CardTitle>
-                        <div className="flex-shrink-0">
-                          {isExpanded ? (
-                            <ChevronUp className="h-5 w-5 text-muted-foreground" />
-                          ) : (
-                            <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                          )}
-                        </div>
-                      </div>
-                    </CardHeader>
-                    {isExpanded && (
-                      <CardContent className="pt-6 w-full">
-                        <div className="text-muted-foreground leading-relaxed w-full">
-                          {renderTextWithLinksAndBreaks(faq.answer)}
-                        </div>
-                      </CardContent>
-                    )}
-                  </Card>
-                </div>
-              )
-            })}
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="w-full"
+              value={openProjectItem}
+              onValueChange={setOpenProjectItem}
+            >
+              {projectFaqs.map((faq: any, index: number) => (
+                <AccordionItem 
+                  key={`project-${faq.id}`} 
+                  value={`project-${faq.id}`}
+                  className="mb-6"
+                  id={`faq${index + 1}`}
+                >
+                  <AccordionTrigger className="text-left py-6 hover:bg-muted/30 rounded-lg transition-colors duration-200">
+                    <span className="font-medium text-foreground">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6">
+                    <TextParser 
+                      text={faq.answer} 
+                      className="text-muted-foreground leading-relaxed"
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
 
           {/* Map FAQ Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 mt-20">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-primary mb-2">Map</h2>
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <MapPin className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-semibold text-foreground">Map</h2>
+              </div>
               <p className="text-muted-foreground">{translations.faq.mapFaqsTitle}</p>
             </div>
             
-            {mapFaqs.map((faq: any, index: number) => {
-              const isExpanded = expandedItem === index
-              
-              return (
-                <div key={faq.id} className="w-full" id={faq.id}>
-                  <Card className="border border-border w-full min-w-full max-w-full">
-                    <CardHeader 
-                      className="bg-muted/50 border-b border-border cursor-pointer hover:bg-muted/70 transition-colors w-full"
-                      onClick={() => toggleItem(index)}
-                    >
-                      <div className="flex items-center justify-between w-full">
-                        <CardTitle className="text-lg font-semibold text-foreground pr-4 flex-1">
-                          {faq.question}
-                        </CardTitle>
-                        <div className="flex-shrink-0">
-                          {isExpanded ? (
-                            <ChevronUp className="h-5 w-5 text-muted-foreground" />
-                          ) : (
-                            <ChevronDown className="h-5 w-5 text-muted-foreground" />
-                          )}
-                        </div>
-                      </div>
-                    </CardHeader>
-                    {isExpanded && (
-                      <CardContent className="pt-6 w-full">
-                        <div className="text-muted-foreground leading-relaxed w-full">
-                          {renderTextWithLinksAndBreaks(faq.answer)}
-                        </div>
-                      </CardContent>
-                    )}
-                  </Card>
-                </div>
-              )
-            })}
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="w-full"
+              value={openMapItem}
+              onValueChange={setOpenMapItem}
+            >
+              {mapFaqs.map((faq: any, index: number) => (
+                <AccordionItem 
+                  key={`map-${faq.id}`} 
+                  value={`map-${faq.id}`}
+                  className="mb-6"
+                  id={`faq${projectFaqs.length + index + 1}`}
+                >
+                  <AccordionTrigger className="text-left py-6 hover:bg-muted/30 rounded-lg transition-colors duration-200">
+                    <span className="font-medium text-foreground">{faq.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6">
+                    <TextParser 
+                      text={faq.answer} 
+                      className="text-muted-foreground leading-relaxed"
+                    />
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </FullScreenSection>
