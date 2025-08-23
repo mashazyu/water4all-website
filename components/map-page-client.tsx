@@ -15,7 +15,7 @@ export default function MapPageClient() {
     <PageLayout>
       {/* Hero Section - Mobile */}
       <PageSection background="default" className="max-md:block md:hidden">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
+        <div className="max-w-6xl mx-auto px-2 md:px-8 lg:px-12 w-full">
           <div className="space-y-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               {translations.map.heroTitle}
