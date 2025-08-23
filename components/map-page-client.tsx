@@ -6,6 +6,7 @@ import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import { NewsSection } from "@/components/ui/news-section"
 import { ButtonNew } from "@/components/ui/button-new"
+import { MAP_URLS } from "@/lib/constants"
 
 export default function MapPageClient() {
   const { language, translations } = useLanguage()
@@ -29,7 +30,7 @@ export default function MapPageClient() {
                 variant="action"
                 size="lg"
                 className="w-full"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
               >
                 {translations.map.addEnglishMap}
               </ButtonNew>
@@ -37,7 +38,7 @@ export default function MapPageClient() {
                 variant="regular"
                 size="lg"
                 className="w-full"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
               >
                 {translations.map.addGermanMap}
               </ButtonNew>
@@ -46,7 +47,7 @@ export default function MapPageClient() {
           
           {/* Map Section */}
           <div className="mt-8">
-            <div className="w-full h-96 sm:h-[450px] lg:h-[450px] bg-muted/30 overflow-hidden">
+            <div className={`w-full h-96 sm:h-[450px] lg:h-[450px] ${mapColor} overflow-hidden`}>
               <iframe
                 src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
                 width="100%"
@@ -85,14 +86,14 @@ export default function MapPageClient() {
                     <ButtonNew 
                       variant="action"
                       size="lg"
-                      onClick={() => window.open('#', '_blank')}
+                      onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
                     >
                       {translations.map.addEnglishMap}
                     </ButtonNew>
                     <ButtonNew 
                       variant="regular"
                       size="lg"
-                      onClick={() => window.open('#', '_blank')}
+                      onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
                     >
                       {translations.map.addGermanMap}
                     </ButtonNew>
@@ -102,7 +103,7 @@ export default function MapPageClient() {
 
               {/* Right Side - Map */}
               <div className="w-1/2 flex items-center justify-center px-8">
-                <div className="w-full h-[500px] bg-muted/30 overflow-hidden rounded-lg">
+                <div className={`w-full h-[500px] ${mapColor} overflow-hidden rounded-lg`}>
                   <iframe
                     src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
                     width="100%"
