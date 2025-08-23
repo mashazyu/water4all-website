@@ -69,7 +69,7 @@ export default function MapPageClient() {
           <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
             <div className="flex min-h-screen">
               {/* Left Side - Content */}
-              <div className="w-1/2 flex items-center justify-center px-8">
+              <div className="w-1/2 flex items-center justify-center pr-8">
                 <div className="w-full max-w-lg h-[500px] flex flex-col justify-center space-y-12">
                   {/* Hero Content */}
                   <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function MapPageClient() {
               </div>
 
               {/* Right Side - Map */}
-              <div className="w-1/2 flex items-center justify-center px-8">
+              <div className="w-1/2 flex items-center justify-center pl-8">
                 <div className="w-full h-[500px] bg-muted/30 overflow-hidden rounded-lg">
                   <iframe
                     src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
