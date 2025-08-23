@@ -31,9 +31,9 @@ export function NewsSection({
       fullHeight={true}
       className={className}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         {/* Enhanced Section Header */}
-        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             <span className="text-primary">
               {translations.home.latestNews}

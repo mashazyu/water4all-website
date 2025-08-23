@@ -11,7 +11,6 @@ import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import { NewsSection } from "@/components/ui/news-section"
 import { InfoTile } from "@/components/ui/info-tile"
 import Link from "next/link"
-import { useState, useEffect } from "react"
 import { Droplets, Waves } from "lucide-react"
 
 interface HeroText {
@@ -21,19 +20,9 @@ interface HeroText {
 
 export default function HomePageClient() {
   const { language, translations } = useLanguage()
-  const [showFAB, setShowFAB] = useState(false)
 
   // Get hero texts from translations
   const heroTexts: HeroText[] = translations?.map?.heroTexts || []
-
-  // Show FAB after scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowFAB(window.scrollY > 200)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   // Safety check for translations
   if (!translations || !translations.home) {
@@ -51,21 +40,6 @@ export default function HomePageClient() {
 
   return (
     <PageLayout>
-      {/* Floating Action Button */}
-      {showFAB && (
-        <div className="fixed bottom-6 right-6 z-50 animate-float">
-          <ButtonNew
-            variant="action"
-            size="lg"
-            className="w-14 h-14 rounded-full shadow-lg"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </ButtonNew>
-        </div>
-      )}
 
       <div className="snap-y snap-mandatory">
         {/* Animated Hero Section */}
@@ -81,7 +55,7 @@ export default function HomePageClient() {
           background="white"
           fullHeight={true}
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
             <div className="space-y-8">
               {/* Section Header */}
               <div className="text-center space-y-4">
@@ -94,7 +68,7 @@ export default function HomePageClient() {
               </div>
 
               {/* Project Tiles Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                 {/* Map Project Tile */}
                 <InfoTile
                   icon={<Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />}

@@ -8,7 +8,7 @@ interface PageSectionProps {
   showAccentLine?: boolean
   accentLineHeight?: string
   titleSize?: "sm" | "md" | "lg" | "xl"
-  background?: "default" | "white" | "muted" | "gradient"
+  background?: "default" | "white" | "muted" | "light" | "dark" | "primary" | "secondary"
   fullHeight?: boolean
 }
 
@@ -23,10 +23,13 @@ export function PageSection({
   fullHeight = true
 }: PageSectionProps) {
   const backgroundClasses = {
-    default: "bg-gradient-to-br from-muted via-white to-blue-50/20",
+    default: "bg-background",
     white: "bg-white",
     muted: "bg-muted",
-    gradient: "bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20"
+    light: "bg-background-light",
+    dark: "bg-background-dark",
+    primary: "bg-primary/5",
+    secondary: "bg-secondary/10"
   }
 
   const titleSizeClasses = {

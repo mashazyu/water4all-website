@@ -11,7 +11,7 @@ interface PageLayoutProps {
 export function PageLayout({ children, className }: PageLayoutProps) {
   return (
     <div className={cn("min-h-screen relative", className)}>
-      <div className="max-w-[900px] mx-auto">
+      <div className="w-full">
         {children}
       </div>
     </div>
@@ -21,7 +21,7 @@ export function PageLayout({ children, className }: PageLayoutProps) {
 interface PageSectionProps {
   children: ReactNode
   className?: string
-  background?: "default" | "white" | "muted" | "gradient"
+  background?: "default" | "white" | "muted" | "light" | "dark" | "primary" | "secondary"
 }
 
 export function FullScreenSection({ children, className, background = "default" }: PageSectionProps) {
@@ -29,7 +29,10 @@ export function FullScreenSection({ children, className, background = "default" 
     default: "bg-background",
     white: "bg-white",
     muted: "bg-muted",
-    gradient: "bg-gradient-to-br from-muted via-white to-blue-50/20"
+    light: "bg-background-light",
+    dark: "bg-background-dark",
+    primary: "bg-primary/5",
+    secondary: "bg-secondary/10"
   }
 
   return (

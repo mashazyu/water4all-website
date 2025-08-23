@@ -54,10 +54,7 @@ export default function Navigation() {
     { href: `/${currentLang}/news`, label: translations.navigation.news },
     { href: `/${currentLang}/faq`, label: translations.navigation.faq },
     { href: `/${currentLang}/about`, label: translations.navigation.about },
-    // Development/Testing routes
-    ...(process.env.NODE_ENV === 'development' ? [
-      { href: `/${currentLang}/gtm-test`, label: 'GTM Test' }
-    ] : [])
+
   ]
 
   const isActive = (path: string) => pathname === path
@@ -78,7 +75,7 @@ export default function Navigation() {
                 href={route.href}
                 className={`text-sm font-normal transition-colors px-3 py-2 ${
                   isActive(route.href)
-                    ? "text-primary bg-primary/10"
+                    ? "text-[#1800ad] bg-primary/10"
                     : "text-foreground hover:text-primary hover:bg-muted"
                 }`}
               >
@@ -144,7 +141,7 @@ export default function Navigation() {
                     onClick={() => setOpen(false)}
                     className={`text-sm font-normal transition-colors px-3 py-2 rounded-md ${
                       isActive(route.href)
-                        ? "text-primary bg-primary/10"
+                        ? "text-[#1800ad] bg-primary/10"
                         : "text-foreground hover:text-primary hover:bg-muted"
                     }`}
                   >

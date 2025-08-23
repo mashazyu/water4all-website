@@ -38,7 +38,7 @@ export default function About() {
   return (
     <PageLayout>
       <FullScreenSection background="default">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
           {/* Header Section */}
           <div className="space-y-6 mb-8">
             <div className="space-y-4">

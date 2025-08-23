@@ -9,7 +9,7 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import CookieConsent from "@/components/cookie-consent"
 import GTMUTMTracker from "@/components/gtm-utm-tracker"
-import GTMDebug from "@/components/gtm-debug"
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -67,7 +67,6 @@ export default async function LangLayout({
         }}
       />
       <GTMUTMTracker />
-      <GTMDebug />
       <LanguageProvider initialLanguage={language}>
         <Navigation />
         <main className="bg-background">{children}</main>

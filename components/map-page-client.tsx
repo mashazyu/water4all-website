@@ -14,8 +14,8 @@ export default function MapPageClient() {
     <PageLayout>
       {/* Hero Section - Mobile */}
       <PageSection background="default" className="max-md:block md:hidden">
-        <div className="px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="max-w-4xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
+          <div className="space-y-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
               {translations.map.heroTitle}
             </h1>
@@ -43,21 +43,21 @@ export default function MapPageClient() {
               </ButtonNew>
             </div>
           </div>
-        </div>
-        
-        {/* Map Section */}
-        <div className="px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="w-full h-96 sm:h-[450px] lg:h-[450px] bg-muted/30 overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Berlin Water Sources Map"
-            />
+          
+          {/* Map Section */}
+          <div className="mt-8">
+            <div className="w-full h-96 sm:h-[450px] lg:h-[450px] bg-muted/30 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Berlin Water Sources Map"
+              />
+            </div>
           </div>
         </div>
       </PageSection>
@@ -65,7 +65,7 @@ export default function MapPageClient() {
       {/* Tablet & Desktop: Split Layout */}
       <FullScreenSection background="default" className="max-md:hidden md:block">
         <div className="min-h-screen bg-background flex flex-col">
-          <div className="max-w-6xl mx-auto w-full">
+          <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
             <div className="flex min-h-screen">
               {/* Left Side - Content */}
               <div className="w-1/2 flex items-center justify-center px-8">
