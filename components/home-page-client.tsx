@@ -4,10 +4,12 @@ import { useLanguage } from "@/components/language-provider"
 import NewsGrid from "@/components/news-grid"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { ButtonNew } from "@/components/ui/button-new"
 import { Hero } from "@/components/ui/hero"
 import { PageSection } from "@/components/ui/page-section"
 import { PageLayout } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { InfoTile } from "@/components/ui/info-tile"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { Droplets, Waves } from "lucide-react"
@@ -52,16 +54,16 @@ export default function HomePageClient() {
       {/* Floating Action Button */}
       {showFAB && (
         <div className="fixed bottom-6 right-6 z-50 animate-float">
-          <Button
-            variant="interactive"
-            size="icon"
-            className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl"
+          <ButtonNew
+            variant="action"
+            size="lg"
+            className="w-14 h-14 rounded-full shadow-lg"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>
-          </Button>
+          </ButtonNew>
         </div>
       )}
 
@@ -95,52 +97,46 @@ export default function HomePageClient() {
               {/* Project Tiles Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-4xl mx-auto">
                 {/* Map Project Tile */}
-                <div className="group relative overflow-hidden bg-white border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
-                  <div className="p-6 sm:p-8">
-                    <div className="flex items-start space-x-4 mb-6">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                        <Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-foreground mb-2">
-                          {translations.home.subproject1Title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {translations.home.subproject1Description}
-                        </p>
+                <InfoTile
+                  icon={<Droplets className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />}
+                  title={translations.home.subproject1Title}
+                  subtitle=""
+                  content={
+                    <div className="flex flex-col">
+                      <p className="text-muted-foreground leading-relaxed flex-1">
+                        {translations.home.subproject1Description}
+                      </p>
+                      <div className="mt-8">
+                        <Link href={`/${language}/map`}>
+                          <ButtonNew variant="action" className="w-full">
+                            {translations.home.learnMore}
+                          </ButtonNew>
+                        </Link>
                       </div>
                     </div>
-                    <Link href={`/${language}/map`}>
-                      <Button variant="outline" className="w-full">
-                        {translations.home.learnMore}
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
+                  }
+                />
 
                 {/* Installation Project Tile */}
-                <div className="group relative overflow-hidden bg-white border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
-                  <div className="p-6 sm:p-8">
-                    <div className="flex items-start space-x-4 mb-6">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
-                        <Waves className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-foreground mb-2">
-                          {translations.home.subproject2Title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {translations.home.subproject2Description}
-                        </p>
+                <InfoTile
+                  icon={<Waves className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />}
+                  title={translations.home.subproject2Title}
+                  subtitle=""
+                  content={
+                    <div className="flex flex-col">
+                      <p className="text-muted-foreground leading-relaxed flex-1">
+                        {translations.home.subproject2Description}
+                      </p>
+                      <div className="mt-8">
+                        <Link href={`/${language}/installation`}>
+                          <ButtonNew variant="action" className="w-full">
+                            {translations.home.learnMore}
+                          </ButtonNew>
+                        </Link>
                       </div>
                     </div>
-                    <Link href={`/${language}/installation`}>
-                      <Button variant="outline" className="w-full">
-                        {translations.home.learnMore}
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
+                  }
+                />
               </div>
             </div>
           </div>

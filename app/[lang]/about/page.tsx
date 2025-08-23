@@ -4,7 +4,6 @@ import { useLanguage } from "@/components/language-provider"
 import { PageLayout } from "@/components/ui/page-layout"
 import { PageSection } from "@/components/ui/page-section"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
-import { Container } from "@/components/ui/container"
 
 export default function About() {
   const { translations } = useLanguage()
@@ -41,28 +40,26 @@ export default function About() {
   return (
     <PageLayout>
       <PageSection background="default" fullHeight={true}>
-        <Container>
-          {/* Header Section */}
-          <div className="space-y-6 mb-8">
-            <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.about.title}</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
-            </div>
+        {/* Header Section */}
+        <div className="space-y-6 mb-8">
+          <div className="space-y-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.about.title}</h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">{translations.about.intro}</p>
           </div>
+        </div>
 
-          {/* Content Section */}
-          <div className="space-y-8">
-            {/* Program Information */}
-            <section className="space-y-6">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">{translations.about.programInfo}</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
-                  {renderTextWithLinks(translations.about.programDescription)}
-                </div>
+        {/* Content Section */}
+        <div className="space-y-8">
+          {/* Program Information */}
+          <section className="space-y-6">
+            <div className="space-y-4">
+              <h2 className="text-2xl font-semibold text-foreground">{translations.about.programInfo}</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground leading-relaxed">
+                {renderTextWithLinks(translations.about.programDescription)}
               </div>
-            </section>
-          </div>
-        </Container>
+            </div>
+          </section>
+        </div>
       </PageSection>
 
       {/* Quick Help Section */}

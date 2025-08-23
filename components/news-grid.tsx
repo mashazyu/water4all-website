@@ -3,7 +3,7 @@
 import { useLanguage } from "./language-provider"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { ButtonNew } from "@/components/ui/button-new"
 import { Calendar, ArrowRight } from "lucide-react"
 import { type NewsItem } from "@/lib/translations"
 import Link from "next/link"
@@ -92,10 +92,10 @@ export default function NewsGrid({
       {showViewAllButton && limit && sortedNews.length > limit && (
         <div className="flex justify-center">
           <Link href={`/${language}/news`}>
-            <Button variant="outline" size="sm" className="border-border hover:bg-muted">
+            <ButtonNew variant="regular" size="sm" className="border-border">
               {translations.subprojects.viewAllNews}
               <ArrowRight className="h-4 w-4" />
-            </Button>
+            </ButtonNew>
           </Link>
         </div>
       )}

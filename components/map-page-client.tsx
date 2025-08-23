@@ -5,6 +5,7 @@ import { PageSection } from "@/components/ui/page-section"
 import NewsGrid from "@/components/news-grid"
 import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
+import { ButtonNew } from "@/components/ui/button-new"
 
 export default function MapPageClient() {
   const { language, translations } = useLanguage()
@@ -24,22 +25,22 @@ export default function MapPageClient() {
             
             {/* Mobile CTA Buttons */}
             <div className="space-y-3">
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 px-4 text-base transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
+              <ButtonNew 
+                variant="action"
+                size="lg"
+                className="w-full"
+                onClick={() => window.open('#', '_blank')}
               >
                 {translations.map.addEnglishMap}
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground py-3 px-4 text-base transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium block"
+              </ButtonNew>
+              <ButtonNew 
+                variant="regular"
+                size="lg"
+                className="w-full"
+                onClick={() => window.open('#', '_blank')}
               >
                 {translations.map.addGermanMap}
-              </a>
+              </ButtonNew>
             </div>
           </div>
         </div>
@@ -81,22 +82,20 @@ export default function MapPageClient() {
                   
                   {/* Tablet CTA Buttons */}
                   <div className="flex gap-4">
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-auto bg-primary hover:bg-primary/90 text-primary-foreground py-4 px-6 text-lg transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium inline-block"
+                    <ButtonNew 
+                      variant="action"
+                      size="lg"
+                      onClick={() => window.open('#', '_blank')}
                     >
                       {translations.map.addEnglishMap}
-                    </a>
-                    <a 
-                      href="#" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground py-4 px-6 text-lg transition-all duration-300 hover:scale-105 text-center rounded-lg font-medium inline-block"
+                    </ButtonNew>
+                    <ButtonNew 
+                      variant="regular"
+                      size="lg"
+                      onClick={() => window.open('#', '_blank')}
                     >
                       {translations.map.addGermanMap}
-                    </a>
+                    </ButtonNew>
                   </div>
                 </div>
               </div>

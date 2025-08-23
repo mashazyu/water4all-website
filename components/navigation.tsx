@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useLanguage } from "./language-provider"
-import { Button } from "@/components/ui/button"
+import { ButtonNew } from "@/components/ui/button-new"
 import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { useState, useEffect, useRef } from "react"
@@ -91,14 +91,15 @@ export default function Navigation() {
         <div className="flex items-center gap-4">
 
           <div className="relative" ref={dropdownRef}>
-            <Button
-              variant="ghost"
+            <ButtonNew
+              variant="regular"
+              size="sm"
               className="text-sm font-normal text-foreground hover:text-primary flex items-center gap-1 px-2 h-8"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               {language.toUpperCase()}
               <ChevronDown className="h-3 w-3" />
-            </Button>
+            </ButtonNew>
             
             {dropdownOpen && (
               <div className="absolute right-0 top-full mt-1 min-w-[120px] bg-popover border border-border rounded-md shadow-lg z-[9999]">
@@ -126,10 +127,10 @@ export default function Navigation() {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="outline" size="sm" className="h-8 w-8 p-0 bg-transparent">
+              <ButtonNew variant="regular" size="sm" className="h-8 w-8 p-0 bg-transparent">
                 <Menu className="h-4 w-4" />
                 <span className="sr-only">Toggle menu</span>
-              </Button>
+              </ButtonNew>
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
