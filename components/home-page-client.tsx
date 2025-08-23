@@ -19,17 +19,10 @@ interface HeroText {
 
 export default function HomePageClient() {
   const { language, translations } = useLanguage()
-  const [isLoading, setIsLoading] = useState(true)
   const [showFAB, setShowFAB] = useState(false)
 
   // Get hero texts from translations
   const heroTexts: HeroText[] = translations?.map?.heroTexts || []
-
-  // Simulate loading state
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 800)
-    return () => clearTimeout(timer)
-  }, [])
 
   // Show FAB after scrolling
   useEffect(() => {
@@ -52,21 +45,7 @@ export default function HomePageClient() {
     )
   }
 
-  if (isLoading) {
-    return (
-      <div className="h-screen flex items-center justify-center bg-background">
-        <div className="text-center space-y-6">
-          <div className="relative">
-            <div className="w-24 h-24 border-4 border-muted border-t-primary rounded-full animate-spin mx-auto"></div>
-          </div>
-          <div className="space-y-2">
-            <h2 className="text-2xl font-bold text-primary">{translations.home.loadingTitle}</h2>
-            <p className="text-muted-foreground">{translations.home.loadingText}</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
+
 
   return (
     <PageLayout>
