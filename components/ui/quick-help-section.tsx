@@ -56,16 +56,16 @@ export function QuickHelpSection({
                   </div>
                   
                   <ul className="space-y-1 text-sm text-muted-foreground">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <span>{translations.map.freeToUse}</span>
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <span>{translations.map.betaTesting}</span>
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <span>{translations.map.waterSourceGuide}</span>
                     </li>
                   </ul>
@@ -90,20 +90,20 @@ export function QuickHelpSection({
                   </div>
                   
                   <ul className="space-y-1 text-sm text-muted-foreground mb-6">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <a href={`/${language}/faq#faq3`} className="text-primary hover:text-secondary underline">
                         {translations.faq.questions.find(q => q.id === "faq3")?.question || ""}
                       </a>
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <a href={`/${language}/faq#faq10`} className="text-primary hover:text-secondary underline">
                         {translations.faq.questions.find(q => q.id === "faq10")?.question || ""}
                       </a>
                     </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2 mt-2.5">•</span>
+                    <li className="flex items-center">
+                      <span className="text-primary mr-2 flex-shrink-0">•</span>
                       <a href={`/${language}/faq#faq9`} className="text-primary hover:text-secondary underline">
                         {translations.faq.questions.find(q => q.id === "faq9")?.question || ""}
                       </a>
