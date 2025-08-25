@@ -271,6 +271,13 @@
       "content": "Wir haben eine Website gestartet, auf der Sie Informationen über unser Projekt finden und Ihre Gedanken teilen können.",
       "date": "2025-08",
       "project": [1, 2]
+    },
+    {
+      "id": 7,
+      "title": "Sticker-Kampagne startet",
+      "content": "Wir freuen uns sehr, unsere Sticker-Kampagne zu starten! Damit möchten wir die Öffentlichkeit in verschiedenen Bezirken über unsere Initiative informieren. Passend dazu haben wir extra für diese Kampagne eine neue Karte auf Englisch erstellt.",
+      "date": "2025-08",
+      "project": [1, 2]
     }
   ],
   "cookies": {

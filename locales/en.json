@@ -270,6 +270,13 @@
       "content": "We launched a website where you can find information about our project and share your thoughts.",
       "date": "2025-08",
       "project": [1, 2]
+    },
+    {
+      "id": 7,
+      "title": "Sticker Campaign Launch",
+      "content": "We're excited to announce the launch of our sticker campaign! Our goal is to share more about our initiative with the public across different districts. To support this, we've also created a new map in English—especially for this campaign.",
+      "date": "2025-08",
+      "project": [1, 2]
     }
   ],
   "cookies": {
