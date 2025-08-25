@@ -70,8 +70,8 @@ export default function HomePageClient() {
                   title={translations.home.subproject1Title}
                   subtitle=""
                   content={
-                    <div className="flex flex-col">
-                      <p className="text-muted-foreground leading-relaxed flex-1">
+                    <div className="flex flex-col h-full justify-between">
+                      <p className="text-muted-foreground leading-relaxed">
                         {translations.home.subproject1Description}
                       </p>
                       <div className="mt-8">
@@ -91,8 +91,8 @@ export default function HomePageClient() {
                   title={translations.home.subproject2Title}
                   subtitle=""
                   content={
-                    <div className="flex flex-col">
-                      <p className="text-muted-foreground leading-relaxed flex-1">
+                    <div className="flex flex-col h-full justify-between">
+                      <p className="text-muted-foreground leading-relaxed">
                         {translations.home.subproject2Description}
                       </p>
                       <div className="mt-8">
