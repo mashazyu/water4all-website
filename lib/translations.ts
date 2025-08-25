@@ -91,6 +91,7 @@ export type Translations = {
     germanMap: string
     addEnglishMap: string
     addGermanMap: string
+    loadingMap: string
     faqSectionTitle: string
     howMapWorks: string
     howRemoveMap: string
