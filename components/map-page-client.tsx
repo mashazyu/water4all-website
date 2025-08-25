@@ -125,7 +125,7 @@ export default function MapPageClient() {
       <QuickHelpSection background="muted" />
 
       {/* Related News Section */}
-      <NewsSection background="default" limit={3} showViewAllButton={true} />
+      <NewsSection background="default" limit={3} showViewAllButton={true} projectFilter={1} />
     </PageLayout>
   )
 }

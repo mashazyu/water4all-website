@@ -35,7 +35,7 @@ export default function Subproject2() {
       </FullScreenSection>
 
       {/* Related News Section - Full Screen */}
-      <NewsSection background="muted" limit={3} showViewAllButton={true} />
+      <NewsSection background="muted" limit={3} showViewAllButton={true} projectFilter={2} />
     </PageLayout>
   )
 }
