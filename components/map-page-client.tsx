@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
+import { trackMapExit } from "@/lib/exit-tracking"
 import { PageLayout } from "@/components/ui/page-layout"
 import { PageSectionWithContent } from "@/components/ui/page-section"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
@@ -10,6 +11,38 @@ import { MAP_URLS } from "@/lib/constants"
 
 export default function MapPageClient() {
   const { language, translations } = useLanguage()
+
+  // Handler for English map button click with enhanced tracking
+  const handleEnglishMapClick = () => {
+    trackMapExit('english', language, {
+      button_variant: language === 'en' || language === 'ru' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.ENGLISH_MAP, '_blank')
+    }, 100)
+  }
+
+  // Handler for German map button click with enhanced tracking
+  const handleGermanMapClick = () => {
+    trackMapExit('german', language, {
+      button_variant: language === 'de' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.GERMAN_MAP, '_blank')
+    }, 100)
+  }
 
   return (
     <PageLayout>
@@ -32,7 +65,7 @@ export default function MapPageClient() {
               variant={language === 'en' || language === 'ru' ? "action" : "regular"}
               size="lg"
               className="w-full"
-              onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
+              onClick={handleEnglishMapClick}
             >
               {translations.map.addEnglishMap}
             </ButtonNew>
@@ -40,7 +73,7 @@ export default function MapPageClient() {
               variant={language === 'de' ? "action" : "regular"}
               size="lg"
               className="w-full"
-              onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
+              onClick={handleGermanMapClick}
             >
               {translations.map.addGermanMap}
             </ButtonNew>
@@ -76,14 +109,14 @@ export default function MapPageClient() {
                 <ButtonNew 
                   variant={language === 'en' || language === 'ru' ? "action" : "regular"}
                   size="lg"
-                  onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
+                  onClick={handleEnglishMapClick}
                 >
                   {translations.map.addEnglishMap}
                 </ButtonNew>
                 <ButtonNew 
                   variant={language === 'de' ? "action" : "regular"}
                   size="lg"
-                  onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
+                  onClick={handleGermanMapClick}
                 >
                   {translations.map.addGermanMap}
                 </ButtonNew>
