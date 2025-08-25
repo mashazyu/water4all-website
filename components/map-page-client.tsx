@@ -1,15 +1,59 @@
 "use client"
 
 import { useLanguage } from "@/components/language-provider"
+import { trackMapExit } from "@/lib/exit-tracking"
 import { PageLayout } from "@/components/ui/page-layout"
 import { PageSectionWithContent } from "@/components/ui/page-section"
 import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import { NewsSection } from "@/components/ui/news-section"
 import { ButtonNew } from "@/components/ui/button-new"
-import { MAP_URLS } from "@/lib/constants"
+import { Skeleton } from "@/components/ui/skeleton"
+import { MAP_URLS, getMapEmbedUrl } from "@/lib/constants"
+import { useState } from "react"
 
 export default function MapPageClient() {
   const { language, translations } = useLanguage()
+  const [isMapLoading, setIsMapLoading] = useState(true)
+
+  // Get the appropriate map embed URL based on user language
+  const mapEmbedUrl = getMapEmbedUrl(language)
+
+  // Handler for English map button click with enhanced tracking
+  const handleEnglishMapClick = () => {
+    trackMapExit('english', language, {
+      button_variant: language === 'en' || language === 'ru' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.ENGLISH_MAP, '_blank')
+    }, 100)
+  }
+
+  // Handler for German map button click with enhanced tracking
+  const handleGermanMapClick = () => {
+    trackMapExit('german', language, {
+      button_variant: language === 'de' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.GERMAN_MAP, '_blank')
+    }, 100)
+  }
+
+  // Handle iframe load event
+  const handleMapLoad = () => {
+    setIsMapLoading(false)
+  }
 
   return (
     <PageLayout>
@@ -32,7 +76,7 @@ export default function MapPageClient() {
               variant={language === 'en' || language === 'ru' ? "action" : "regular"}
               size="lg"
               className="w-full"
-              onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
+              onClick={handleEnglishMapClick}
             >
               {translations.map.addEnglishMap}
             </ButtonNew>
@@ -40,16 +84,24 @@ export default function MapPageClient() {
               variant={language === 'de' ? "action" : "regular"}
               size="lg"
               className="w-full"
-              onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
+              onClick={handleGermanMapClick}
             >
               {translations.map.addGermanMap}
             </ButtonNew>
           </div>
           
           {/* Mobile Map Section */}
-          <div className="w-full h-96 sm:h-[450px] bg-muted/30 overflow-hidden rounded-lg">
+          <div className="w-full h-96 sm:h-[450px] bg-muted/30 overflow-hidden rounded-lg relative">
+            {isMapLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+                <div className="text-center space-y-3">
+                  <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <p className="text-sm text-muted-foreground">{translations.map.loadingMap}</p>
+                </div>
+              </div>
+            )}
             <iframe
-              src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
+              src={mapEmbedUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -57,6 +109,7 @@ export default function MapPageClient() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Berlin Water Sources Map"
+              onLoad={handleMapLoad}
             />
           </div>
         </div>
@@ -76,14 +129,14 @@ export default function MapPageClient() {
                 <ButtonNew 
                   variant={language === 'en' || language === 'ru' ? "action" : "regular"}
                   size="lg"
-                  onClick={() => window.open(MAP_URLS.ENGLISH_MAP, '_blank')}
+                  onClick={handleEnglishMapClick}
                 >
                   {translations.map.addEnglishMap}
                 </ButtonNew>
                 <ButtonNew 
                   variant={language === 'de' ? "action" : "regular"}
                   size="lg"
-                  onClick={() => window.open(MAP_URLS.GERMAN_MAP, '_blank')}
+                  onClick={handleGermanMapClick}
                 >
                   {translations.map.addGermanMap}
                 </ButtonNew>
@@ -91,9 +144,17 @@ export default function MapPageClient() {
             </div>
 
             {/* Right Side - Map */}
-            <div className="w-full h-[400px] xl:h-[500px] bg-muted/30 overflow-hidden rounded-lg">
+            <div className="w-full h-[400px] xl:h-[500px] bg-muted/30 overflow-hidden rounded-lg relative">
+              {isMapLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-muted/30">
+                  <div className="text-center space-y-3">
+                    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
+                    <p className="text-sm text-muted-foreground">{translations.map.loadingMap}</p>
+                  </div>
+                </div>
+              )}
               <iframe
-                src="https://www.google.com/maps/d/embed?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&ll=52.547946812489116%2C13.452717799999995&z=17"
+                src={mapEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -101,6 +162,7 @@ export default function MapPageClient() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Berlin Water Sources Map"
+                onLoad={handleMapLoad}
               />
             </div>
           </div>

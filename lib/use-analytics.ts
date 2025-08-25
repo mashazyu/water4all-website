@@ -88,6 +88,54 @@ export const useAnalytics = () => {
     }
   }, [getUTMParams])
 
+  // New function for tracking exit links (external navigation)
+  const trackExitLink = useCallback((
+    destination: string,
+    linkType: string,
+    userLanguage: string,
+    additionalContext?: Record<string, any>
+  ) => {
+    if (typeof window !== 'undefined') {
+      const utmParams = getUTMParams()
+      const timestamp = Date.now()
+      
+      // Track via gtag (Google Analytics)
+      if (window.gtag) {
+        window.gtag('event', 'exit_link', {
+          event_category: 'navigation',
+          event_label: `${linkType}_${userLanguage}`,
+          destination: destination,
+          link_type: linkType,
+          user_language: userLanguage,
+          page_location: window.location.href,
+          page_title: document.title,
+          timestamp: timestamp,
+          // Include UTM parameters
+          ...utmParams,
+          // Include any additional context
+          ...additionalContext,
+        })
+      }
+      
+      // Track via GTM dataLayer for additional flexibility
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'exit_link_click',
+          exit_link_type: linkType,
+          exit_destination: destination,
+          user_language: userLanguage,
+          page_location: window.location.href,
+          page_title: document.title,
+          timestamp: timestamp,
+          // Include UTM parameters
+          ...utmParams,
+          // Include any additional context
+          ...additionalContext,
+        })
+      }
+    }
+  }, [getUTMParams])
+
   // Auto-track UTM parameters when the hook is used
   useEffect(() => {
     trackUTMCapture()
@@ -97,6 +145,7 @@ export const useAnalytics = () => {
     trackEvent,
     trackPageView,
     trackUTMCapture,
+    trackExitLink,
     getUTMParams,
   }
 }
