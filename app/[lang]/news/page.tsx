@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { useLanguage } from "@/components/language-provider"
-import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
+import { PageLayout } from "@/components/ui/page-layout"
+import { PageSectionWithContent } from "@/components/ui/page-section"
 import NewsGrid from "@/components/news-grid"
 import { ButtonNew } from "@/components/ui/button-new"
 import { Loader2 } from "lucide-react"
@@ -36,37 +37,32 @@ export default function NewsPage() {
 
   return (
     <PageLayout>
-      <FullScreenSection background="default">
-        <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 w-full">
-          {/* Header Section */}
-          <section className="space-y-6 mb-8">
-            <div className="space-y-4">
-              <h1 className="text-3xl md:text-4xl font-bold text-primary">{translations.newsPage.title}</h1>
-              <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">{translations.newsPage.intro}</p>
+      <PageSectionWithContent 
+        background="default"
+        title={translations.newsPage.title}
+        subtitle={translations.newsPage.intro}
+        titleAlignment="left"
+      >
+        {/* News Grid Section */}
+        <section className="space-y-8">
+          <NewsGrid limit={displayCount} />
+          
+          {hasMoreNews && (
+            <div className="flex justify-center">
+              <ButtonNew 
+                onClick={handleLoadMore} 
+                disabled={isLoading}
+                variant="action"
+                size="md"
+                className="flex items-center gap-2"
+              >
+                {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+                {translations.newsPage.loadMore}
+              </ButtonNew>
             </div>
-          </section>
-
-          {/* News Grid Section */}
-          <section className="space-y-8">
-            <NewsGrid limit={displayCount} />
-            
-            {hasMoreNews && (
-              <div className="flex justify-center">
-                <ButtonNew 
-                  onClick={handleLoadMore} 
-                  disabled={isLoading}
-                  variant="action"
-                  size="md"
-                  className="flex items-center gap-2"
-                >
-                  {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-                  {translations.newsPage.loadMore}
-                </ButtonNew>
-              </div>
-            )}
-          </section>
-        </div>
-      </FullScreenSection>
+          )}
+        </section>
+      </PageSectionWithContent>
     </PageLayout>
   )
 }

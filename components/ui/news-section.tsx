@@ -11,6 +11,7 @@ interface NewsSectionProps {
   accentLineHeight?: string
   limit?: number
   showViewAllButton?: boolean
+  projectFilter?: number
 }
 
 export function NewsSection({ 
@@ -19,7 +20,8 @@ export function NewsSection({
   titleSize = "lg",
   accentLineHeight = "h-8",
   limit = 3,
-  showViewAllButton = true
+  showViewAllButton = true,
+  projectFilter
 }: NewsSectionProps) {
   const { translations } = useLanguage()
 
@@ -36,7 +38,11 @@ export function NewsSection({
         </div>
         
         <div className="group">
-          <NewsGrid limit={limit} showViewAllButton={showViewAllButton} />
+          <NewsGrid 
+            limit={limit} 
+            showViewAllButton={showViewAllButton} 
+            projectFilter={projectFilter}
+          />
         </div>
       </div>
     </FullScreenSection>
