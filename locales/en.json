@@ -75,7 +75,7 @@
       },
       {
         "title": "Хочешь пить?",
-        "subtitle": "Карта вкусной воды Берлина"
+        "subtitle": "Карта воды Берлина"
       }
     ],
     "heroTitle": "Water Sources Map",
@@ -219,7 +219,7 @@
       {
         "id": "faq13",
         "question": "Where did you get the data for the map?",
-        "answer": "We used publicly available data. The list of drinking fountains comes from the [Berliner Wasserbetriebe (BWB) website](https://www.bwb.de/de/trinkbrunnen.php), the list of Volkshochschulen (VHS) is from the [official City of Berlin website](https://www.berlin.de/vhs/volkshochschulen/), and the list of libraries is from the [Verbund der Öffentlichen Bibliotheken Berlins website](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
+        "answer": "The complete list of drinking fountains comes from [Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), other refill spots from [Refill Germany](https://refill-deutschland.de/), the list of Volkshochschulen (VHS) from the [official City of Berlin website](https://www.berlin.de/vhs/volkshochschulen/), and the list of libraries is from the [Verbund der Öffentlichen Bibliotheken Berlins website](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
         "category": "map"
       }
     ]
@@ -240,14 +240,14 @@
     {
       "id": 2,
       "title": "Engagement with Berliner Wasserbetriebe",
-      "content": "Our suggestion for a fountain location in Pankow has been accepted for consideration and is now on the list for future possible locations.",
+      "content": "Our suggestion for a fountain location in Pankow has been accepted for consideration and is now on the list for future possible locations. BWB drinking fountations map integration.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 3,
       "title": "Engagement with Refill",
-      "content": "Exchanged experience and insights about the water sources mapping.",
+      "content": "Exchanged experience and insights about the water sources mapping. Refill spots map integration.",
       "date": "2025-07",
       "project": [1, 2]
     },
@@ -274,8 +274,8 @@
     },
     {
       "id": 7,
-      "title": "Sticker Campaign Launch",
-      "content": "We're excited to announce the launch of our sticker campaign! Our goal is to share more about our initiative with the public across different districts. To support this, we've also created a new map in English—especially for this campaign.",
+      "title": "Info Campaign Launch",
+      "content": "We're excited to announce the launch of our info campaign! Our goal is to share more about our initiative with the public across different districts. To support this, we've also created a new map in English—especially for this campaign.",
       "date": "2025-08",
       "project": [1, 2]
     }
