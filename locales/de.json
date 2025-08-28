@@ -75,7 +75,7 @@
       },
       {
         "title": "Хочешь пить?",
-        "subtitle": "Карта вкусной воды Берлина"
+        "subtitle": "Карта воды Берлина"
       }
     ],
     "heroTitle": "DURSTIG?",
@@ -142,7 +142,7 @@
       {
         "id": "faq1",
         "question": "Warum finde ich die meisten Trinkbrunnen nicht auf Google Maps?",
-        "answer": "[Die Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), das Unternehmen, das die Trinkbrunnen installiert, listen diese nur auf ihrer eigenen Website. Sie integrieren die Standorte nicht in Google Maps. Stattdessen stellen sie eine herunterladbare .kml-Datei mit allen Brunnenkoordinaten zur Verfügung.\n\nWir haben es Ihnen einfacher gemacht, indem wir diese Daten in eine Google-Maps-Ebene umgewandelt haben, die Sie direkt auf Ihrem Smartphone speichern können. Außerdem haben wir weitere öffentliche Wasserquellen wie Bibliotheken, Volkshochschulen und andere Standorte hinzugefügt.\n\nFür noch mehr Nachfüllstationen schauen Sie bei [Refill](https://refill-deutschland.de/) vorbei, wo Geschäfte und Organisationen gelistet sind, die an deren Programm teilnehmen.",
+        "answer": "[Die Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), das Unternehmen, das die Trinkbrunnen installiert, listen diese nur auf ihrer eigenen Website. Sie integrieren die Standorte nicht in Google Maps. Stattdessen stellen sie eine herunterladbare .kml-Datei mit allen Brunnenkoordinaten zur Verfügung.\n\nWir haben es Ihnen einfacher gemacht, indem wir diese Daten in eine Google-Maps-Ebene umgewandelt haben, die Sie direkt auf Ihrem Smartphone speichern können. Außerdem haben wir weitere öffentliche Wasserquellen wie Bibliotheken, Volkshochschulen und andere Standorte sowie die Refill-Stationen aus dem [Refill-Programm](https://refill-deutschland.de/) hinzugefügt.",
         "category": "map"
       },
       {
@@ -220,7 +220,7 @@
       {
         "id": "faq13",
         "question": "Woher stammen die Daten für die Karte?",
-        "answer": "Wir haben öffentlich zugängliche Daten verwendet. Die Liste der Trinkbrunnen stammt von der [Website der Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), die Liste der Volkshochschulen (VHS) von der offiziellen [Website der Stadt Berlin](https://www.berlin.de/vhs/volkshochschulen/), und die Liste der Bibliotheken von der [Website des Verbunds der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
+        "answer": "Wir haben öffentlich zugängliche Daten verwendet. Die Liste der Trinkbrunnen stammt von der [Website der Berliner Wasserbetriebe (BWB)](https://www.bwb.de/de/trinkbrunnen.php), , die Refill-Standorte von [Refill Deutschland](https://refill-deutschland.de/), die Liste der Volkshochschulen (VHS) von der offiziellen [Website der Stadt Berlin](https://www.berlin.de/vhs/volkshochschulen/), und die Liste der Bibliotheken von der [Website des Verbunds der Öffentlichen Bibliotheken Berlins](https://www.voebb.de/aDISWeb/app?service=direct/0/Home/$DirectLink&sp=SPROD00&sp=SWI01000154&noRedir).",
         "category": "map"
       }
     ]
@@ -241,14 +241,14 @@
     {
       "id": 2,
       "title": "Austausch mit den Berliner Wasserbetrieben",
-      "content": "Unser Vorschlag für einen Trinkbrunnenstandort in Pankow wurde zur zukünftigen Prüfung in die Liste möglicher Standorte aufgenommen.",
+      "content": "Unser Vorschlag für einen Trinkbrunnenstandort in Pankow wurde zur zukünftigen Prüfung in die Liste möglicher Standorte aufgenommen. Integration der BWB-Trinkbrunnen-Karte.",
       "date": "2025-07",
       "project": [2]
     },
     {
       "id": 3,
       "title": "Austausch mit Refill",
-      "content": "Erfahrung und Erkenntnisse zur Kartierung öffentlicher Wasserquellen ausgetauscht.",
+      "content": "Erfahrung und Erkenntnisse zur Kartierung öffentlicher Wasserquellen ausgetauscht. Integration der Refill-Standorte-Karte",
       "date": "2025-07",
       "project": [1, 2]
     },
@@ -275,8 +275,8 @@
     },
     {
       "id": 7,
-      "title": "Sticker-Kampagne startet",
-      "content": "Wir freuen uns sehr, unsere Sticker-Kampagne zu starten! Damit möchten wir die Öffentlichkeit in verschiedenen Bezirken über unsere Initiative informieren. Passend dazu haben wir extra für diese Kampagne eine neue Karte auf Englisch erstellt.",
+      "title": "Infokampagne startet",
+      "content": "Wir freuen uns sehr, unsere Infokampagne zu starten! Damit möchten wir die Öffentlichkeit in verschiedenen Bezirken über unsere Initiative informieren. Passend dazu haben wir extra für diese Kampagne eine neue Karte auf Englisch erstellt.",
       "date": "2025-08",
       "project": [1, 2]
     }
