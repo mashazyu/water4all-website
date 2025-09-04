@@ -80,7 +80,7 @@
     ],
     "heroTitle": "DURSTIG?",
     "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
-    "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer einfach zu finden - besonders auf alltäglichen Plattformen wie Google Maps. Um es einfacher zu machen, haben wir eine eigene Google Map erstellt, die Brunnen von Berliner Wasserbetriebe zeigt, die rund um die Uhr verfügbar sind, sowie Regierungsgebäude, wo Sie während der regulären Geschäftszeiten nachfüllen können.",
+    "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer leicht zu finden – besonders auf alltäglichen Plattformen wie Google Maps. Dort sind weniger als 50 Trinkbrunnen eingetragen, tatsächlich gibt es jedoch deutlich mehr. Um den Zugang zu erleichtern, haben wir Daten von den Berliner Wasserbetrieben, Refill und anderen öffentlichen Quellen gesammelt und an einem Ort zusammengeführt. Unsere Karte zeigt über 500 Trinkwasserstellen in ganz Berlin – darunter Trinkbrunnen, Refill-Standorte aus dem Refill-Programm sowie öffentliche Gebäude, in denen Sie während der Öffnungszeiten nachfüllen können.",
     "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
     "englishMap": "Englische Karte",
     "germanMap": "Deutsche Karte",
@@ -95,7 +95,7 @@
     "contactEmail": "Kontakt: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliner nutzen bereits diese Karte",
 
-    "mapFeatures": "Über 210 Trinkbrunnen und 100 Regierungsgebäude in ganz Berlin.",
+    "mapFeatures": "Über 210 Trinkbrunnen und 500 Refill-Standorte in ganz Berlin.",
     "betaTesting": "Während der Beta-Tests hatten wir über 1.000 Aufrufe der Karte - hoffentlich haben unsere Tester keinen Durst gelitten.",
     "waterSourceGuide": "Ein wachsender Leitfaden zu kostenlosen Wasserquellen",
 
