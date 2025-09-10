@@ -80,12 +80,14 @@
     ],
     "heroTitle": "Water Sources Map",
     "heroSubtitle": "Find nearby taps on our map",
-    "infoSection": "Berlin has plenty of free drinking water points, but they're not always easy to find—especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",
+    "infoSection": "Berlin has lots of free drinking water spots, but they're not always easy to find — especially on everyday platforms like Google Maps. There, fewer than 50 fountains are listed, but in reality there are many more. To make access easier, we collected data from [Berliner Wasserbetriebe](https://www.bwb.de/de/trinkbrunnen.php), [Refill](https://refill-deutschland.de/), and [other public sources](/en/faq#faq14) and put it all in one place. Our map now shows over 800 drinking water locations across Berlin — including fountains, Refill program spots, and public buildings where you can refill your bottle during opening hours.\n\nOpen the map with free drinking water locations!",
     "googleMapsTitle": "Add Water Sources to Your Google Maps",
     "englishMap": "English Map",
     "germanMap": "German Map",
-    "addEnglishMap": "Add map in English",
-    "addGermanMap": "Add map in German",
+    "russianMap": "Russian Map",
+    "addEnglishMap": "In English",
+    "addGermanMap": "In German",
+    "addRussianMap": "In Russian",
     "loadingMap": "Loading map...",
     "faqSectionTitle": "Frequently Asked Questions",
     "howMapWorks": "How does this map work?",
@@ -278,6 +280,13 @@
       "content": "We're excited to announce the launch of our info campaign! Our goal is to share more about our initiative with the public across different districts. To support this, we've also created a new map in English—especially for this campaign.",
       "date": "2025-08",
       "project": [1, 2]
+    },
+    {
+      "id": 8,
+      "title": "The map is now in Russian!",
+      "content": "Russian speakers in Berlin can now use our water map in their language to find the nearest drinking fountains and refill points, and even save the map to Google Maps in Russian.",
+      "date": "2025-09",
+      "project": [1]
     }
   ],
   "cookies": {

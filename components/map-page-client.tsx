@@ -8,6 +8,7 @@ import { QuickHelpSection } from "@/components/ui/quick-help-section"
 import { NewsSection } from "@/components/ui/news-section"
 import { ButtonNew } from "@/components/ui/button-new"
 import { Skeleton } from "@/components/ui/skeleton"
+import { TextParser } from "@/components/ui/text-parser"
 import { MAP_URLS, getMapEmbedUrl } from "@/lib/constants"
 import { useState } from "react"
 
@@ -50,6 +51,22 @@ export default function MapPageClient() {
     }, 100)
   }
 
+  // Handler for Russian map button click with enhanced tracking
+  const handleRussianMapClick = () => {
+    trackMapExit('russian', language, {
+      button_variant: language === 'ru' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.RUSSIAN_MAP, '_blank')
+    }, 100)
+  }
+
   // Handle iframe load event
   const handleMapLoad = () => {
     setIsMapLoading(false)
@@ -67,15 +84,15 @@ export default function MapPageClient() {
         <div className="md:hidden space-y-8">
           {/* Mobile Description Text */}
           <div className="text-lg text-muted-foreground leading-relaxed">
-            {translations.map.infoSection}
+            <TextParser text={translations.map.infoSection} />
           </div>
           
           {/* Mobile CTA Buttons */}
           <div className="space-y-3">
             <ButtonNew 
-              variant={language === 'en' || language === 'ru' ? "action" : "regular"}
+              variant={language === 'en' ? "action" : "regular"}
               size="lg"
-              className="w-full"
+              className="w-full px-2 py-1"
               onClick={handleEnglishMapClick}
             >
               {translations.map.addEnglishMap}
@@ -83,10 +100,18 @@ export default function MapPageClient() {
             <ButtonNew 
               variant={language === 'de' ? "action" : "regular"}
               size="lg"
-              className="w-full"
+              className="w-full px-2 py-1"
               onClick={handleGermanMapClick}
             >
               {translations.map.addGermanMap}
+            </ButtonNew>
+            <ButtonNew 
+              variant={language === 'ru' ? "action" : "regular"}
+              size="lg"
+              className="w-full px-2 py-1"
+              onClick={handleRussianMapClick}
+            >
+              {translations.map.addRussianMap}
             </ButtonNew>
           </div>
           
@@ -121,14 +146,15 @@ export default function MapPageClient() {
             <div className="flex flex-col justify-between min-h-[400px] xl:h-[500px]">
               {/* Description Text */}
               <div className="text-lg text-muted-foreground leading-relaxed max-w-3xl mb-8">
-                {translations.map.infoSection}
+                <TextParser text={translations.map.infoSection} />
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-row gap-4 max-w-md">
+              <div className="flex flex-row gap-4 w-full max-w-2xl">
                 <ButtonNew 
-                  variant={language === 'en' || language === 'ru' ? "action" : "regular"}
+                  variant={language === 'en' ? "action" : "regular"}
                   size="lg"
+                  className="flex-1 px-2 py-1"
                   onClick={handleEnglishMapClick}
                 >
                   {translations.map.addEnglishMap}
@@ -136,9 +162,18 @@ export default function MapPageClient() {
                 <ButtonNew 
                   variant={language === 'de' ? "action" : "regular"}
                   size="lg"
+                  className="flex-1 px-2 py-1"
                   onClick={handleGermanMapClick}
                 >
                   {translations.map.addGermanMap}
+                </ButtonNew>
+                <ButtonNew 
+                  variant={language === 'ru' ? "action" : "regular"}
+                  size="lg"
+                  className="flex-1 px-2 py-1"
+                  onClick={handleRussianMapClick}
+                >
+                  {translations.map.addRussianMap}
                 </ButtonNew>
               </div>
             </div>

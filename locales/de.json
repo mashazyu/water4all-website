@@ -80,12 +80,14 @@
     ],
     "heroTitle": "DURSTIG?",
     "heroSubtitle": "Finden Sie nahegelegene Wasserhähne auf unserer Karte",
-    "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer leicht zu finden – besonders auf alltäglichen Plattformen wie Google Maps. Dort sind weniger als 50 Trinkbrunnen eingetragen, tatsächlich gibt es jedoch deutlich mehr. Um den Zugang zu erleichtern, haben wir Daten von den Berliner Wasserbetrieben, Refill und anderen öffentlichen Quellen gesammelt und an einem Ort zusammengeführt. Unsere Karte zeigt über 500 Trinkwasserstellen in ganz Berlin – darunter Trinkbrunnen, Refill-Standorte aus dem Refill-Programm sowie öffentliche Gebäude, in denen Sie während der Öffnungszeiten nachfüllen können.",
+    "infoSection": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer leicht zu finden – besonders auf alltäglichen Plattformen wie Google Maps. Dort sind weniger als 50 Trinkbrunnen eingetragen, tatsächlich gibt es jedoch deutlich mehr. Um den Zugang zu erleichtern, haben wir Daten von den [Berliner Wasserbetrieben](https://www.bwb.de/de/trinkbrunnen.php), [Refill](https://refill-deutschland.de/) und [anderen öffentlichen Quellen](/de/faq#faq14) gesammelt und an einem Ort zusammengeführt. Unsere Karte zeigt über 800 Trinkwasserstellen in ganz Berlin – darunter Trinkbrunnen, Refill-Standorte aus dem Refill-Programm sowie öffentliche Gebäude, in denen Sie während der Öffnungszeiten nachfüllen können.\n\nÖffnen Sie die Karte mit den Standorten für kostenloses Trinkwasser!",
     "googleMapsTitle": "Fügen Sie Wasserquellen zu Ihren Google Maps hinzu",
     "englishMap": "Englische Karte",
     "germanMap": "Deutsche Karte",
-    "addEnglishMap": "Karte auf Englisch",
-    "addGermanMap": "Karte auf Deutsch",
+    "russianMap": "Russische Karte",
+    "addEnglishMap": "Auf Englisch",
+    "addGermanMap": "Auf Deutsch",
+    "addRussianMap": "Auf Russisch",
     "loadingMap": "Karte wird geladen...",
     "faqSectionTitle": "Häufig gestellte Fragen",
     "howMapWorks": "Wie funktioniert diese Karte?",
@@ -279,6 +281,13 @@
       "content": "Wir freuen uns sehr, unsere Infokampagne zu starten! Damit möchten wir die Öffentlichkeit in verschiedenen Bezirken über unsere Initiative informieren. Passend dazu haben wir extra für diese Kampagne eine neue Karte auf Englisch erstellt.",
       "date": "2025-08",
       "project": [1, 2]
+    },
+    {
+      "id": 8,
+      "title": "Die Karte ist jetzt auch auf Russisch verfügbar!",
+      "content": "Russischsprachige Berlinerinnen und Berliner können unsere Wasserkarte nun in ihrer Sprache nutzen, um die nächsten Trinkbrunnen und Nachfüllstationen zu finden – und die Karte sogar direkt in Google Maps auf Russisch speichern.",
+      "date": "2025-09",
+      "project": [1]
     }
   ],
   "cookies": {
