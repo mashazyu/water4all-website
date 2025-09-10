@@ -118,13 +118,14 @@ export const trackExitLinkEnhanced = (
  * Convenience function for tracking map exits
  */
 export const trackMapExit = (
-  mapType: 'english' | 'german',
+  mapType: 'english' | 'german' | 'russian',
   userLanguage: string,
   additionalContext?: Record<string, any>
 ): void => {
   const mapUrls = {
     english: 'https://www.google.com/maps/d/edit?mid=1Vu1ecwzIo0W7WEs8MIbz49hOJZSgoZY&usp=sharing',
-    german: 'https://www.google.com/maps/d/edit?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&usp=sharing'
+    german: 'https://www.google.com/maps/d/edit?mid=1v5s3GJCaaJwk2WRFqHz3XiBXYEIuw1Y&usp=sharing',
+    russian: 'https://www.google.com/maps/d/edit?mid=1FJ8sStgRRpony1CRlLuiDRMttrjOhUg&usp=sharing'
   }
 
   trackExitLinkEnhanced({

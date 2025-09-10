@@ -50,6 +50,22 @@ export default function MapPageClient() {
     }, 100)
   }
 
+  // Handler for Russian map button click with enhanced tracking
+  const handleRussianMapClick = () => {
+    trackMapExit('russian', language, {
+      button_variant: language === 'ru' ? 'action' : 'regular',
+      user_preferred_language: language,
+      utm_source: 'map_page',
+      utm_medium: 'button_click',
+      utm_campaign: 'water_sources_map'
+    })
+    
+    // Small delay to ensure tracking fires before navigation
+    setTimeout(() => {
+      window.open(MAP_URLS.RUSSIAN_MAP, '_blank')
+    }, 100)
+  }
+
   // Handle iframe load event
   const handleMapLoad = () => {
     setIsMapLoading(false)
@@ -73,7 +89,7 @@ export default function MapPageClient() {
           {/* Mobile CTA Buttons */}
           <div className="space-y-3">
             <ButtonNew 
-              variant={language === 'en' || language === 'ru' ? "action" : "regular"}
+              variant={language === 'en' ? "action" : "regular"}
               size="lg"
               className="w-full"
               onClick={handleEnglishMapClick}
@@ -87,6 +103,14 @@ export default function MapPageClient() {
               onClick={handleGermanMapClick}
             >
               {translations.map.addGermanMap}
+            </ButtonNew>
+            <ButtonNew 
+              variant={language === 'ru' ? "action" : "regular"}
+              size="lg"
+              className="w-full"
+              onClick={handleRussianMapClick}
+            >
+              {translations.map.addRussianMap}
             </ButtonNew>
           </div>
           
@@ -127,7 +151,7 @@ export default function MapPageClient() {
               {/* CTA Buttons */}
               <div className="flex flex-row gap-4 max-w-md">
                 <ButtonNew 
-                  variant={language === 'en' || language === 'ru' ? "action" : "regular"}
+                  variant={language === 'en' ? "action" : "regular"}
                   size="lg"
                   onClick={handleEnglishMapClick}
                 >
@@ -139,6 +163,13 @@ export default function MapPageClient() {
                   onClick={handleGermanMapClick}
                 >
                   {translations.map.addGermanMap}
+                </ButtonNew>
+                <ButtonNew 
+                  variant={language === 'ru' ? "action" : "regular"}
+                  size="lg"
+                  onClick={handleRussianMapClick}
+                >
+                  {translations.map.addRussianMap}
                 </ButtonNew>
               </div>
             </div>
