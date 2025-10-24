@@ -45,7 +45,25 @@
     "learnMore": "Узнать больше",
     "latestNews": "Последние новости",
     "loadingTitle": "Water4All",
-    "loadingText": "Загружаем отличный контент..."
+    "loadingText": "Загружаем отличный контент...",
+    "supportTitle": "Поддерживается",
+    "supportSubtitle": "Мы очень благодарны за поддержку следующих организаций и людей",
+    "clubDialogName": "Club Dialog e.V.",
+    "clubDialogDescription": "Организация мигрантов, основанная в 1988 году в Берлине для содействия социальному диалогу и интеграции.",
+    "dieLinkePankowName": "Die Linke Панков",
+    "dieLinkePankowDescription": "Политическая фракция, поддерживающая нашу инициативу по установке новых питьевых фонтанчиков в районе Панков.",
+    "supporterOrganizations": [
+      {
+        "title": "Club Dialog e.V.",
+        "website": "https://www.club-dialog.de/de/",
+        "image": "https://www.club-dialog.de/wp-content/uploads/2024/06/3456789-removebg-preview.png"
+      },
+      {
+        "title": "Linksfraktion in der BVV Pankow",
+        "website": "https://www.linksfraktion-pankow.de",
+        "image": "/die-linke-fraktion-in-pankow.png"
+      }
+    ]
   },
   "subprojects": {
     "subproject1FullDescription": "В Берлине много бесплатных точек питьевой воды, но их не всегда легко найти — особенно на повседневных платформах, таких как Google Maps. Чтобы упростить задачу, мы создали собственную карту Google, которая показывает фонтанчики от Berliner Wasserbetriebe, доступные круглосуточно, а также правительственные здания, где вы можете пополнить запасы в обычные рабочие часы.",

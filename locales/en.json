@@ -45,7 +45,25 @@
     "learnMore": "Learn More",
     "latestNews": "Latest News",
     "loadingTitle": "Water4All",
-    "loadingText": "Loading amazing content..."
+    "loadingText": "Loading amazing content...",
+    "supportTitle": "Supported By",
+    "supportSubtitle": "We are very grateful for the support of the following organizations and people",
+    "clubDialogName": "Club Dialog e.V.",
+    "clubDialogDescription": "A migrant organization founded in 1988 in Berlin to promote social dialogue and integration.",
+    "dieLinkePankowName": "Die Linke Pankow",
+    "dieLinkePankowDescription": "Political faction supporting our initiative for new drinking fountains in Pankow district.",
+    "supporterOrganizations": [
+      {
+        "title": "Club Dialog e.V.",
+        "website": "https://www.club-dialog.de/de/",
+        "image": "https://www.club-dialog.de/wp-content/uploads/2024/06/3456789-removebg-preview.png"
+      },
+      {
+        "title": "Linksfraktion in der BVV Pankow",
+        "website": "https://www.linksfraktion-pankow.de",
+        "image": "/die-linke-fraktion-in-pankow.png"
+      }
+    ]
   },
   "subprojects": {
     "subproject1FullDescription": "Berlin has plenty of free drinking water points, but they're not always easy to find—especially on everyday platforms like Google Maps. To make things easier, we've created a custom Google Map that shows fountains from Berliner Wasserbetriebe, which are available 24/7, as well as government buildings where you can refill during regular business hours.",

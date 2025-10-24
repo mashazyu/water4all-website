@@ -45,7 +45,25 @@
     "learnMore": "Mehr erfahren",
     "latestNews": "Aktuelle Meldungen",
     "loadingTitle": "Water4All",
-    "loadingText": "Lade tollen Inhalt..."
+    "loadingText": "Lade tollen Inhalt...",
+    "supportTitle": "Unterstützt von",
+    "supportSubtitle": "Wir sind sehr dankbar für die Unterstützung der folgenden Organisationen und Menschen",
+    "clubDialogName": "Club Dialog e.V.",
+    "clubDialogDescription": "Eine Migrant*innenorganisation, die 1988 in Berlin gegründet wurde, um gesellschaftlichen Dialog und Integration zu fördern.",
+    "dieLinkePankowName": "Die Linke Pankow",
+    "dieLinkePankowDescription": "Politische Fraktion, die unsere Initiative für neue Trinkbrunnen im Bezirk Pankow unterstützt.",
+    "supporterOrganizations": [
+      {
+        "title": "Club Dialog e.V.",
+        "website": "https://www.club-dialog.de/de/",
+        "image": "https://www.club-dialog.de/wp-content/uploads/2024/06/3456789-removebg-preview.png"
+      },
+      {
+        "title": "Linksfraktion in der BVV Pankow",
+        "website": "https://www.linksfraktion-pankow.de",
+        "image": "/die-linke-fraktion-in-pankow.png"
+      }
+    ]
   },
   "subprojects": {
     "subproject1FullDescription": "Berlin hat viele kostenlose Trinkwasserstellen, aber sie sind nicht immer einfach zu finden - besonders auf alltäglichen Plattformen wie Google Maps. Um es einfacher zu machen, haben wir eine eigene Google Map erstellt, die Brunnen von Berliner Wasserbetriebe zeigt, die rund um die Uhr verfügbar sind, sowie Regierungsgebäude, wo Sie während der regulären Geschäftszeiten nachfüllen können.",
