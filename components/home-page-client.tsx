@@ -8,6 +8,7 @@ import { Hero } from "@/components/ui/hero"
 import { PageLayout, FullScreenSection } from "@/components/ui/page-layout"
 import { PageSectionWithContent } from "@/components/ui/page-section"
 import { NewsSection } from "@/components/ui/news-section"
+import { SupportSection } from "@/components/ui/support-section"
 import { InfoTile } from "@/components/ui/info-tile"
 import Link from "next/link"
 import { Droplets, Waves } from "lucide-react"
@@ -101,10 +102,11 @@ export default function HomePageClient() {
           </div>
         </PageSectionWithContent>
 
-
+        {/* Support Section */}
+        <SupportSection />
 
         {/* Latest News Section */}
-        <NewsSection background="muted" />
+        <NewsSection background="white" />
       </div>
     </PageLayout>
   )
