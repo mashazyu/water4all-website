@@ -305,6 +305,41 @@
       "content": "Russian speakers in Berlin can now use our water map in their language to find the nearest drinking fountains and refill points, and even save the map to Google Maps in Russian.",
       "date": "2025-09",
       "project": [1]
+    },
+    {
+      "id": 9,
+      "title": "Multilingual Map - NEW: Now also in Russian",
+      "content": "Our map is now available in Russian! This helps more Berliners find drinking fountains and refill points and save the map to Google Maps.",
+      "date": "2025-09",
+      "project": [1]
+    },
+    {
+      "id": 10,
+      "title": "Information on planned drinking fountains in Pankow",
+      "content": "Thanks to a small inquiry to the BVV Pankow and with the help of the Linksfraktion in the BVV Pankow, we received official information about planned drinking fountains in the district.",
+      "date": "2025-09",
+      "project": [2]
+    },
+    {
+      "id": 11,
+      "title": "Exchange with the Senate Administration (SenMVKU)",
+      "content": "The Senate confirmed: There is no budget in 2025 for new drinking fountains.",
+      "date": "2025-10",
+      "project": [2]
+    },
+    {
+      "id": 12,
+      "title": "Contact with Lichtenberg civic engagement office",
+      "content": "We are talking with the Lichtenberg civic engagement office to explore what funding or participation opportunities exist at the district level for drinking fountain installations.",
+      "date": "2025-10",
+      "project": [2]
+    },
+    {
+      "id": 13,
+      "title": "New inquiries to district authorities in other districts",
+      "content": "We are collecting information on planned drinking fountains and submitted new small inquiries to various districts to get a more complete picture for Berlin.",
+      "date": "2025-10",
+      "project": [2]
     }
   ],
   "cookies": {
