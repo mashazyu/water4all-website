@@ -115,7 +115,7 @@
     "contactEmail": "Contact: berlintrinkbrunnen@gmail.com",
     "socialProof": "500+ Berliners already using this map",
 
-    "mapFeatures": "Over 210 drinking fountains and 100 government buildings across Berlin.",
+    "mapFeatures": "Over 800 drinking spots with 210 drinking fountains, 500+ refill spots, and 100 government buildings across Berlin.",
     "betaTesting": "We had more than 1,000 views of the map during beta testing—hopefully keeping our testers from going thirsty.",
     "waterSourceGuide": "A growing guide to free water sources",
 
@@ -227,7 +227,7 @@
       {
         "id": "faq9",
         "question": "How can I help support your initiative?",
-        "answer": "If you know anyone in district authorities, the Berlin Senate (especially, the MVKU department), or other relevant offices, please connect us. You can also share our map and project with friends and local community groups.",
+        "answer": "Spread the word about our map - let your friends know about it or share it through your channels. Feel free to contact us to get stickers and flyers if you’d like to get more involved. We are happy to hear about other projects to collaborate with or get in touch with local authorities.",
         "category": "project"
       },
       {
